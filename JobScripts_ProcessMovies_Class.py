@@ -1,4 +1,6 @@
 #TODO: Write a function which will write the JOB notepads automatically & submits them onto the server.
+#TODO: Rename the folder from 'MDCKwt100percent' to 'MDCK_WT_Pure'
+
 
 """
         Text of the SEGMENTATION & CLASSIFICATION job text file:
@@ -31,12 +33,16 @@ params = {'path': '/mnt/lowe-sn00/Data/Kristina/MDCKwt100percent/17_07_31/pos6/'
 options = {}
 """
 
+@property
+# You need to be connected to the server!
+# Path: '/Volumes/lowegrp/JobServer/jobs/'
 
 class ProcessMovies:
     def __init__(self, pos, data_date='17_07_31', type='MDCKwt100percent', user='Kristina'):
         """Class comprised of 2 functions (SegClass & Track) to process time-lapse movies.
 
         Directory structure (path): "/mnt/lowe-sn00/Data/user/type/date/pos/"
+        Directory from my Mac: "/Volumes/lowegrp/JobServer/jobs/" (when logged in to the server)
 
         Args:
             pos = position for which you have a brightfield, GFP and/or RFP movie available.
@@ -61,69 +67,88 @@ class ProcessMovies:
         self.jobs_dir = '/mnt/lowe-sn00/lowegrp/JobServer/jobs/'
 
 
-    def SegClass(self):
+    def SegClass(self, BF=True, GFP=True, RFP=False):
         """ Segmentation & Classification of the BF, GFP & RFP movies.
 
-        Args (no input needed for this function):
-            Uses 3 .tif files which should be stored in the posX folder.
-            If you are only using 2 movies, supply the 3rd movie as a noise.
-            (in this case, RFP_posX_noise.tif) set as default.
+        Args (Boolean; 'False' if only the 'noise' movie is provided):
+            Uses 3 .tif files (brightfield, GFP, RFP, which should be stored in the posX folder.
+            Supply the noise movies as Channel_posX_noise.tif (e.g. RFP_pos6_noise.tif).
+            I'm only mapping pure populations, so 'RFP_posX_noise.tif' set as default.
 
         Return (overall output):
-            An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied.
+            An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied. """
 
-        """
+        # Create a .job file:
+        job_name = 'JOB_SegClass_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
+        self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
+        #self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
-        #TODO: Set a new kwarg (Boolean): noise=True
-        job_name = 'JOB_SegClass_{}_{}_pos{}'.format(self.user, self.today_date, self.pos)
-        self.txt_file = open('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/' + job_name + '.txt', 'w')
-        #self.job_file = open(self.jobs_dir + job_name + '.job', 'w')                  # TODO: Create a .job file too!
+        # Define what goes into the file:
+        movie = [BF, GFP, RFP]
+        channels = ['BF', 'GFP', 'RFP']
+        for order, item in enumerate(movie):
+            if item:
+                channels[order] += '_pos' + self.pos + '.tif'
+            else:
+                channels[order] += '_pos' + self.pos + '_noise.tif'
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/'\
             .format(str(self.user), str(self.type), str(self.data_date), str(self.pos))
-        print (path)
+
         string = '[job]\ncomplete = False\nid = f2dafed81fd87a66bf0028a16b1473cd\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\n'
-        string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "BF_pos' + self.pos + '.tif", "gfp": "GFP_pos' + self.pos + '.tif", "rfp": "RFP_pos' + self.pos + '_noise.tif"}, "shape": (1200, 1600)}"\n'
-        print (string)
-        self.txt_file.write(string)
-        self.txt_file.close()
+        string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
+                        '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}"\n'
+
+        self.job_file.write(string)
+        self.job_file.close()
 
 
-    def Tracking(self):
-        """ Tracking of the BF, GFP & RFP movies.
+    def Tracking(self, to_track_GFP=True, to_track_RFP=False):
+        """ Tracking of the GFP & RFP movies against the brightfield.
 
-        Args (no input needed for this function):
-            Uses an HDF file ('segmented.hdf5') saved in the folder from which movies were supplied as input.
+        Args (Boolean; 'True' if channel is to be tracked, 'False' if omitted, i.e for pure populations):
+            Default settings: 'to_track_GFP=True, to_track_RFP=False'
+            Uses an HDF file ('segmented.hdf5') saved in the folder from which movies were supplied as SegClass input.
 
         Return:
-            Need to specify which channel to be tracked.
-            Set ("to_track":["GFP"]) by default.
+            Creates 4 files: 'hypothesis_typeX.txt', 'optimised_typeX.txt', 'tracks_typeX.mat', 'tracks_typeX.xml'.
+            (X = 1 for 'GFP', X = 2 for 'RFP')
+            All saved inside the HDF folder with 'segmented.hdf5' file which was used as input for tracking.
         """
-        # TODO: Set a new kwarg (Boolean): to_track_GFP=True, to_track_RFP=False
 
-        job_name = 'JOB_Tracking_{}_{}_pos{}'.format(self.user, self.today_date, self.pos)
-        self.txt_file = open('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/' + job_name + '.txt', 'w')
-        # self.job_file = open(self.jobs_dir + job_name + '.job', 'w')                # TODO: Create a .job file too!
+        # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
+        import os
+        if os.path.isdir('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF' \
+                                 .format(self.user, self.type, self.data_date, self.pos)) is False \
+            or os.path.exists('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF/segmented.hdf5' \
+                                 .format(self.user, self.type, self.data_date, self.pos)) is False :
+            raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied", \
+                            "Run the 'SegClass' function first")
+
+        # Create a .job file:
+        job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
+        self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
+        #self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
+
+        # Define what goes into the file:
+        tracks = [to_track_GFP, to_track_RFP]
+        channels = ["GFP", "RFP"]
+        for order, item in enumerate(tracks):
+            if item is False:
+                del channels[order]
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
-            .format(str(self.user), str(self.type), str(self.data_date), str(self.pos))
-        print (path)
+                .format(str(self.user), str(self.type), str(self.data_date), str(self.pos))
+
         string = '[job]\ncomplete = False\nid = Data_2\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,1200)), "to_track":["GFP"]}\n'
-        string += 'options = {}'
-        print (string)
-        self.txt_file.write(string)
-        self.txt_file.close()
+        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,1200)), ' \
+                        '"to_track":' + str(channels) +'}\noptions = {}'
 
-
-# Call the class & its functions:
-for number in range(6, 9):
-    call = ProcessMovies(number, data_date='17_07_24')
-    call.SegClass()
-    call.Tracking()
+        self.job_file.write(string)
+        self.job_file.close()
