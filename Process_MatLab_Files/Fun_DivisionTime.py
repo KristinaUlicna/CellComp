@@ -14,6 +14,7 @@ def CalculateDivisionTime(tracks_file, base=100):
         cells_dict[int(line[3])][1] = int(line[2])
     div_time_frame = [(item[1] - item[0]) for item in list(cells_dict.values())]
 
+    # TODO: Remove the 0 exclusion, just add four (+4) to all time points...
     # CATEGORIZE CELLS: Exclude cells which only appear in a SINGLE frame:
     div_time_real = [item * 4 for item in div_time_frame if item != 0]
     single_frame_cells = len(div_time_frame) - len(div_time_real)
@@ -51,19 +52,11 @@ def CalculateDivisionTime(tracks_file, base=100):
 def PlotDivisionTimeHist(tracks_file):
     cells_dict, div_time_real, single_frame_cells, hist_cell_count, hist_cell_count_crop = CalculateDivisionTime(tracks_file)
     import matplotlib.pyplot as plt
-    fig, axs = plt.subplots(1, 2, tight_layout=True)
-    #plt.title("Histogram of cell cycle times captured by S&T'd movies")
-
-    axs[0].hist(div_time_real, bins=len(hist_cell_count))
-    #axs[0].xlabel("Cell Division time [mins]")
-    #axs[0].ylabel("Count per category [cells]")
-    #axs[0].ylim(-100)
-
-    axs[1].hist(div_time_real[0:9], bins=len(hist_cell_count[0:9]))
-    #axs[1].xlabel("Cell Division time [mins]")
-    #axs[1].ylabel("Count per category [cells]")
-    #axs[1].ylim(-100)
-
+    #fig, axs = plt.subplots(1, 1, tight_layout=True)
+    plt.title("Histogram of cell cycle times captured by S&T'd movies")
+    plt.hist(div_time_real, bins=len(hist_cell_count))
+    # TODO: Add an hour-x-axis below the minute-x-axis.
+    plt.ylim(-100)
     plt.show()
     plt.close()
 

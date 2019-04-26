@@ -1,8 +1,7 @@
-from Fun_Generations import GenerationTracking
-
-#TODO: Loop through these!
+from Fun_Generations import GenerationTracking, StoreGenerationFile
 
 files = list(range(3))
+
 for pos in files:
     generation = GenerationTracking('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Tracks_pos' + str(pos) + '_ID_sorted.csv')
     print ("\n\tP O S  #" + str(pos))
@@ -11,3 +10,6 @@ for pos in files:
     for gen, name in zip(generation, gen_names):
         print ("Gen {}".format(name), ": {}".format(len(gen)), gen)
 
+for pos in files:
+    StoreGenerationFile('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Tracks_pos' + str(pos) + '_ID_sorted.csv')
+    print ("\nPos {} - file written.".format(pos))

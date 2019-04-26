@@ -49,19 +49,13 @@ plt.title("Histogram of cell cycle times captured by S&T'd movies")
 plt.xlabel("Cell Division time [mins]")
 plt.ylabel("Count per category [cells]")
 plt.ylim(-100)
+
+slice_st, slice_en = 0, 9
+plt.bar(div_time_real[slice_st:slice_en], bins_value[slice_st:slice_en])
+plt.title("SLICE: Histogram of cell cycle times captured by S&T'd movies")
+plt.xlabel("Cell Division time [mins]")
+plt.ylabel("Count per category [cells]")
+plt.ylim(-100)
+
 plt.show()
 plt.close()
-
-"""
-plt.semilogx(gamma_range, sv_sum_list, c = 'k', color = 'coral', linewidth = 5.0)
-plt.ylim(420, 520)
-plt.grid(b=None, axis='y')
-plt.tight_layout()
-plt.xlabel("Range of 'gamma' parameter")
-plt.ylabel("Sum of support vectors used for model training")
-
-sub_axes = plt.axes([0.63, 0.23, 0.3, 0.3])
-sub_axes.semilogx(gamma_range[9:(len(sv_sum_list)-1)], sv_sum_list[9:(len(sv_sum_list)-1)], c = 'k', color = 'c', linewidth = 2.0)
-sub_axes.grid(b=None, which='major', axis='y')
-
-"""
