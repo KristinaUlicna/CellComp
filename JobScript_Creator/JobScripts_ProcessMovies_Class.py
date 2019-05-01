@@ -31,7 +31,6 @@ params = {'path': '/mnt/lowe-sn00/Data/Kristina/MDCK_WT_Pure/17_07_31/pos6/', 'v
 options = {}
 """
 
-@property
 # You need to be connected to the server!
 # Path: '/Volumes/lowegrp/JobServer/jobs/'
 
@@ -78,8 +77,8 @@ class ProcessMovies():
 
         # Create a .job file:
         job_name = 'JOB_SegClass_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
-        self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
-        #self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
+        #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
+        self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
         movie = [BF, GFP, RFP]
@@ -98,7 +97,7 @@ class ProcessMovies():
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\n'
         string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
-                        '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}"\n'
+                        '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}\n'
 
         self.job_file.write(string)
         self.job_file.close()
@@ -128,8 +127,8 @@ class ProcessMovies():
 
         # Create a .job file:
         job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
-        self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
-        #self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
+        #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
+        self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
         tracks = [to_track_GFP, to_track_RFP]

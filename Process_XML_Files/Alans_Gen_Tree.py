@@ -19,7 +19,6 @@ __email__ = "a.lowe@ucl.ac.uk"
 FATE_APOPTOSIS = 5
 
 import btypes
-
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects
 
@@ -64,9 +63,9 @@ class LineageTree(object):
         tracks: a list of Track objects, typically imported from a json/xml file
     Methods:
         get_track_by_ID: return the track object with the corresponding ID
-        create: create the lineage trees by performing a BFS
+        create: create the lineage trees by performing a BFS (= Breadth First Search, or Traversal)
         plot: plot the tree/trees
-    Notes:
+    #TODO: Notes:
         Need to update plotting and return other stats from the trees. """
 
     def __init__(self, tracks):
@@ -76,7 +75,7 @@ class LineageTree(object):
         if not all([isinstance(trk, btypes.Tracklet) for trk in tracks]):
             raise TypeError('Tracks should be of type Track')
 
-        # sort the tracks by the starting frame
+        # Sort the tracks by the starting frame
         self.tracks = sorted(tracks, key=lambda trk: trk.t[0], reverse=False)
 
     def get_track_by_ID(self, ID):
@@ -135,19 +134,18 @@ class LineageTree(object):
 class LineageTreePlotter(object):
     """ Plotter for lineage trees.
 
-               o-----------X
-               |
-      o--------o
-      |        |
-      |        o--------------------
-     -o
-      |
-      o-----------------------------
+                 o-----------X
+                 |
+        o--------o       o-------------
+        |        |       |
+        |        o-------o
+    ----o                |
+        |                o-------------
+        |
+        o------------------------------ etc...
 
     Notes:
-        This is ugly, and needs cleaning up!
-
-    """
+        This is ugly, and needs cleaning up! """
 
     def __init__(self):
         self.reset()
