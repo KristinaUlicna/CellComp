@@ -2,23 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Call.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/btypes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/lineage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/tracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Process_XML_Files/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/TrackingObjectsIn3D.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Alans_Notebooks/TrackingObjectsIn3D.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Alans_Gen_Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Process_XML_Files/Alans_Gen_Tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_MatLab_Files/Call_Generations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_MatLab_Files/Fun_DivisionTime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_MatLab_Files/Fun_Generations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_MatLab_Files/Plot_Histograms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Alans_Gen_Tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Parsing_XML_Tutorial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/btypes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/core.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/lineage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/tracker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process_XML_Files/utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,22 +32,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1554297082432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$CellParentPairs_Call.coverage" NAME="CellParentPairs_Call Coverage Results" MODIFIED="1556721881624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
-    <SUITE FILE_PATH="coverage/PythonScripts$JobScripts_ProcessMovies_Call.coverage" NAME="JobScripts_ProcessMovies_Call Coverage Results" MODIFIED="1556623840414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
+    <SUITE FILE_PATH="coverage/PythonScripts$CellParentPairs_Call__1_.coverage" NAME="CellParentPairs_Call (1) Coverage Results" MODIFIED="1556724191495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Scipy_XML.coverage" NAME="Scipy_XML Coverage Results" MODIFIED="1554895760323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Gen_Trees.coverage" NAME="Gen_Trees Coverage Results" MODIFIED="1555337793270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Class.coverage" NAME="Generation_Tree_by_ID_Class Coverage Results" MODIFIED="1556876714620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Fun_Generations.coverage" NAME="Fun_Generations Coverage Results" MODIFIED="1554297090479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Lineage_Trees.coverage" NAME="Lineage_Trees Coverage Results" MODIFIED="1554132757104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Recursive_Function.coverage" NAME="Generation_Tree_by_ID_Recursive_Function Coverage Results" MODIFIED="1556879183434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Call_Fun_Lineage.coverage" NAME="Call_Fun_Lineage Coverage Results" MODIFIED="1554203106778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Plotly_Trees.coverage" NAME="Plotly_Trees Coverage Results" MODIFIED="1554898167324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
-    <SUITE FILE_PATH="coverage/PythonScripts$GeeTree_Invoke.coverage" NAME="GeeTree_Invoke Coverage Results" MODIFIED="1554830359651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Parsing_XML.coverage" NAME="Parsing_XML Coverage Results" MODIFIED="1555323265634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Fun_DivisionTime.coverage" NAME="Fun_DivisionTime Coverage Results" MODIFIED="1554290221915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Help.coverage" NAME="Generation_Tree_by_ID_Help Coverage Results" MODIFIED="1556719256474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Call_Generations.coverage" NAME="Call_Generations Coverage Results" MODIFIED="1555318508373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree.coverage" NAME="Generation_Tree Coverage Results" MODIFIED="1556701783513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Help.coverage" NAME="Generation_Tree_by_ID_Help Coverage Results" MODIFIED="1556813339882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Final.coverage" NAME="GenTree_Call_Final Coverage Results" MODIFIED="1557004905474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_2.coverage" NAME="Help_2 Coverage Results" MODIFIED="1554294009953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$CellParentPairs_Call.coverage" NAME="CellParentPairs_Call Coverage Results" MODIFIED="1556721881624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1557078514163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$JobScripts_ProcessMovies_Call.coverage" NAME="JobScripts_ProcessMovies_Call Coverage Results" MODIFIED="1556809020484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Cell_Count_per_Frame.coverage" NAME="Cell_Count_per_Frame Coverage Results" MODIFIED="1557082093512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions_Call.coverage" NAME="GenTree_Functions_Call Coverage Results" MODIFIED="1557005923040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Parsing_XML_Tutorial.coverage" NAME="Parsing_XML_Tutorial Coverage Results" MODIFIED="1557006796394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Lineage_Trees.coverage" NAME="Lineage_Trees Coverage Results" MODIFIED="1554132757104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$GenTree_RecFun_Function.coverage" NAME="GenTree_RecFun_Function Coverage Results" MODIFIED="1557001327302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Plotly_Trees.coverage" NAME="Plotly_Trees Coverage Results" MODIFIED="1554898167324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$GeeTree_Invoke.coverage" NAME="GeeTree_Invoke Coverage Results" MODIFIED="1554830359651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
+    <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions.coverage" NAME="GenTree_Functions Coverage Results" MODIFIED="1557079469390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Call_Generations.coverage" NAME="Call_Generations Coverage Results" MODIFIED="1555318508373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree.coverage" NAME="Generation_Tree Coverage Results" MODIFIED="1556724966188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Open_XML_file.coverage" NAME="Open_XML_file Coverage Results" MODIFIED="1554826335294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -67,46 +81,46 @@
     <session id="-1755711611">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="3" />
-          <entry key="py" value="43" />
+          <entry key="py" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="3" />
-          <entry key="Python" value="43" />
+          <entry key="Python" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="65" />
-          <entry key="py" value="18350" />
+          <entry key="dummy" value="87" />
+          <entry key="py" value="32897" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="65" />
-          <entry key="Python" value="18350" />
+          <entry key="PLAIN_TEXT" value="87" />
+          <entry key="Python" value="32897" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Process_XML_Files/lineage.py">
+        <entry file="file://$PROJECT_DIR$/Lineage_Trees/lineage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2073">
-              <caret line="62" column="17" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="17" />
+            <state relative-caret-position="4129">
+              <caret line="190" column="47" selection-start-line="190" selection-start-column="42" selection-end-line="190" selection-end-column="47" />
               <folding>
                 <element signature="e#869#883#0" expanded="true" />
               </folding>
@@ -115,37 +129,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py">
+        <entry file="file://$PROJECT_DIR$/Lineage_Trees/tracker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1032">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            <state relative-caret-position="648">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#850#859#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
-              <caret line="222" column="66" selection-start-line="222" selection-start-column="66" selection-end-line="222" selection-end-column="66" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Lineage_Trees/Find_Max_Frame.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py">
+        <entry file="file://$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="546">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py">
+        <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="-1341">
+              <caret line="173" column="32" lean-forward="true" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -166,12 +179,10 @@
       <find>[</find>
       <find>2390</find>
       <find>child</find>
-      <find>xml</find>
       <find>btypes</find>
       <find>print</find>
       <find>from_</find>
       <find>isinstance</find>
-      <find>103</find>
       <find>1960</find>
       <find>read_xml</find>
       <find>self.left</find>
@@ -182,9 +193,19 @@
       <find>gen3_right4</find>
       <find>gen3_right6</find>
       <find>gen3_right8</find>
+      <find>depth</find>
+      <find>class</find>
+      <find>ET</find>
+      <find>xml</find>
+      <find>ET</find>
+      <find>ET.</find>
+      <find>103</find>
+      <find>Track</find>
+      <find>frame</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -215,17 +236,27 @@
         <option value="$PROJECT_DIR$/Process_XML_Files/constants.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/core.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/utils.py" />
-        <option value="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/tracker.py" />
-        <option value="$PROJECT_DIR$/Process_XML_Files/lineage.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/My_Generation_Tree.py" />
-        <option value="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Call.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py" />
-        <option value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py" />
         <option value="$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py" />
+        <option value="$PROJECT_DIR$/Process_XML_Files/lineage.py" />
+        <option value="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py" />
+        <option value="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py" />
+        <option value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/Generation_Tree_by_ID_Recursive_Function.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_RecFun_Function.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Class_Final.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Call_Final.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Functions_Call.py" />
+        <option value="$PROJECT_DIR$/Processing_XML_Files/Parsing_XML_Tutorial.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/tracker.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/Help.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Functions.py" />
+        <option value="$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py" />
       </list>
     </option>
   </component>
@@ -235,7 +266,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -245,17 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="PythonScripts" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,12 +291,23 @@
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="Process_MatLab_Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Lineage_Trees" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="Process_XML_Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Processing_XML_Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="PythonScripts" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -307,8 +338,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CellParentPairs_Call">
-    <configuration name="CellParentPairs_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Cell_Count_per_Frame">
+    <configuration name="Cell_Count_per_Frame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lineage_Trees" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GenTree_Functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -316,12 +369,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Process_XML_Files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lineage_Trees" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lineage_Trees/GenTree_Functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -330,7 +383,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Gen_Trees" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GenTree_Functions_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,12 +391,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Process_XML_Files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lineage_Trees" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Process_XML_Files/Gen_Trees.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lineage_Trees/GenTree_Functions_Call.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,7 +405,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Generation_Tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Help" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -360,12 +413,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Process_XML_Files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lineage_Trees" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lineage_Trees/Help.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -374,7 +427,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Generation_Tree_by_ID_Help" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Parsing_XML_Tutorial" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -382,34 +435,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Process_XML_Files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Processing_XML_Files" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="JobScripts_ProcessMovies_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JobScript_Creator" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Processing_XML_Files/Parsing_XML_Tutorial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -419,19 +450,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Gen_Trees" />
-      <item itemvalue="Python.Generation_Tree" />
-      <item itemvalue="Python.JobScripts_ProcessMovies_Call" />
-      <item itemvalue="Python.CellParentPairs_Call" />
-      <item itemvalue="Python.Generation_Tree_by_ID_Help" />
+      <item itemvalue="Python.GenTree_Functions_Call" />
+      <item itemvalue="Python.GenTree_Functions" />
+      <item itemvalue="Python.Parsing_XML_Tutorial" />
+      <item itemvalue="Python.Help" />
+      <item itemvalue="Python.Cell_Count_per_Frame" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.CellParentPairs_Call" />
-        <item itemvalue="Python.Generation_Tree_by_ID_Help" />
-        <item itemvalue="Python.Generation_Tree" />
-        <item itemvalue="Python.JobScripts_ProcessMovies_Call" />
-        <item itemvalue="Python.Gen_Trees" />
+        <item itemvalue="Python.Cell_Count_per_Frame" />
+        <item itemvalue="Python.GenTree_Functions" />
+        <item itemvalue="Python.Help" />
+        <item itemvalue="Python.Parsing_XML_Tutorial" />
+        <item itemvalue="Python.GenTree_Functions_Call" />
       </list>
     </recent_temporary>
   </component>
@@ -449,14 +480,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22694525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16642651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292232" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3292232" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35881627" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,7 +501,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3299712" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.3299712" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -483,17 +514,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Mat_to_tsv.py" />
-    <entry file="file://$PROJECT_DIR$/Lineage_Function.py" />
-    <entry file="file://$PROJECT_DIR$/DivisionTime_Function.py" />
-    <entry file="file://$PROJECT_DIR$/Call_Fun_Lineage.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Rotation_1/pythonFiles/ML_SVM_Worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Call_Generations.py" />
     <entry file="file://$PROJECT_DIR$/Fun_DivisionTime.py" />
     <entry file="file://$PROJECT_DIR$/Fun_Generations.py" />
@@ -506,13 +526,6 @@
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/GeeTree_Invoke.py" />
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Parsing_XML.py" />
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Gen_Trees.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Rotation_1/pythonFiles/AlignQueToRef.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="166" column="69" selection-start-line="161" selection-start-column="24" selection-end-line="166" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Plotly_Trees.py" />
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Lineage_Tree_Generator.ipynb" />
     <entry file="file://$PROJECT_DIR$/Alans_Notebooks/TrackingObjectsIn3D.ipynb">
@@ -557,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="130" column="8" selection-start-line="130" selection-start-column="8" selection-end-line="130" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/btypes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -581,16 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Class.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Call.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -598,41 +594,185 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Call.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/lineage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2073">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="17" />
+        <state relative-caret-position="97">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#869#883#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Process_XML_Files/Traverse_JSON_format.py">
+    <entry file="file://$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Help.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="222" column="66" selection-start-line="222" selection-start-column="66" selection-end-line="222" selection-end-column="66" />
+        <state relative-caret-position="-152">
+          <caret line="4" column="81" selection-start-line="4" selection-start-column="81" selection-end-line="4" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Process_XML_Files/CellParentPairs_Call.py">
+    <entry file="file://$PROJECT_DIR$/Process_XML_Files/Generation_Tree_by_ID_Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="562">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Generation_Tree_by_ID_Long_Version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Generation_Tree_by_ID_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Generation_Tree_by_ID_Recursive_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JobScript_Creator/JobScripts_ProcessMovies_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="37" column="86" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rotation_1/pythonFiles/AlignQueToRef.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="200" column="36" lean-forward="true" selection-start-line="193" selection-start-column="12" selection-end-line="200" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_RecFun_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Call.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Repetitive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1107" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing_XML_Files/Parsing_XML_Tutorial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="72" column="33" lean-forward="true" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Functions_Call.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Call_Final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Class_Final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="57" column="6" lean-forward="true" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_RecFun_Class.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/tracker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#850#859#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Find_Max_Frame.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/lineage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4129">
+          <caret line="190" column="47" selection-start-line="190" selection-start-column="42" selection-end-line="190" selection-end-column="47" />
+          <folding>
+            <element signature="e#869#883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1341">
+          <caret line="173" column="32" lean-forward="true" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>

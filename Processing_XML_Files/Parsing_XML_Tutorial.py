@@ -4,11 +4,11 @@
 
     #Reading the file from disk:
 import xml.etree.ElementTree as ET
-tree = ET.parse('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/XML_Files/Pos0_8xml_Before/pos0/tracks_type1.xml')
+tree = ET.parse('/Users/kristinaulicna/Documents/Rotation_2/tracks_type1.xml')
 root = tree.getroot()
 
     #Reading the data as a string:
-"""root = ET.fromstring('/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/XML_Files/Pos0_8xml/pos0/tracks_type1.xml')"""
+"""root = ET.fromstring('/Users/kristinaulicna/Documents/Rotation_2/tracks_type1.xml')"""
 
     #As an 'Element', root has a tag and a dictionary of attributes:
 print ("Root Tag: {}".format(root.tag))

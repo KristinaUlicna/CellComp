@@ -88,7 +88,7 @@ class Track(object):
         return T
 
     def get_neighborhood_attr(self, attr):
-        if not isinstance(attr, basestring):
+        if not isinstance(attr, str):
             raise TypeError('Attribute must be a string')
         return [n[attr] for n in self.neighborhood]
 

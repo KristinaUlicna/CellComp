@@ -36,7 +36,7 @@ options = {}
 
 class ProcessMovies():
     def __init__(self, pos, data_date='17_07_31', type='MDCK_WT_Pure', user='Kristina'):
-        """Class comprised of 2 functions (SegClass & Track) to process time-lapse movies.
+        """Class comprised of 2 functions (SegClass & Tracking) to process time-lapse movies.
 
         Directory structure (path): "/mnt/lowe-sn00/Data/user/type/date/pos/"
         Directory from my Mac: "/Volumes/lowegrp/JobServer/jobs/" (when logged in to the server)
@@ -44,10 +44,13 @@ class ProcessMovies():
         Args:
             pos = position for which you have a brightfield, GFP and/or RFP movie available.
             date = date of the experiment, as stated in Anna's data folder. Set by default to '17_07_31'.
-            type = name of your experiment (the subfolder for better organisation). Set by default to 'MDCK_WT_Pure'.
+            type = name of your experiment (the subfolder/s for better organisation). Set by default to 'MDCK_WT_Pure'.
             user = your first name (capitalised first letter). Set by default to 'Kristina'.
         Return:
-            Creates a text file (.txt) and #TODO:directly submits a '.job' file into JobServer to run.
+            Creates a .job file (.txt) and directly submits it onto JobServer to run.
+        Note:
+            Run the segmentation, i.e. ProcessMovies.SegClass() first.
+            Tracking will not work (raises Exception) if you provide no HDF folder to start with.
         """
 
         self.pos = str(pos)         # the word 'pos' not included!
@@ -70,7 +73,7 @@ class ProcessMovies():
         Args (Boolean; 'False' if only the 'noise' movie is provided):
             Uses 3 .tif files (brightfield, GFP, RFP, which should be stored in the posX folder.
             Supply the noise movies as Channel_posX_noise.tif (e.g. RFP_pos6_noise.tif).
-            I'm only mapping pure populations, so 'RFP_posX_noise.tif' set as default.
+            I'm only mapping pure populations, so 'RFP=False' or 'RFP_posX_noise.tif' set as default.
 
         Return (overall output):
             An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied. """

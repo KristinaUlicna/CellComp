@@ -157,11 +157,11 @@ def FindCellByID(cell_ID):
 
     #TODO: Code works only for four generations! Extend to eight generations, or len(dictionary):
     if FOUND:
-        #print ("Cell #{}; Node #{}; Generation #{}".format(cell_ID, cells_node, generation))
+        print ("Cell #{}; Node #{}; Generation #{}".format(cell_ID, cells_node, generation))
         if cells_node == None or generation == None:
             print ("Cell #{} doesn't appear in the movie / is not tracked.".format(cell_ID))
-    #else:
-    #    print ("Cell #{} was not mapped. Sorry!".format(cell_ID))
+    else:
+        print ("Cell #{} was not mapped. Sorry!".format(cell_ID))
 
     return cell_ID, FOUND, cells_node, generation
 
@@ -186,7 +186,7 @@ FindCellByID(12015)
 FindCellByID(12016)
 print ()
 
-
+"""
 # Explore all cells:
 found_list = []
 node_list = []
@@ -221,3 +221,5 @@ for item in nodes_over2gen:
 
 #TODO: Max cell label? - to know how long I need to iterate over
 #TODO: Access # of cells per tree & number of generations per tree
+
+"""

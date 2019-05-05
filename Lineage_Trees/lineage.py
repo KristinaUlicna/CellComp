@@ -84,7 +84,7 @@ class LineageTreeNode(object):
     def start(self):
         return self.track.n[0]
 
-    @property
+    @property #decorators
     def end(self):
         return self.track.n[-1]
 
