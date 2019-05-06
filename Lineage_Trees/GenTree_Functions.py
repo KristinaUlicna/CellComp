@@ -7,23 +7,28 @@ def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user
         xml_file = (for now) string, absolute directory to the file from which you want the information.
 
     Return:
-        cell_ID, xml_file, node_order, isRoot, isLeaf, frameAppears, frameDisappears, cellcycletime_mins, cellcycletime_hrs, generation, howmanyancestors, howmanychildren
-        all elements are TODO: strings!
+        cell_ID, file_name, node_order, isRoot, isLeaf, frameAppears, frameDisappears,
+            cellcycletime_mins, cellcycletime_hrs, generation, progeny, started_as, ceased_by (all items are strings)
 
     Notes:
         Still plenty of adjustments to make.
         TODO: 'how_much_progeny' = Change these variables to 'member of branch with X generations'
             e.g. cell_ID 11388 is in generation 3 but is a member of 6-generational tree,
             i.e has 3 layers of ancestors and 3 layers of offspring.
-        TODO: If cell ID doesn't exist, print ("Not found!")
-        TODO: Connect to server => change argument from absolute directory to [user, type, date, pos]
         TODO: Logical checks - raise Exceptions!
+
         """
 
-    from lineage import LineageTreeNode, LineageTree, LineageTreePlotter
+    # When processing a long sequence of cell_IDs, print a checkpoint note once in every 100:
+    if cell_ID % 100 == 0:
+        print ("Processing cell_ID {}".format(cell_ID))
+
+    # Choose directory from which you want to import the data in xml_format:
     #xml_file = "/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracks/tracks_type1.xml".format(user, type, data_date, pos)
     xml_file = "/Users/kristinaulicna/Documents/Rotation_2/tracks_type1.xml"    # absolute directory from my Mac
 
+    # Create the Lineage Trees using lineage.py module:
+    from lineage import LineageTreeNode, LineageTree, LineageTreePlotter
     t = LineageTree.from_xml(xml_file)
     trees = t.create()
 
@@ -41,9 +46,11 @@ def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user
     started_as = None
     ceased_by = None
 
+    # Loop through the trees to locate your cell_ID of interest:
     for order, tree in enumerate(trees):
         node = Traverse_Trees(cell_ID=cell_ID, tree=tree)
-        # Remember, 'node' object is the right class - pull out all necessary information:
+
+        # Pull out all necessary information from the 'node' object:
         if node is not None:
                 # Node order in the list of created trees (to be able to index if necessary):
             node_order = order
@@ -86,6 +93,9 @@ def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user
                 ceased_by = 'divided by mitosis'
             if isApoptotic is True and isLeaf is True:
                 ceased_by = 'died by apoptosis'
+
+    if node_order is None:
+        print ("Cell_ID {} not mapped to any LineageTreeNode. The label {} probably doesn't exist.".format(cell_ID, cell_ID))
 
     return cell_ID, file_name, node_order, isRoot, isLeaf, frameAppears, frameDisappears, cellcycletime_mins, cellcycletime_hrs, generation, progeny, started_as, ceased_by
 
@@ -130,6 +140,7 @@ def ReadXMLforClass(cell_ID, xml_file):
     # Inspect the <class> list:
     class_types = list(set(class_list))
     isApoptotic = 'apoptosis' in class_list
+    #TODO: Ask Alan what is <fate> in the xml_file...?
 
     return class_list, class_types, isApoptotic
 
@@ -139,23 +150,23 @@ def PrintDetailsTable(cell_ID_list):
 
     Details:
         cell_ID [0], xml_file [1], node_order [2], isRoot [3], isLeaf [4], frameAppears [5], frameDisappears [6],
-        cellcycletime_mins [7], cellcycletime_hrs [8], generation [9], howmanyancestors [10], howmanychildren [11]
+        cellcycletime_mins [7], cellcycletime_hrs [8], generation [9], progeny [10], started_as [11], ceased_by [12]
     Args:
-        cell_ID_list: list of integers, can also do 'range(start, stop)'
+        cell_ID_list: list of integers, can also do 'range(start, stop)' TODO: How come this not need list(range(start, stop))?
     Return:
         None
         Prints the table in the console.
 
     """
 
-    from texttable import Texttable         # creates simple ASCII tables
-    header = ["Cell_ID", "XML_file", "Node #", "Root?", "Leaf?", "Frm [0]", "Frm [-1]",
-              "CCT [m]", "CCT [h]", "Gen #", "Progeny", "Started_As", "Ceased_By"]
-    cols_align = ["r"] * len(header)
-
-    # Initialise the table:
+    # Initialise the table with the header:
+    from texttable import Texttable  # creates simple ASCII tables
     table = Texttable(max_width=0)
+
+    header = ["Cell_ID", "XML_file", "Node#", "Root?", "Leaf?", "Frm[0]", "Frm[-1]", "CCT[m]", "CCT[h]", "Gen#", "Progeny", "Started_As", "Ceased_By"]
     table.header(header)
+
+    cols_align = ["r"] * len(header)
     table.set_cols_align(cols_align)
 
     # Add individual lines to the growing table, one by one:
@@ -230,12 +241,11 @@ def StoreDetailsFile(cell_ID_list, file_name_suffix=None):
         else:
             not_exist_cell_ID.append(i)
 
-    # Close the file, you are done!
+    # Add list of cell_IDs which do not exist to the end & close the file.
     txt_file.write("\nList of cell_IDs not found in any tree: " + str(not_exist_cell_ID) + "\n")
     txt_file.close()
 
 
-#StoreDetailsFile([103, 1960, 7158, 11388, 11531, 11582, 12015], file_name_suffix='Node_8_Tree')
+StoreDetailsFile([103, 1960, 7158, 11388, 11531, 11582, 12015], file_name_suffix='Node_8_Tree')
 #StoreDetailsFile([11388, 70, 101, 12015, 10864, 103])
-#StoreDetailsFile(list(range(0, 10)), file_name_suffix='First_10_Cells')
-
+#StoreDetailsFile(list(range(0, 13001)), file_name_suffix='All_13000_Cells')
