@@ -1,4 +1,23 @@
-#TODO: Write a function which will write the JOB notepads automatically & submits them onto the server.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                             #
+# ----- Job Script Creator for SegClass & Tracking Jobs ----- #
+#                                                             #
+# ----- Creator :           Kristina ULICNA             ----- #
+#                                                             #
+# ----- Last updated :      13th May 2019               ----- #
+#                                                             #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# ----- Class 'ProcessMovies' with 2 functions 'SegClass' & 'Tracking'
+# to write JOB notepads files & submit them to the server automatically:
+
+import os
+import datetime
+
+# You need to be connected to the server!
+# Server directory absolute path: "/Volumes/lowegrp/JobServer/jobs/"
+print (os.path.exists("/Volumes/lowegrp/JobServer/jobs/"))
 
 """
         Text of the SEGMENTATION & CLASSIFICATION job text file:
@@ -22,20 +41,18 @@ complete = False
 id = Data_2
 user = Kristina
 priority = 99
-time = (2019-04-15)_12-20-00
+time = (2019-05-09)_11-35-00
 lib_path = /home/alan/code/BayesianTracker/
 module = bworker
 func = SERVER_track
 device = CPU
-params = {'path': '/mnt/lowe-sn00/Data/Kristina/MDCK_WT_Pure/17_07_31/pos6/', 'volume':((0,1200),(0,1600),(-1,1),(0,1200)), 'to_track':'GFP'}
+params = {'path': '/mnt/lowe-sn00/Data/Kristina/MDCK_WT_Pure/17_07_31/pos8/', 'volume':((0,1200),(0,1600),(-1,1),(0,1200)), 'to_track':['GFP'], 'config': 'MDCK_config_Kristina.json'}
 options = {}
 """
 
-# You need to be connected to the server!
-# Path: '/Volumes/lowegrp/JobServer/jobs/'
 
 class ProcessMovies():
-    def __init__(self, pos, data_date='17_07_31', type='MDCK_WT_Pure', user='Kristina'):
+    def __init__(self, xml_file=None, pos=8, data_date='17_07_31', exp_type='MDCK_WT_Pure', user='Kristina'):
         """Class comprised of 2 functions (SegClass & Tracking) to process time-lapse movies.
 
         Directory structure (path): "/mnt/lowe-sn00/Data/user/type/date/pos/"
@@ -53,12 +70,19 @@ class ProcessMovies():
             Tracking will not work (raises Exception) if you provide no HDF folder to start with.
         """
 
-        self.pos = str(pos)         # the word 'pos' not included!
-        self.data_date = data_date
-        self.type = type
-        self.user = user
+        if xml_file is not None:
+            xml_file_name = str(xml_file)
+            xml_file_name = xml_file_name.split("/")
+            self.pos = xml_file_name[-3].split('pos')[-1]
+            self.data_date = xml_file_name[-4]
+            self.exp_type = xml_file_name[-5]
+            self.user = xml_file_name[-6]
+        else:
+            self.pos = pos
+            self.data_date = data_date
+            self.exp_type = exp_type
+            self.user = user
 
-        import datetime
         now = datetime.datetime.now()
         time = [str(now.year), str(now.month), str(now.day), str(now.hour), str(now.minute), str(now.second)]
         time = ['0' + item if len(item) < 2 else item for item in time]
@@ -80,7 +104,6 @@ class ProcessMovies():
 
         # Create a .job file:
         job_name = 'JOB_SegClass_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
-        #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
@@ -88,12 +111,12 @@ class ProcessMovies():
         channels = ['BF', 'GFP', 'RFP']
         for order, item in enumerate(movie):
             if item:
-                channels[order] += '_pos' + self.pos + '.tif'
+                channels[order] += '_pos' + str(self.pos) + '.tif'
             else:
-                channels[order] += '_pos' + self.pos + '_noise.tif'
+                channels[order] += '_pos' + str(self.pos) + '_noise.tif'
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/'\
-            .format(str(self.user), str(self.type), str(self.data_date), str(self.pos))
+            .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = f2dafed81fd87a66bf0028a16b1473cd\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
@@ -120,11 +143,10 @@ class ProcessMovies():
         """
 
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
-        import os
         if os.path.isdir('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF' \
-                                 .format(self.user, self.type, self.data_date, self.pos)) is False \
+                                 .format(self.user, self.exp_type, self.data_date, self.pos)) is False \
             or os.path.exists('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF/segmented.hdf5' \
-                                 .format(self.user, self.type, self.data_date, self.pos)) is False :
+                                 .format(self.user, self.exp_type, self.data_date, self.pos)) is False :
             raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied", \
                             "Run the 'SegClass' function first")
 
@@ -141,14 +163,14 @@ class ProcessMovies():
                 del channels[order]
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
-                .format(str(self.user), str(self.type), str(self.data_date), str(self.pos))
+                .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = Data_2\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,1200)), ' \
-                        '"to_track":' + str(channels) +'}\noptions = {}'
+                        '"to_track":' + str(channels) +', "config": "MDCK_config_Kristina.json"}\noptions = {}'
 
         self.job_file.write(string)
         self.job_file.close()

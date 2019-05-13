@@ -1,5 +1,7 @@
 # ----- LineageTree Creator -----
 
+# TODO: Don't throw away - has 'isApoptotic' function in it!
+
 def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user='Kristina'):
     """ Get the details of each cell ID once segmented & tracked.
     Args:
@@ -100,7 +102,7 @@ def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user
     return cell_ID, file_name, node_order, isRoot, isLeaf, frameAppears, frameDisappears, cellcycletime_mins, cellcycletime_hrs, generation, progeny, started_as, ceased_by
 
 
-def Traverse_Trees(cell_ID, tree):        # define the recursive function
+def Traverse_Trees(cell_ID, tree):    # recursive functions: https://www.programiz.com/python-programming/recursion
     if cell_ID == tree.ID:
         return tree
     if tree.leaf is True:
