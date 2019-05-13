@@ -37,7 +37,10 @@ class AnalyseCellIDs():
             if line[0] == 'Cell_ID':
                 header_list = line
             else:
-                line[0] = int(line[0])
+                try:
+                    line[0] = int(line[0])
+                except:
+                    continue
                 line_list.append(line)
 
         # Re-write the file & type the header:
@@ -215,3 +218,6 @@ class AnalyseCellIDs():
         plt.show()
         plt.close()
 
+
+# TODO: Remove those weird lines from the histogram
+# TODO: Find out how to extract which cellIDs are plotted per each bin - explore what those are...

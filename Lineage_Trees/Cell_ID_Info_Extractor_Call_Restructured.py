@@ -8,7 +8,7 @@
 #                                                 #
 # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-from Cell_ID_Info_Extractor_Class import *
+from Cell_ID_Info_Extractor_Class_Restructured import *
 import os
 
 # Call the class for all available movies:
@@ -40,14 +40,10 @@ for folder in server_dir:
 
 
 # Call the class:
-
+"""
 for version in list(range(0, 5)):
-    if txt_file.closed:
-        txt_file = open("/Users/kristinaulicna/Documents/Rotation_2/temporary.txt", 'w')
-    else:
-        GetCellDetails(version=version).IterateTrees()
-
-#TODO: Why can I not iterate over the class calling?
+    GetCellDetails(version=version).IterateTrees()
+"""
 
 
 # Call the class separately:
