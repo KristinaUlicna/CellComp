@@ -56,7 +56,8 @@ class GetCellDetails():
             self.version = str(version)
 
         self.table = Texttable(max_width=0)
-        self.txt_file = open("/Users/kristinaulicna/Documents/Rotation_2/temporary.txt", 'w')
+        #self.txt_file = open("/Users/kristinaulicna/Documents/Rotation_2/temporary.txt", 'w')
+        self.txt_file = "/Users/kristinaulicna/Documents/Rotation_2/temporary.txt"
 
 
     def IterateTrees(self, write_file = True, print_table = False):
@@ -78,6 +79,7 @@ class GetCellDetails():
         trees = t.create()
 
         if write_file is True:
+            txt_file = open(self.txt_file, 'w')
 
             # Initialise the file & write the header:
             header_string = ''
@@ -85,7 +87,8 @@ class GetCellDetails():
                 header_string += item + "\t"
             header_string = header_string[:-1]
             header_string += "\n"
-            self.txt_file.write(header_string)
+            txt_file.write(header_string)
+            txt_file.close()
 
             # Loop through the trees:
             for node_order, tree in enumerate(trees):
@@ -93,21 +96,19 @@ class GetCellDetails():
 
             # Rename the file, close it & print the time of processing:
             if self.server_ON:
-                #TODO: mkdir
-                server_dir = "/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracks/analysis/" \
+                server_dir = "/Volumes/lowegrp/Data/{}/{}/{}/pos{}/analysis/" \
                     .format(self.user, self.exp_type, self.data_date, self.pos)
                 if not os.path.exists(server_dir):
                     os.makedirs(server_dir)
-                new_file_name = open(server_dir + "/cellIDdetails.txt", "w")
-
+                new_file_name = server_dir + "/cellIDdetails.txt"
             else:
                 new_file_name = "/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Tracker_Updates_XML_Files/" \
                                 "ver{}/cellIDinfo_ver{}.txt".format(self.version, self.version)
 
-            old_file_name = str(self.txt_file).split("'")[1]
+            old_file_name = str(self.txt_file)
             shutil.move(old_file_name, new_file_name)
 
-        self.txt_file.close()
+        txt_file.close()
 
 
 def Traverse_Trees(tree, write_file, print_table):        # define the recursive function

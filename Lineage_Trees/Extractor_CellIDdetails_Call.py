@@ -12,7 +12,7 @@ from Cell_ID_Info_Extractor_Class_Restructured import *
 import os
 
 # Call the class for all available movies:
-"""
+
 dir_exp_type = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/"
 server_dir = os.listdir(dir_exp_type)
 for folder in server_dir:
@@ -33,10 +33,9 @@ for folder in server_dir:
                         for file in dir_xml:
                             if file == "tracks_type1.xml":
                                 xml_file = dir_tracks + file
-                                #print (xml_file)
                                 GetCellDetails(xml_file=xml_file).IterateTrees()
                                 print ("XML file {} done!".format(xml_file))
-"""
+
 
 
 # Call the class:
@@ -47,4 +46,5 @@ for version in list(range(0, 5)):
 
 
 # Call the class separately:
-GetCellDetails(version=4).IterateTrees()
+
+#GetCellDetails(version=4).IterateTrees()

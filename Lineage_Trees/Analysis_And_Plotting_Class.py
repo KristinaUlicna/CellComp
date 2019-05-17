@@ -1,69 +1,35 @@
-# # # # # # # # # # # # # # # # # # # # # # # # # #
-#                                                 #
-# ----- Tracked CellID Information Analysis ----- #
-#                                                 #
-# ----- Creator :     Kristina ULICNA       ----- #
-#                                                 #
-# ----- Date :        10th May 2019         ----- #
-#                                                 #
-# # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # #
+#                                               #
+# ----- All Tracked CellID Info Analysis  ----- #
+#                                               #
+# ----- Creator :        Kristina ULICNA  ----- #
+#                                               #
+# ----- Last updated :   17th May 2019    ----- #
+#                                               #
+# # # # # # # # # # # # # # # # # # # # # # # # #
 
 
 # Import all the necessary libraries:
-from operator import itemgetter
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
-class AnalyseCellIDs():
+
+class AnalyseAllCellIDs():
 
     def __init__(self, txt_file):
+        """ Args:   txt_file (string)   ->   absolute path to a 'cellIDdetails_sorted.txt' file. """
 
+        directory = txt_file.split("/")[:-1]
+        directory = '/'.join(directory) + "/movie/"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        self.directory = directory
         self.txt_file = txt_file
-        directory = str(self.txt_file).split("/")
-        directory = directory[:-1]
-        self.directory = '/'.join(directory) + "/"
 
 
-    def SortCellIDFile(self):
-        """ Sorts the file by the first column -> int(line[0]) <- in numerical order by overwriting the file.
-            Args:       Insert the file name (end with .txt) with absolute directory.
-            Details:    ["Cell_ID", "Frm[0]", "Frm[-1]", "CCT[m]", "CCT[h]", "Gen_#", "IsRoot", "IsLeaf"]."""
-
-        # Read the txt_file & divide into header & lines to be sorted:
-        header_list = []
-        line_list = []
-        for line in open(self.txt_file, 'r'):
-            line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID':
-                header_list = line
-            else:
-                try:
-                    line[0] = int(line[0])
-                except:
-                    continue
-                line_list.append(line)
-
-        # Re-write the file & type the header:
-        file = open(self.txt_file, 'w')
-        header_string = ''
-        for item in header_list:
-            header_string += item + "\t"
-        header_string = header_string[:-1]
-        header_string += "\n"
-        file.write(header_string)
-
-        # Sort the lines numerically according to the cell_ID, write & close:
-        for line in sorted(line_list, key=itemgetter(0)):
-            string = ''
-            for item in line:
-                string += str(item) + "\t"
-            string = string[:-1]
-            string += "\n"
-            file.write(string)
-        file.close()
-
-
-    def PlotCellIDLifeTime(self):
+    def PlotCellIDLifeTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
 
         cell_ID_label_list = []
@@ -93,11 +59,13 @@ class AnalyseCellIDs():
         plt.ylabel('Cell ID label')
         plt.title('Lifetime of all cell_ID labels')
         plt.savefig(self.directory + "Plot_Cell_ID_Label_LifeTime.jpeg", bbox_inches="tight")
-        plt.show()
+
+        if show is True:
+            plt.show()
         plt.close()
 
 
-    def PlotCellIDsPerFrame(self):
+    def PlotCellIDsPerFrame(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
 
         cell_ID_frame_list = []
@@ -126,11 +94,13 @@ class AnalyseCellIDs():
         plt.ylabel('Cell count (total cell_IDs)')
         plt.title('Cell Count per Frame (Count of Cell_ID Labels)')
         plt.savefig(self.directory + "Plot_Cell_ID_Count_Per_Frame.jpeg", bbox_inches="tight")
-        plt.show()
+
+        if show is True:
+            plt.show()
         plt.close()
 
 
-    def PlotCellCycleAbsoluteTime(self):
+    def PlotCellCycleAbsoluteTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
 
         x_axis_3 = []
@@ -141,23 +111,27 @@ class AnalyseCellIDs():
                 continue
             x_axis_3.append(int(line[1]) * 4)
             y_axis_3.append(int(line[3]))
-        #self.txt_file.close()
 
-        plt.scatter(x_axis_3, y_axis_3, alpha=0.3)
+        plt.scatter(x_axis_3, y_axis_3, alpha=0.3, c="forestgreen")
         plt.xlim(-200, 5000)
         plt.xticks(list(range(0, 4801, 400)))
         plt.xlabel("Absolute time [mins]")
         plt.ylabel("Cell cycle time [mins]")
         plt.title("Absolute time vs Cell cycle duration")
         plt.savefig(self.directory + "Absolute_Time_per_Cell_Cycle_Time.jpeg", bbox_inches="tight")
-        plt.show()
+
+        if show is True:
+            plt.show()
         plt.close()
 
 
-    def PlotHist_CellCycleDuration(self, limit=80):
+    def PlotHist_CellCycleDuration(self, limit=80, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs.
-            Limit set to 80 by default = whole time of the movie in hours.
-            Automatically incorporates
+        Args:
+            Limit   -> (integer; set to 80 by default)      = whole time of the movie in hours.
+        Return:
+            n_per_bin, n_per_bin_length     = number of elements per each bin, number of bins
+
         """
 
         if int(limit) > 80:
@@ -194,8 +168,8 @@ class AnalyseCellIDs():
         ax1.set_title("Cell Cycle Duration of Cell_IDs with division time below {} hours".format(limit))
 
         # Y-axis: Find y-axis maximum to define lower limit of y-axis
-        y, _, _ = plt.hist(cct_hrs)
-        ax1.set_ylim(int((y.max() * -1) / 10))      # y_lim = -10% of max y-axis value
+        n_per_bin, bin_edges, patches = plt.hist(cct_hrs)
+        ax1.set_ylim(int((n_per_bin.max() * -1) / 10))      # y_lim = -10% of max y-axis value
         ax1.set_ylabel("Cell ID count")
 
         # X-axis: Hour scale:
@@ -215,9 +189,16 @@ class AnalyseCellIDs():
 
         # Save, show & close:
         plt.savefig(self.directory + "Hist_Cell_Cycle_Duration_{}hours.jpeg".format(limit), bbox_inches="tight")
-        plt.show()
+        if show is True:
+            plt.show()
         plt.close()
 
+        # Return list of elements per each bin:
+        n_per_bin = [int(item) for item in n_per_bin.tolist()]
+        return n_per_bin, len(n_per_bin)
 
-# TODO: Remove those weird lines from the histogram
+
+# TODO: Remove those weird lines from the histogram.
 # TODO: Find out how to extract which cellIDs are plotted per each bin - explore what those are...
+# TODO: Create 10 min increments on minute x-axis.
+
