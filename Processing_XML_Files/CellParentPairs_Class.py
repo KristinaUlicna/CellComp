@@ -1,6 +1,7 @@
 # Define function to spit out trees:
 
-class CellParentPairs():
+class CellParentPairs(object):
+
     def __init__(self, pos, data_date):
         """ Get pairs of cells which were detected to have a parent.
             Build-in checks for parent ID < cell ID (else: Warning!)
@@ -18,6 +19,7 @@ class CellParentPairs():
         self.tree = ET.parse("/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/{}/pos{}/HDF/tracks_type1.xml".format(data_date, pos))
         #self.tree = ET.parse("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/tracks_type1.xml")
         self.root = self.tree.getroot()
+
 
     def FindCellParents(self):
         """ Get pairs of cells which were detected to have a parent. Build-in check for parent ID < cell ID (else: Warning!)

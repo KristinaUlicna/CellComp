@@ -34,6 +34,3 @@ def FilterRootLeafCellIDs(txt_file):
 
     # Close the newly-written, filtered file:
     filtered_file.close()
-
-
-FilterRootLeafCellIDs("/Users/kristinaulicna/Documents/Rotation_2/cellIDdetails_sorted.txt")

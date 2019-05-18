@@ -11,11 +11,14 @@
 
 # Import all the necessary libraries:
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 import numpy as np
+import math
 import os
 
 
-class AnalyseAllCellIDs():
+class AnalyseAllCellIDs(object):
+    """ """
 
     def __init__(self, txt_file):
         """ Args:   txt_file (string)   ->   absolute path to a 'cellIDdetails_sorted.txt' file. """
@@ -55,6 +58,8 @@ class AnalyseAllCellIDs():
         # Plot the thing:
         for mini_x, mini_y in zip(x_axis, y_axis):
             plt.plot(mini_x, mini_y)
+        plt.xticks(np.arange(0, 1200 + 1, step=200))
+        plt.xlim(-50, 1250)
         plt.xlabel('Frame number')
         plt.ylabel('Cell ID label')
         plt.title('Lifetime of all cell_ID labels')
@@ -66,7 +71,11 @@ class AnalyseAllCellIDs():
 
 
     def PlotCellIDsPerFrame(self, show=False):
-        """ Read the sorted .txt file with cell_ID details to plot graphs. """
+        """ Read the sorted .txt file with cell_ID details to plot graphs.
+
+            # Output 2 lists:
+        # cell_ID_frame_list -> [[0, 1, 2, ...], [0, 1, 2, ...], ...]
+        # concat_frame_list -> [0, 1, 2, ..., 0, 1, 2, ..., ...] """
 
         cell_ID_frame_list = []
 
@@ -89,7 +98,8 @@ class AnalyseAllCellIDs():
 
         # Plot the thing:
         plt.scatter(x_axis, y_axis, c="salmon", alpha=0.5)
-        plt.xticks(np.arange(0, 1200 + 1, step=300))
+        plt.xlim(-100, 1300)
+        plt.xticks(np.arange(0, 1200 + 1, step=200))
         plt.xlabel('Frame number')
         plt.ylabel('Cell count (total cell_IDs)')
         plt.title('Cell Count per Frame (Count of Cell_ID Labels)')
@@ -116,6 +126,8 @@ class AnalyseAllCellIDs():
         plt.xlim(-200, 5000)
         plt.xticks(list(range(0, 4801, 400)))
         plt.xlabel("Absolute time [mins]")
+        plt.ylim(-200, 5000)
+        plt.yticks(list(range(0, 4801, 400)))
         plt.ylabel("Cell cycle time [mins]")
         plt.title("Absolute time vs Cell cycle duration")
         plt.savefig(self.directory + "Absolute_Time_per_Cell_Cycle_Time.jpeg", bbox_inches="tight")
@@ -150,27 +162,34 @@ class AnalyseAllCellIDs():
                     if float(line[4]) <= float(limit):
                         cct_hrs.append(float(line[4]))
 
+        # Bins definition:
+        # TODO: define the bins edges!
+        #bins = int(math.ceil(max(sum(cct_hrs, [])) / 5.0)) * 5
+        #bin_edges = list(range(0, bins + 1, 1))
 
         # Set axes ticks according to the limit:
-        if limit <= 2:
-            ticks_hrs = list(range(0, int(limit) + 1))
+        if limit > 5:
+            ticks_hrs = list(range(0, int(limit) + 1, int(int(limit) / 10)))
+            ticks_min = [int(tick) * 60 for tick in ticks_hrs]
         else:
-            ticks_hrs = list(range(0, int(limit) + 1, int(int(limit)/10)))
-        ticks_min = [int(tick) * 60 for tick in ticks_hrs]
+            ticks_hrs = list(range(0, int(limit) + 1))
+            ticks_min = [int(tick) * 60 for tick in ticks_hrs]
+            ticks_min = list(range(ticks_min[0], ticks_min[-1] + 1, 20))
 
         # Plot the thing:
         fig = plt.figure()
         fig.subplots_adjust(bottom=0.2)
-        ax1 = fig.add_subplot(111)
-        ax2 = ax1.twiny()
 
-        ax1.hist(cct_hrs)
+        ax1 = fig.add_subplot(111)
+        n_per_bin, _, _ = ax1.hist(cct_hrs, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
+        print (n_per_bin)
+        print (bin_edges)
         ax1.set_title("Cell Cycle Duration of Cell_IDs with division time below {} hours".format(limit))
 
         # Y-axis: Find y-axis maximum to define lower limit of y-axis
-        n_per_bin, bin_edges, patches = plt.hist(cct_hrs)
-        ax1.set_ylim(int((n_per_bin.max() * -1) / 10))      # y_lim = -10% of max y-axis value
         ax1.set_ylabel("Cell ID count")
+        ax1.set_ylim((n_per_bin.max() * -1) / 10)       # y_lim = -10% of max y-axis value
+        ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
 
         # X-axis: Hour scale:
         tick_limit = limit / 20
@@ -179,10 +198,12 @@ class AnalyseAllCellIDs():
         ax1.set_xlabel("Cell Cycle Time [hours]")
 
         # X-axis: Minute scale:
+        ax2 = ax1.twiny()
         ax2.set_xlim(ticks_min[0] - tick_limit * 60, ticks_min[-1] + tick_limit * 60)
         ax2.set_xticks(ticks_min)
         ax2.set_xlabel("Cell Cycle Time [mins]")
 
+        # Move twinned axis ticks and label from top to bottom & offset the twin axis below the host:
         ax2.xaxis.set_ticks_position("bottom")
         ax2.xaxis.set_label_position("bottom")
         ax2.spines["bottom"].set_position(("axes", -0.15))
@@ -196,9 +217,3 @@ class AnalyseAllCellIDs():
         # Return list of elements per each bin:
         n_per_bin = [int(item) for item in n_per_bin.tolist()]
         return n_per_bin, len(n_per_bin)
-
-
-# TODO: Remove those weird lines from the histogram.
-# TODO: Find out how to extract which cellIDs are plotted per each bin - explore what those are...
-# TODO: Create 10 min increments on minute x-axis.
-

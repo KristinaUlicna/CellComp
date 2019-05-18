@@ -19,7 +19,7 @@ import time
 start_time = time.process_time()
 
 
-class GetCellDetails():
+class GetCellDetails(object):
     """ Store relevant details of each cell_ID in the xml_file (=output of tracking & segmentation with classification).
         Uses recursive function to iterate over trees created using lineage.py module.
         Relevant cell_ID details which are processed are listed in the 'header' variable.
