@@ -162,28 +162,24 @@ class AnalyseAllCellIDs(object):
                     if float(line[4]) <= float(limit):
                         cct_hrs.append(float(line[4]))
 
-        # Bins definition:
-        # TODO: define the bins edges!
-        #bins = int(math.ceil(max(sum(cct_hrs, [])) / 5.0)) * 5
-        #bin_edges = list(range(0, bins + 1, 1))
-
-        # Set axes ticks according to the limit:
+        # Define bin edges & set axes ticks according to the limit:
         if limit > 5:
             ticks_hrs = list(range(0, int(limit) + 1, int(int(limit) / 10)))
             ticks_min = [int(tick) * 60 for tick in ticks_hrs]
+            bin_edges = list(range(0, limit + 1, int(limit / 20)))
         else:
             ticks_hrs = list(range(0, int(limit) + 1))
             ticks_min = [int(tick) * 60 for tick in ticks_hrs]
             ticks_min = list(range(ticks_min[0], ticks_min[-1] + 1, 20))
+            bin_edges = list(range(0, limit * 60 + 1, int(limit * 60 / 15)))
+            bin_edges = [item / 60 for item in bin_edges]
 
         # Plot the thing:
         fig = plt.figure()
         fig.subplots_adjust(bottom=0.2)
 
         ax1 = fig.add_subplot(111)
-        n_per_bin, _, _ = ax1.hist(cct_hrs, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
-        print (n_per_bin)
-        print (bin_edges)
+        n_per_bin, _, _ = ax1.hist(cct_hrs, bins=bin_edges, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
         ax1.set_title("Cell Cycle Duration of Cell_IDs with division time below {} hours".format(limit))
 
         # Y-axis: Find y-axis maximum to define lower limit of y-axis

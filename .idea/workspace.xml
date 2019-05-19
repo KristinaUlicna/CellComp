@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_IDs_Analysis_OTHER/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Processing_XML_Files/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Script.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Absolute_Time_Vs_Cell_Cycle.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/CellCycleTime_Histogram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Cell_Count_per_Frame.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extract_Histogram_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis_OTHER/Extract_Histogram_Info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Find_Max_Frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis_OTHER/Find_Max_Frame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Probability_Histograms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis_OTHER/Probability_Histograms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Sort_File_by_CellID.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Analysis_And_Plotting_Call.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Analysis_And_Plotting_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Extractor_CellIDdetails_Call.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Extractor_CellIDdetails_withTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_withTable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Filter_Roots_and_Leaves.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Filter_Root_Leaf_CellIDs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/GenTree_Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/GenTree_Plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Maxi_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Server_Movies_Paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Server_Movies_Paths.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/Sort_CellIDs_Numerically.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Sort_CellIDs_Numerically.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/btypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/btypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/lineage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/lineage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lineage_Trees/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Lineage_Trees/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/CellParentPairs_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Processing_XML_Files/CellParentPairs_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +22,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Class.coverage" NAME="Generation_Tree_by_ID_Class Coverage Results" MODIFIED="1556876714620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call_Reconstructed.coverage" NAME="Cell_ID_Info_Extractor_Call_Reconstructed Coverage Results" MODIFIED="1557828816939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Fun_Generations.coverage" NAME="Fun_Generations Coverage Results" MODIFIED="1554297090479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$ANOVA_Generations_Function.coverage" NAME="ANOVA_Generations_Function Coverage Results" MODIFIED="1558287168709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_with_file.coverage" NAME="Help_with_file Coverage Results" MODIFIED="1557825221675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Call_Fun_Lineage.coverage" NAME="Call_Fun_Lineage Coverage Results" MODIFIED="1554203106778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call_Restructured.coverage" NAME="Cell_ID_Info_Extractor_Call_Restructured Coverage Results" MODIFIED="1557822762245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
@@ -60,7 +33,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Help.coverage" NAME="Generation_Tree_by_ID_Help Coverage Results" MODIFIED="1556813339882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Final.coverage" NAME="GenTree_Call_Final Coverage Results" MODIFIED="1557004905474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_2.coverage" NAME="Help_2 Coverage Results" MODIFIED="1554294009953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1558219960175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1558277187732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$JobScripts_ProcessMovies_Call.coverage" NAME="JobScripts_ProcessMovies_Call Coverage Results" MODIFIED="1556809020484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions_Call.coverage" NAME="GenTree_Functions_Call Coverage Results" MODIFIED="1557005923040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Sort_File_by_CellID.coverage" NAME="Sort_File_by_CellID Coverage Results" MODIFIED="1557405593022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
@@ -92,6 +65,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$CellCycleTime_Histogram.coverage" NAME="CellCycleTime_Histogram Coverage Results" MODIFIED="1557406821635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call.coverage" NAME="Cell_ID_Info_Extractor_Call Coverage Results" MODIFIED="1557766658784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_with_Recursion.coverage" NAME="Help_with_Recursion Coverage Results" MODIFIED="1557224729045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Merge_CellID_Filtered_Files.coverage" NAME="Merge_CellID_Filtered_Files Coverage Results" MODIFIED="1558281429828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree.coverage" NAME="Generation_Tree Coverage Results" MODIFIED="1556724966188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Open_XML_file.coverage" NAME="Open_XML_file Coverage Results" MODIFIED="1554826335294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
   </component>
@@ -130,25 +104,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="3" />
-          <entry key="py" value="224" />
+          <entry key="py" value="231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="3" />
-          <entry key="Python" value="224" />
+          <entry key="Python" value="231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="376" />
-          <entry key="py" value="70732" />
+          <entry key="dummy" value="410" />
+          <entry key="py" value="75962" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="376" />
-          <entry key="Python" value="70730" />
+          <entry key="PLAIN_TEXT" value="410" />
+          <entry key="Python" value="75960" />
           <entry key="SQL" value="2" />
         </counts>
       </usages-collector>
@@ -156,11 +130,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+            <state relative-caret-position="573">
+              <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
               <folding>
                 <element signature="e#490#521#0" expanded="true" />
               </folding>
@@ -169,21 +143,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Help.py">
+        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="1080">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+              <folding>
+                <element signature="e#114#145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+            <state relative-caret-position="288">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
-                <element signature="e#114#145#0" expanded="true" />
+                <element signature="e#140#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2025">
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
+              <folding>
+                <element signature="e#97#106#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,9 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lineage_Trees/Absolute_Time_Vs_Cell_Cycle.py" />
-        <option value="$PROJECT_DIR$/Lineage_Trees/CellCycleTime_Histogram.py" />
-        <option value="$PROJECT_DIR$/Lineage_Trees/Probability_Histograms.py" />
         <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_FINAL.py" />
         <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Class_Efficient.py" />
         <option value="$PROJECT_DIR$/Lineage_Trees/GenTree_Class_Call.py" />
@@ -291,6 +277,9 @@
         <option value="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" />
         <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Help.py" />
         <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" />
+        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Merge_CellID_Filtered_Files.py" />
+        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations.py" />
+        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py" />
       </list>
     </option>
   </component>
@@ -376,7 +365,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Help">
+  <component name="RunManager" selected="Python.ANOVA_Generations_Function">
+    <configuration name="ANOVA_Generations_Function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Cycle_Duration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Analysis_And_Plotting_Class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -391,28 +402,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Filter_Roots_and_Leaves" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Server_And_Movies" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Whole_Movie_Check_Plots/Filter_Root_Leaf_CellIDs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -465,7 +454,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Sort_CellIDs_Numerically" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Merge_CellID_Filtered_Files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -473,12 +462,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Server_And_Movies" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Cycle_Duration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Whole_Movie_Check_Plots/Sort_CellIDs_Numerically.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -488,19 +477,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Filter_Roots_and_Leaves" />
-      <item itemvalue="Python.Sort_CellIDs_Numerically" />
       <item itemvalue="Python.Maxi_Analysis" />
       <item itemvalue="Python.Analysis_And_Plotting_Class" />
       <item itemvalue="Python.Help" />
+      <item itemvalue="Python.Merge_CellID_Filtered_Files" />
+      <item itemvalue="Python.ANOVA_Generations_Function" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ANOVA_Generations_Function" />
+        <item itemvalue="Python.Merge_CellID_Filtered_Files" />
         <item itemvalue="Python.Help" />
         <item itemvalue="Python.Maxi_Analysis" />
         <item itemvalue="Python.Analysis_And_Plotting_Class" />
-        <item itemvalue="Python.Filter_Roots_and_Leaves" />
-        <item itemvalue="Python.Sort_CellIDs_Numerically" />
       </list>
     </recent_temporary>
   </component>
@@ -553,8 +542,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lineage_Trees/Cell_Count_per_Frame.py" />
-    <entry file="file://$PROJECT_DIR$/Lineage_Trees/CellCycleTime_Histogram.py" />
     <entry file="file://$PROJECT_DIR$/Lineage_Trees/Sort_File_by_CellID.py" />
     <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_FINAL.py" />
     <entry file="file://$PROJECT_DIR$/Lineage_Trees/GenTree_Class_Efficient.py" />
@@ -682,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Sort_CellIDs_Numerically.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_withTable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -723,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Call.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -750,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Filter_Root_Leaf_CellIDs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Server_Movies_Paths.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-321">
@@ -771,29 +737,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Help.py">
+    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="878">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py">
+    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Sort_CellIDs_Numerically.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
-          <folding>
-            <element signature="e#490#521#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-201">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Filter_Root_Leaf_CellIDs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+        <state relative-caret-position="1080">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
           <folding>
             <element signature="e#114#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#140#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2025">
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#97#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="e#490#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
