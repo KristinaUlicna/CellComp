@@ -8,13 +8,14 @@ from Cell_IDs_Analysis.Extractor_CellIDdetails_Class import GetCellDetails
 from Whole_Movie_Check_Plots.Sort_CellIDs_Numerically import SortCellIDFile
 from Whole_Movie_Check_Plots.Filter_Root_Leaf_CellIDs import FilterRootLeafCellIDs
 from Whole_Movie_Check_Plots.Tracking_Plots_Class import AnalyseAllCellIDs
+from Cell_Cycle_Duration.Plot_CC_Duration_Hist import *
 
 import time
 start_time = time.process_time()
 
 
 # Iterate through all movies:
-xml_file_list, txt_file_list = GetMovieFilesPaths()
+xml_file_list, txt_file_list = GetMovieFilesPaths(exp_type="MDCK_WT_Pure")
 
 
 # Extract cell_ID details by iterating trees:
@@ -37,20 +38,40 @@ for txt_file in txt_file_list:
 """
 for sorted_file in txt_file_list:
     sorted_file = sorted_file.replace("raw", "sorted")
-    print ("Sorted file (input): {}".format(sorted_file))
+    print ("Filtering file (input): {}".format(sorted_file))
     FilterRootLeafCellIDs(txt_file=sorted_file)
-    print("Sorted file processed in {} seconds".format(round(time.process_time() - start_time, 2)))
+    print("Filtered file processed in {} seconds".format(round(time.process_time() - start_time, 2)))
 """
 
 # Do the sanity check for all the movies:
-
+"""
 for sorted_file in txt_file_list:
     sorted_file = sorted_file.replace("raw", "sorted")
-    print ("Sorted file (input): {}".format(sorted_file))
+    print ("Plotting movie graphs for (input): {}".format(sorted_file))
     call = AnalyseAllCellIDs(txt_file=sorted_file)
     call.PlotCellIDLifeTime()
     call.PlotCellIDsPerFrame()
     call.PlotCellCycleAbsoluteTime()
-    for i in [80, 40, 20, 5, 2]:
+    for i in [80, 40, 20, 5]:
         call.PlotHist_CellCycleDuration(limit=i)
-    print("Sorted file processed in {} seconds".format(round(time.process_time() - start_time, 2)))
+    print("Plotting movie graphs done in {} seconds".format(round(time.process_time() - start_time, 2)))
+"""
+
+# Plot stacked histograms for all generations captured per movie:
+"""
+for filtered_file in txt_file_list:
+    filtered_file = filtered_file.replace("raw", "filtered")
+    print("Filtered file (input): {}".format(filtered_file))
+    try:
+        # Some files are empty so nothing can be plotted - prevent printing an error message:
+        PlotHistGenerationCCT(txt_file=filtered_file, show=True)
+    except:
+        print ("File {} could not be processed!".format(filtered_file))
+    print("Plotting generational histogram took {} seconds".format(round(time.process_time() - start_time, 2)))
+"""
+
+# Plot stacked histograms for all generations in ALL movies at once:
+"""
+PlotHistGenerationCCT("/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/cellIDdetails_merged.txt", show=True)
+
+"""

@@ -12,6 +12,7 @@
 # Import all the necessary libraries:
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
+import statistics as stats
 import numpy as np
 import math
 import os
@@ -109,6 +110,9 @@ class AnalyseAllCellIDs(object):
             plt.show()
         plt.close()
 
+        return x_axis, y_axis
+        # TODO: Plot an 'ideal' line into the graph?
+
 
     def PlotCellCycleAbsoluteTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
@@ -182,6 +186,17 @@ class AnalyseAllCellIDs(object):
         n_per_bin, _, _ = ax1.hist(cct_hrs, bins=bin_edges, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
         ax1.set_title("Cell Cycle Duration of Cell_IDs with division time below {} hours".format(limit))
 
+        # Visualise the mean & standard deviations:
+        if len(cct_hrs) <= 2:
+            mean, std = 0, 0
+        else:
+            mean = round(stats.mean(cct_hrs), 2)
+            std = round(stats.stdev(cct_hrs), 2)
+
+        ax1.axvline(mean, color='gold', linestyle='dashed', linewidth=1.5, label="Mean Gen #1")
+        ax1.axvline(mean + std, color='gold', linestyle='dashed', linewidth=1.0)
+        ax1.axvline(mean - std, color='gold', linestyle='dashed', linewidth=1.0)
+
         # Y-axis: Find y-axis maximum to define lower limit of y-axis
         ax1.set_ylabel("Cell ID count")
         ax1.set_ylim((n_per_bin.max() * -1) / 10)       # y_lim = -10% of max y-axis value
@@ -210,6 +225,4 @@ class AnalyseAllCellIDs(object):
             plt.show()
         plt.close()
 
-        # Return list of elements per each bin:
-        n_per_bin = [int(item) for item in n_per_bin.tolist()]
-        return n_per_bin, len(n_per_bin)
+        return mean, std

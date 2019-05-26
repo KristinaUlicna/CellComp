@@ -22,7 +22,10 @@ __email__ = "a.lowe@ucl.ac.uk"
 
 FATE_APOPTOSIS = 5
 
-import tracker
+import sys
+sys.path.append("../")
+
+from Sequitr_Lineage_Trees import tracker
 
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects

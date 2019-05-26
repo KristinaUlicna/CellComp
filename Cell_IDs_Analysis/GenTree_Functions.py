@@ -1,5 +1,10 @@
 # ----- LineageTree Creator -----
 
+import sys
+sys.path.append("../")
+from Sequitr_Lineage_Trees.lineage import LineageTreeNode, LineageTree, LineageTreePlotter
+
+
 # TODO: Don't throw away - has 'isApoptotic' function in it!
 
 def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user='Kristina'):
@@ -30,7 +35,6 @@ def GetCellDetails(cell_ID, pos, data_date='17_07_31', type='MDCK_WT_Pure', user
     xml_file = "/Users/kristinaulicna/Documents/Rotation_2/tracks_type1.xml"    # absolute directory from my Mac
 
     # Create the Lineage Trees using lineage.py module:
-    from lineage import LineageTreeNode, LineageTree, LineageTreePlotter
     t = LineageTree.from_xml(xml_file)
     trees = t.create()
 
@@ -248,6 +252,10 @@ def StoreDetailsFile(cell_ID_list, file_name_suffix=None):
     txt_file.close()
 
 
-StoreDetailsFile([103, 1960, 7158, 11388, 11531, 11582, 12015], file_name_suffix='Node_8_Tree')
-#StoreDetailsFile([11388, 70, 101, 12015, 10864, 103])
-#StoreDetailsFile(list(range(0, 13001)), file_name_suffix='All_13000_Cells')
+
+# Call the function for cellIDs which you identified as left outliers:
+outliers = ['1804', '1913', '2553', '2654', '2655', '3013', '3022', '3040', '3073', '3158', '3329', '3467', '3813']
+outliers = [int(item) for item in outliers]
+print (outliers)
+
+StoreDetailsFile(outliers, file_name_suffix='LEFT_OUTLIERS')

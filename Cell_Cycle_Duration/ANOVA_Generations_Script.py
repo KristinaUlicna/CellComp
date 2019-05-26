@@ -8,8 +8,9 @@ sys.path.append("../")
 
 from scipy import stats
 from Cell_Cycle_Duration.Plot_CC_Duration_Hist import CreateGenerationList
+from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
 
-
+"""
 # Call the function & import the generation_list per each file:
 large_list = []
 directory = "/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Tracker_Updates_XML_Files/"
@@ -21,7 +22,23 @@ for ver_folder in sorted(os.listdir(directory)):        # !!! sorted() so that i
 
 print ("THESE ARE _SORTED.TXT FILES, NOT FILTERED. THAT'S WHY SO MANY CELLS!")
 print ("Large List: len {} -> {}".format(len(large_list), large_list))
+"""
 
+_, txt_file_list = GetMovieFilesPaths(exp_type = "MDCK_WT_Pure")
+
+large_list = []
+for file in sorted(txt_file_list):
+    file = file.replace("raw", "filtered")
+    print ("Processing file: {}".format(file))
+    generation_list = CreateGenerationList(txt_file=file, print_stats=False)
+    large_list.append(generation_list)
+
+print ("Large List: len = {} -> {}".format(len(large_list), large_list))
+
+# Understand your large_list:
+for file_order, single_file in enumerate(large_list):
+    for gen_order, single_generation in enumerate(single_file):
+        print ("File #{} -> Generation #{} -> {}".format(file_order + 1, gen_order + 1, single_generation))
 
 
 # ----- OPTION : Run independent t-test
@@ -33,10 +50,11 @@ print ("Large List: len {} -> {}".format(len(large_list), large_list))
 # ----- OPTION : Run ANOVA for each generation:
 # (from https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html)
 # TODO: This is hard-coded, do soft-coding instead!
-
+"""
 _, p_value = stats.f_oneway(large_list[0][0], large_list[1][0], large_list[2][0], large_list[3][0], large_list[4][0])
 
 print ("ANOVA Generation #1 -> p-value: {}".format(float(p_value)))
 print ("Are the data significantly different?"
        "\n\tns (P > 0.05) : {}\n\t* (P ≤ 0.05): {}\n\t** (P ≤ 0.01) : {}\n\t*** (P ≤ 0.001) : {}\n\t**** (P ≤ 0.0001) : {}" \
             .format(p_value >= 0.05, p_value <= 0.05, p_value <= 0.01, p_value <= 0.001, p_value <= 0.0001))
+"""

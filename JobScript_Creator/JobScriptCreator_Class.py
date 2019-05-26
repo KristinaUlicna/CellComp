@@ -8,7 +8,6 @@
 #                                                             #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-
 # ----- Class 'ProcessMovies' with 2 functions 'SegClass' & 'Tracking'
 # to write JOB notepads files & submit them to the server automatically:
 
@@ -17,7 +16,7 @@ import datetime
 
 # You need to be connected to the server!
 # Server directory absolute path: "/Volumes/lowegrp/JobServer/jobs/"
-print (os.path.exists("/Volumes/lowegrp/JobServer/jobs/"))
+print ("Does server path exist? {}".format(os.path.exists("/Volumes/lowegrp/JobServer/jobs/")))
 
 """
         Text of the SEGMENTATION & CLASSIFICATION job text file:
@@ -53,21 +52,31 @@ options = {}
 
 class ProcessMovies():
     def __init__(self, xml_file=None, pos=8, data_date='17_07_31', exp_type='MDCK_WT_Pure', user='Kristina'):
-        """Class comprised of 2 functions (SegClass & Tracking) to process time-lapse movies.
+        """ Class comprised of 2 functions (SegClass & Tracking) to process time-lapse movies.
+
+        TODO: Create arg 'exp_type' with options: "MDCK_WT_Pure", "MDCK_Sc_Tet-_Pure", "MDCK_Sc_Tet+_Pure"
+              Depending on this arg, the server will iterate all movies in the directory.
+              Also, it will change the volume in the Tracking function => 1200 frames for 'WT', 1400 frames for 'Sc'
 
         Directory structure (path): "/mnt/lowe-sn00/Data/user/type/date/pos/"
         Directory from my Mac: "/Volumes/lowegrp/JobServer/jobs/" (when logged in to the server)
 
         Args:
+            xml_file (string)   ->    This is an absolute directory to the xml_file that will be eventually created;
+                                      It is only used to extract the absolute path where the source movies are saved.
             pos = position for which you have a brightfield, GFP and/or RFP movie available.
             date = date of the experiment, as stated in Anna's data folder. Set by default to '17_07_31'.
             type = name of your experiment (the subfolder/s for better organisation). Set by default to 'MDCK_WT_Pure'.
             user = your first name (capitalised first letter). Set by default to 'Kristina'.
+
         Return:
+            None.
             Creates a .job file (.txt) and directly submits it onto JobServer to run.
-        Note:
+
+        Notes:
             Run the segmentation, i.e. ProcessMovies.SegClass() first.
             Tracking will not work (raises Exception) if you provide no HDF folder to start with.
+
         """
 
         if xml_file is not None:
@@ -125,6 +134,7 @@ class ProcessMovies():
         string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
                         '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}\n'
 
+        #print (string)
         self.job_file.write(string)
         self.job_file.close()
 
@@ -140,6 +150,7 @@ class ProcessMovies():
             Creates 4 files: 'hypothesis_typeX.txt', 'optimised_typeX.txt', 'tracks_typeX.mat', 'tracks_typeX.xml'.
             (X = 1 for 'GFP', X = 2 for 'RFP')
             All saved inside the HDF folder with 'segmented.hdf5' file which was used as input for tracking.
+            TODO: Check if formatted parameters work well!
         """
 
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
@@ -162,6 +173,10 @@ class ProcessMovies():
             if item is False:
                 del channels[order]
 
+        frame_volume = 1200
+        if self.exp_type == "MDCK_Sc_Tet-_Pure" or self.exp_type == "MDCK_Sc_Tet+_Pure":
+            frame_volume = 1400
+
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
                 .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
@@ -169,8 +184,10 @@ class ProcessMovies():
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,1200)), ' \
-                        '"to_track":' + str(channels) +', "config": "MDCK_config_Kristina.json"}\noptions = {}'
+        string += 'params = {"path": "{}", "volume":((0,1200),(0,1600),(-1,1),(0,{})), '.format(path, frame_volume)
+        string += '"to_track":{}, "config": "MDCK_config_Kristina_relax.json"}\n'.format(channels)
+        string += 'options = {}'
 
+        print (string)
         self.job_file.write(string)
         self.job_file.close()
