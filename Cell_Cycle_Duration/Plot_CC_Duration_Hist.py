@@ -64,6 +64,8 @@ class PlotHistGenerationCCT(object):
             print ("Generations total = {}; Length of sub-lists = {}; Whole gen list = {}" \
                    .format(len(self.generation_list), gen_list, self.generation_list))
 
+        return self.generation_list
+
 
     def PlotHistSimple(self, show=False):
         """ Plots a figure with overlapping histograms, each depicting the distributions
@@ -81,7 +83,10 @@ class PlotHistGenerationCCT(object):
         """
 
         # Make vectors for plotting:
-        bins = int(math.ceil(max(sum(self.generation_list, [])) / 5.0)) * 5
+        if len(self.generation_list[0]) > 2:
+            bins = int(math.ceil(max(sum(self.generation_list, [])) / 5.0)) * 5
+        else:
+            bins = 1
         bin_edges = list(range(0, bins + 1, 1))
         bin_xticks = list(range(0, bins + 2, 2))
 
@@ -98,6 +103,9 @@ class PlotHistGenerationCCT(object):
                                                 label='Generation #{}\ncellIDs = {}'.format(number + 1, len(gen)))
             if number == 0:
                 # One st.dev away from the mean:
+                if self.mean[number] == []:
+                    self.mean[number] = 0
+                    self.std[number] = 0
                 plt.axvline(self.mean[number], color='gold', linestyle='dashed', linewidth=2.0, label= \
                 "Generation #{};\nmean ± st.dev\n({} ± {})".format(number + 1, self.mean[number], self.std[number]))
                 plt.axvline(self.mean[number] + self.std[number], color='gold', linestyle='dashed', linewidth=1.0)
@@ -108,8 +116,8 @@ class PlotHistGenerationCCT(object):
                 plt.axvline(x=self.mean[number] - (2*self.std[number]), color='gold', linestyle='dashed', linewidth=1.0, alpha=0.6)
 
                 # Fill between upper & lower boundary for outliers (mean-1*std & mean-2*std):
-                #plt.fill_between(x,y,0, where = (x > 2*self.std[number]) & (x <= 1*self.std[number]), color = 'plum')
-
+                plt.axvspan(self.mean[number] - (2*self.std[number]), self.mean[number] - (1*self.std[number]),
+                            alpha=0.3, color='plum', zorder=1, label='Left-skewed outliers')
 
         plt.title("Generational Cell Cycle Duration (cellIDdetails_{}.txt)".format(self.file_type))
         plt.legend()    # change location to "loc='upper left'" if necessary
@@ -141,7 +149,11 @@ class PlotHistGenerationCCT(object):
 
         # Loop through first two generations (at the moment, there is not enough data available for gen 3+)
         for gen in [1, 2]:
-            values_per_bin = self.values_per_bin[gen - 1]
+            try:
+                values_per_bin = self.values_per_bin[gen - 1]
+            except:
+                print ("Warning, not enough data to normalise generation {}!".format(gen))
+                continue
             if gen == 1:
                 color = "dodgerblue"
                 alpha = 0.5
@@ -149,7 +161,8 @@ class PlotHistGenerationCCT(object):
                 color = "orange"
                 alpha = 0.5
             else:
-                raise Exception("Warning, not enough data to normalise generation 3+!")
+                print ("Warning, not enough data to normalise generation {}+!".format(gen))
+                break
 
             # What are you normalising against?
             values_per_bin = [int(item) for item in values_per_bin]
@@ -195,9 +208,13 @@ class PlotHistGenerationCCT(object):
         # Plot the cumulative histogram
         plt.figure(figsize=(8, 4))
         for number, gen in enumerate(self.generation_list):
+            # TODO: Check why it comes back to 0
             plt.hist(gen, bins=n_bins, density=True, histtype='step', cumulative=True, linewidth=2.0,
                         label='Generation #{}\ncellIDs = {}'.format(number + 1, len(gen)))
             if number <= 2:
+                if self.mean[number] == []:
+                    self.mean[number] = 0
+                    self.std[number] = 0
                 plt.axvline(self.mean[number], ymin=mean_std_lim[number][0], ymax=mean_std_lim[number][1],
                             linestyle='dashed', linewidth=2.0, color=color_list[number], alpha=0.5,
                             label="Generation #{};\nmean ± st.dev\n({} ± {})".format(number + 1, self.mean[number], self.std[number]))
@@ -205,7 +222,6 @@ class PlotHistGenerationCCT(object):
                             color=color_list[number], linestyle='dashed', linewidth=1.0)
                 plt.axvline(self.mean[number] - self.std[number], ymin=mean_std_lim[number][0], ymax=mean_std_lim[number][1],
                             color=color_list[number], linestyle='dashed', linewidth=1.0)
-                #plt.fill_betweenx(y=self.mean[number], x1=(self.mean[number]-self.std[number]), x2=(self.mean[number]+self.std[number]))
 
         # TODO: Add a line showing the expected distribution.
 
@@ -218,7 +234,7 @@ class PlotHistGenerationCCT(object):
         plt.ylim(-0.1, 1.1)         # divide into thirds: -0.1 to 0.3 | 0.3 to 0.7 | 0.7 to 1.1
         plt.xlabel('Cell Cycle Duration [hours]')
         plt.xticks(list(range(0, n_bins + 2, 2)))
-        plt.xlim(0 - n_bins/20, n_bins + n_bins/20)
+        plt.xlim(0 - n_bins/20, n_bins + n_bins/20)     # 5% ± the min & max point
 
         # Save, show & close:
         plt.savefig(self.directory + 'Hist_Generational_CCT_{}_Cumulative.jpeg'

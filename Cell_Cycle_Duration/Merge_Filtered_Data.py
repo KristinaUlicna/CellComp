@@ -20,7 +20,7 @@ def MergeFilteredData(exp_type = "MDCK_WT_Pure"):
 
     # Write a new file & initiate with header:
     merged_data_file = open("/Volumes/lowegrp/Data/Kristina/{}/cellIDdetails_merged.txt".format(exp_type), "w")
-    header_list = ["Cell_ID", "Frm[0]", "Frm[-1]", "CCT[m]", "CCT[h]", "Gen_#", "IsRoot", "IsLeaf"]
+    header_list = ["Cell_ID-posX-date", "Frm[0]", "Frm[-1]", "CCT[m]", "CCT[h]", "Gen_#", "IsRoot", "IsLeaf"]
     header_string = ""
     for item in header_list:
         header_string += str(item) + "\t"

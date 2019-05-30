@@ -21,11 +21,15 @@ from JobScriptCreator_Class import ProcessMovies
 # Iterate through all movies available in selected folder:
 # 'MDCK_WT_Pure' or 'MDCK_Sc_Tet-_Pure' or 'MDCK_Sc_Tet+_Pure'
 
-xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_Sc_Tet-_Pure")
+
+xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
 
 for file in xml_file_list:
-    print("Writing job for file: {}".format(file))
-    ProcessMovies(xml_file=file).SegClass(BF=True, GFP=False, RFP=True)
+    if "pos0" in file:
+        print("Writing job for file: {}".format(file))
+        ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
+
+
 
 """
 dir_exp_type = "/Volumes/lowegrp/Data/Kristina/MDCK_Sc_Tet+_Pure/"

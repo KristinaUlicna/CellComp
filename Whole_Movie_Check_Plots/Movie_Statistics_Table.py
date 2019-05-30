@@ -1,3 +1,4 @@
+import os
 import sys
 sys.path.append("../")
 
@@ -6,10 +7,10 @@ from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
 from Whole_Movie_Check_Plots.Tracking_Plots_Class import AnalyseAllCellIDs
 
 
-def GetMovieSummary(cell_type):
+def GetMovieSummary(exp_type):
     """ Print a table & write a file summarising the properties of all movies available per experiment.
     Args:
-        cell_type (string)  ->   Type of experiment.
+        exp_type (string)  ->   Type of experiment.
                                  Options: "MDCK_WT_Pure", "MDCK_Sc_Tet-_Pure", "MDCK_Sc_Tet+_Pure"
     Return:
         None.
@@ -17,8 +18,8 @@ def GetMovieSummary(cell_type):
         Writes a txt_file into the directory given by cell_type.
     """
 
-    name = "C E L L  T Y P E : '{}'\n".format(cell_type)
-    _, txt_file_list = GetMovieFilesPaths(exp_type=cell_type)
+    name = "C E L L  T Y P E : '{}'\n".format(exp_type)
+    _, txt_file_list = GetMovieFilesPaths(exp_type=exp_type)
 
     movie_number = []
     movie_date = []
@@ -32,28 +33,28 @@ def GetMovieSummary(cell_type):
 
     # How many movies do you have available?
     total_movies = 0
-    if cell_type == "MDCK_WT_Pure":
-        total_movies = 21
-    if cell_type == "MDCK_Sc_Tet-_Pure":
-        total_movies = 9
-    if cell_type == "MDCK_Sc_Tet+_Pure":
-        total_movies = 0
+    if exp_type == "MDCK_WT_Pure":
+        total_movies = 18
+    if exp_type == "MDCK_Sc_Tet-_Pure":
+        total_movies = 13
+    if exp_type == "MDCK_Sc_Tet+_Pure":
+        total_movies = 13
+    if exp_type == "MDCK_90WT_10Sc_NoComp":
+        total_movies = 3    # out of 16
 
 
     for order, sorted_file in enumerate(sorted(txt_file_list)):
         sorted_file = sorted_file.replace("raw", "sorted")
         print ("Sorted File: {}".format(sorted_file))
         movie_number.append(order+1)
-        movie_date.append(sorted_file.split("/")[-3])
-        movie_pos.append(sorted_file.split("/")[-4])
+        movie_date.append(sorted_file.split("/")[-4])
+        movie_pos.append(sorted_file.split("/")[-3])
 
-        # Get empty frames:
-        # TODO: An elegant way to find how many frames the movie has?
-        x_axis, y_axis = AnalyseAllCellIDs(txt_file=sorted_file).PlotCellIDsPerFrame()
-        for x, y in zip(x_axis, y_axis):
-            if y == 0:
-                total_frames.append(x-1)
-                break
+        # Get total number of frames per movie:
+        path = "/Volumes/lowegrp/Data/Kristina/{}/{}/{}/segmented/".format(exp_type, movie_date[order], movie_pos[order])
+        frame_count = os.listdir(path)
+        frame_count = [item for item in frame_count if str(item).startswith("s_") and str(item).endswith(".tif")]
+        total_frames.append(len(frame_count))
 
         # Get number of divisions (every non-leaf cell):
         div_counter = 0
@@ -65,9 +66,7 @@ def GetMovieSummary(cell_type):
                 div_counter += 1
         total_divisions.append(div_counter)
 
-        # Get mean division time per movie:
-        # TODO: Should I exclude outliers?
-
+        # Get mean division time per movie:     TODO: Should I exclude outliers?
         filtered_file = sorted_file.replace("sorted", "filtered")
         mean, std = AnalyseAllCellIDs(txt_file=filtered_file).PlotHist_CellCycleDuration(limit=80)
         mean_div_time.append(mean)
@@ -80,12 +79,11 @@ def GetMovieSummary(cell_type):
     # Write the table & file name & header:
     table = Texttable(max_width=0)
     print (name)
-    header = ["Movie", "Date", "Pos", "Frames", "Divisions", "Mean Div Time", "St.Dev Div Time",
-              "Lines-sorted.txt", "Lines-filtered.txt"]
+    header = ["Movie", "DataDate", "Pos", "Frms", "Div#", "MeanDT", "StdDT", "Sort-l", "Filt-l"]
     table.header(header)
 
     # Write into a new file:
-    summary_file = "/Volumes/lowegrp/Data/Kristina/{}/summary_movies.txt".format(cell_type)
+    summary_file = "/Volumes/lowegrp/Data/Kristina/{}/summary_movies.txt".format(exp_type)
     summary_file = open(summary_file, "w")
     summary_file.write(name)
     header_string = ''
@@ -111,4 +109,7 @@ def GetMovieSummary(cell_type):
     summary_file.close()
 
 
-GetMovieSummary(cell_type="MDCK_WT_Pure")
+GetMovieSummary(exp_type="MDCK_WT_Pure")
+#GetMovieSummary(exp_type="MDCK_Sc_Tet-_Pure")      # tracking not completed
+#GetMovieSummary(exp_type="MDCK_Sc_Tet+_Pure")      # tracking not completed
+#GetMovieSummary(exp_type="MDCK_90WT_10Sc_NoComp")  # 2 channels!

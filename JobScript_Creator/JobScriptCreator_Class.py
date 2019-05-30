@@ -173,20 +173,23 @@ class ProcessMovies():
             if item is False:
                 del channels[order]
 
-        frame_volume = 1200
-        if self.exp_type == "MDCK_Sc_Tet-_Pure" or self.exp_type == "MDCK_Sc_Tet+_Pure":
-            frame_volume = 1400
+        frame_volume = 1400
+        if self.exp_type == "MDCK_WT_Pure":
+            frame_volume = 1200
+        elif self.exp_type == "MDCK_90WT_10Sc_NoComp":
+            frame_volume = 1500
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
                 .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = Data_2\n'
-        string += 'user = ' + str(self.user) + '\npriority = 99\n'
+        string += 'user = ' + str(self.user) + '\npriority = 1\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        string += 'params = {"path": "{}", "volume":((0,1200),(0,1600),(-1,1),(0,{})), '.format(path, frame_volume)
-        string += '"to_track":{}, "config": "MDCK_config_Kristina_relax.json"}\n'.format(channels)
+        string += 'params = {"path": "{}", "volume":((0,1200),(0,1600),(-1,1),(0,{})), "to_track":{}, "config": "MDCK_config_Kristina.json"}\n'.format(path, frame_volume, channels)
         string += 'options = {}'
+
+        # TODO: FIX THIS!!!
 
         print (string)
         self.job_file.write(string)

@@ -21,7 +21,7 @@ def GetMovieFilesPaths(exp_type = "MDCK_WT_Pure"):
     dir_list = [item for item in os.listdir(directory) if item != ".DS_Store" and len(str(item)) == 8]      # len('17_07_31') == 8
     for folder_date in dir_list:
         directory = "/Volumes/lowegrp/Data/Kristina/{}/{}/".format(exp_type, folder_date)  # re-initialise the native string
-        dir_list = [item for item in os.listdir(directory) if item != ".DS_Store"]
+        dir_list = [item for item in os.listdir(directory) if item != ".DS_Store" and "pos" in item]
         for folder_pos in dir_list:
             directory = "/Volumes/lowegrp/Data/Kristina/{}/{}/{}/".format(exp_type, folder_date, folder_pos)  # re-initialise the native string
             directory_xml = directory + "tracks/tracks_type1.xml"

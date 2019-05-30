@@ -106,5 +106,6 @@ def VisualiseCellIDRelabelling(txt_file, show=False):
     return odd_frames
 
 
-odd_frames = VisualiseCellIDRelabelling("/Users/kristinaulicna/Documents/Rotation_2/17_07_24-pos6/cellIDdetails_sorted.txt", show=False)
-print (odd_frames)
+# Call the function:
+# odd_frames = VisualiseCellIDRelabelling("/Users/kristinaulicna/Documents/Rotation_2/17_07_24-pos6/cellIDdetails_sorted.txt", show=False)
+# print ("Odd frames: {}".format(odd_frames))
