@@ -50,4 +50,4 @@ def MergeFilteredData(exp_type = "MDCK_WT_Pure"):
     merged_data_file.close()
 
 
-#MergeFilteredData()
+MergeFilteredData(exp_type="MDCK_WT_Pure")

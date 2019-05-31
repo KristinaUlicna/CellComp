@@ -2,6 +2,7 @@ import os
 import sys
 sys.path.append("../")
 
+import statistics as stats
 from texttable import Texttable              # creates simple ASCII tables
 from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
 from Whole_Movie_Check_Plots.Tracking_Plots_Class import AnalyseAllCellIDs
@@ -28,6 +29,8 @@ def GetMovieSummary(exp_type):
     total_divisions = []
     mean_div_time = []
     std_div_time = []
+    num_lines_raw = []
+    num_lines_trimmed = []
     num_lines_sorted = []
     num_lines_filtered = []
 
@@ -43,10 +46,17 @@ def GetMovieSummary(exp_type):
         total_movies = 3    # out of 16
 
 
-    for order, sorted_file in enumerate(sorted(txt_file_list)):
-        sorted_file = sorted_file.replace("raw", "sorted")
-        print ("Sorted File: {}".format(sorted_file))
-        movie_number.append(order+1)
+    for order, raw_file in enumerate(sorted(txt_file_list)):
+
+        print("\nProcessing txt_file: {}".format(raw_file))
+
+        # Initialise 3 types of files:
+        trimmed_file = raw_file.replace("raw", "trimmed")
+        sorted_file = raw_file.replace("raw", "sorted")
+        filtered_file = raw_file.replace("raw", "filtered")
+
+        # Order the movies, get their date & pos:
+        movie_number.append(order + 1)
         movie_date.append(sorted_file.split("/")[-4])
         movie_pos.append(sorted_file.split("/")[-3])
 
@@ -60,26 +70,38 @@ def GetMovieSummary(exp_type):
         div_counter = 0
         for line in open(sorted_file, 'r'):
             line = line.rstrip().split('\t')
-            if line[0] == 'Cell_ID':
-                continue
-            if line[7] == "False":
+            if line[0] != 'Cell_ID' and line[7] == "False":
                 div_counter += 1
         total_divisions.append(div_counter)
 
-        # Get mean division time per movie:     TODO: Should I exclude outliers?
-        filtered_file = sorted_file.replace("sorted", "filtered")
-        mean, std = AnalyseAllCellIDs(txt_file=filtered_file).PlotHist_CellCycleDuration(limit=80)
-        mean_div_time.append(mean)
-        std_div_time.append(std)
+        # Extract cell cycle duration according to given limit:
+        cct_hrs = []
+        for line in open(filtered_file, "r"):
+            line = line.rstrip().split("\t")
+            if line[0] == 'Cell_ID':
+                continue
+            # Include only non-root & non-leaf cell_IDs:
+            if line[6] == "False" and line[7] == "False":
+                cct_hrs.append(float(line[4]))
 
-        # Count number of lines per file:
-        num_lines_sorted.append(sum(1 for line in open(sorted_file))-1)
-        num_lines_filtered.append(sum(1 for line in open(filtered_file))-1)
+        # Get mean division time per movie (condition for movies which are too short to output usable data):
+        if len(cct_hrs) >= 2:
+            mean_div_time.append(round(stats.mean(cct_hrs), 2))
+            std_div_time.append(round(stats.stdev(cct_hrs), 2))
+        else:
+            mean_div_time.append(0.0)
+            std_div_time.append(0.0)
+
+        # Count number of lines per file:   (-1 to exclude header OR -2 to take the weird line out from 'raw_file')
+        num_lines_raw.append(sum(1 for line in open(raw_file)) - 2)
+        num_lines_trimmed.append(sum(1 for line in open(trimmed_file)) - 1)
+        num_lines_sorted.append(sum(1 for line in open(sorted_file)) - 1)
+        num_lines_filtered.append(sum(1 for line in open(filtered_file)) - 1)
 
     # Write the table & file name & header:
     table = Texttable(max_width=0)
     print (name)
-    header = ["Movie", "DataDate", "Pos", "Frms", "Div#", "MeanDT", "StdDT", "Sort-l", "Filt-l"]
+    header = ["Movie", "DataDate", "Pos", "Frms", "Div#", "MeanDT", "StdDT", "Raw-l", "Trim-l", "Sort-l", "Filt-l"]
     table.header(header)
 
     # Write into a new file:
@@ -94,8 +116,8 @@ def GetMovieSummary(exp_type):
     summary_file.write(header_string)
 
     for i in list(range(0, total_movies)):
-        my_list = [movie_number[i], movie_date[i], movie_pos[i], total_frames[i], total_divisions[i],
-                   mean_div_time[i], std_div_time[i], num_lines_sorted[i], num_lines_filtered[i]]
+        my_list = [movie_number[i], movie_date[i], movie_pos[i], total_frames[i], total_divisions[i], mean_div_time[i],
+                   std_div_time[i], num_lines_raw[i], num_lines_trimmed[i], num_lines_sorted[i], num_lines_filtered[i]]
         table.add_row(my_list)
         string = ''
         for item in my_list:

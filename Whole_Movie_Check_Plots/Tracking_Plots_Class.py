@@ -185,7 +185,7 @@ class AnalyseAllCellIDs(object):
 
         ax1 = fig.add_subplot(111)
         n_per_bin, _, _ = ax1.hist(cct_hrs, bins=bin_edges, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
-        ax1.set_title("Cell Cycle Duration of filtered Cell_IDs (cellIDdetails_filtered.txt)")
+        ax1.set_title("Cell Cycle Duration of trimmed & filtered cell_IDs")
 
         # Visualise the mean & standard deviations:
         if len(cct_hrs) <= 2:
@@ -222,7 +222,7 @@ class AnalyseAllCellIDs(object):
         bins_interval = list(range(start, end + 1, 1))
         cct_hrs_interval = [item for item in cct_hrs if float(item) > start and float(item) < end]
 
-        sub_axes = plt.axes([0.45, 0.5, 0.48, 0.4])  # left, bottom, width, height
+        sub_axes = plt.axes([0.45, 0.5, 0.4, 0.35])  # left, bottom, width, height
         n_per_bin_interval, _, _ = sub_axes.hist(x=cct_hrs_interval, bins=bins_interval, color='lightgreen', edgecolor='green', linewidth=1.0)
         upper = int(max(n_per_bin_interval))
         if upper <= 20:
@@ -239,16 +239,7 @@ class AnalyseAllCellIDs(object):
 
 
         # Save, show & close:
-        #plt.savefig(self.directory + "Hist_Cell_Cycle_Duration_{}hours.jpeg".format(limit), bbox_inches="tight")
+        plt.savefig(self.directory + "Hist_Cell_Cycle_Duration.jpeg".format(limit), bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
-
-        return mean, std
-
-
-# Call the class to test last function:
-call = AnalyseAllCellIDs("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
-mean, std = call.PlotHist_CellCycleDuration(limit=80, show=True)
-#call.PlotHist_CellCycleDuration(limit=30, show=True)
-print (mean, std)

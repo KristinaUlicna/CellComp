@@ -34,14 +34,15 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
                 generation = int(line[5])
             if finding is True and int(line[5]) == generation - 1:
                 if generation > 1:
-                    return [int(line[0]), float(line[4])]
+                    return [int(line[0]), float(line[4]), int(line[5])]
                 else:
-                    return [int(line[0]), "NaN"]
+                    return [int(line[0]), "NaN", int(line[5])]
 
 
     # Call the function - create 2 lists:
     merged_file = "/Volumes/lowegrp/Data/Kristina/{}/cellIDdetails_merged.txt".format(exp_type)
-    x_axis_list, y_axis_list = [], []
+    x_axis_list = [[], [], []]
+    y_axis_list = [[], [], []]
 
     for line in open(merged_file, 'r'):
         line = line.rstrip().split("\t")
@@ -49,13 +50,13 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
             continue
         parent_info = FindCellParent(cell_ID=line[0])
         if parent_info is not None and parent_info[1] != "NaN" and isinstance(parent_info[1], float):
-            x_axis_list.append(parent_info[1])
-            y_axis_list.append(float(line[4]))
+            x_axis_list[parent_info[2]-1].append(parent_info[1])
+            y_axis_list[parent_info[2]-1].append(float(line[4]))
 
     print("Parent time list -> len: {}; {}".format(len(x_axis_list), x_axis_list))
     print("CellID time list -> len: {}; {}".format(len(y_axis_list), y_axis_list))
 
-
+    """
     # Do sanity check for overwriting - count the number of lines:
     counter = 0
     for line in open(merged_file, 'r'):
@@ -67,8 +68,42 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
             counter += 1
     print("Counter: {}".format(counter))
     print(len(x_axis_list) == len(y_axis_list) == counter)
+    """
+
+    def PlotScatter(zoom=False, show=show):
+
+        # Plot the thing:
+        plt.figure()
+        for gen in [1, 2, 3]:
+            plt.scatter(x=x_axis_list[gen-1], y=y_axis_list[gen-1], alpha=0.7,
+                        label="Generation #{}\n{} parent_IDs".format(gen, len(x_axis_list[gen-1])))
+            plt.title("Scatter Plot of {} cells\n(divided by generations)".format(exp_type))
+            plt.xlabel("Parent division time [hours]")
+            plt.ylabel("Child division time [hours]")
+            plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3)
+            plt.grid(b=True, color='grey', linestyle='-', linewidth=0.5, alpha=0.5)
+            if zoom is True:
+                st, en = 10, 35
+                plt.plot([st, en], [st, en], color="grey", linestyle="dashed", alpha=0.5)
+                plt.xlim(st, en)
+                plt.xticks(list(range(st, en + 1, 2)))
+                plt.ylim(st, en)
+                plt.yticks(list(range(st, en + 1, 2)))
+                tag = "_zoom"
+            else:
+                plt.legend()
+                tag = ""
+
+        # Save the figures:
+        directory = "/Volumes/lowegrp/Data/Kristina/{}/".format(exp_type)
+        plt.savefig(directory + "Scatter_Plot_by_Gen{}.jpeg".format(tag), bbox_inches="tight")
+        if show is True:
+            plt.show()
+        plt.close()
+
 
     # Define a function to plot the thing:
+
     def PlotHist2D(bins_st=12, bins_en=24, step=1, show=show):
 
         # Define number of bins:
@@ -95,10 +130,13 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
         plt.close()
 
 
-    PlotHist2D(bins_st=10, bins_en=35, step=1.0)
-    PlotHist2D(bins_st=10, bins_en=35, step=0.2)
-    PlotHist2D(bins_st=16, bins_en=24, step=0.5)
-    PlotHist2D(bins_st=10, bins_en=35, step=2.5)
+    #PlotHist2D(bins_st=10, bins_en=35, step=1.0)
+    #PlotHist2D(bins_st=10, bins_en=35, step=0.2)
+    #PlotHist2D(bins_st=16, bins_en=24, step=0.5)
+    #PlotHist2D(bins_st=10, bins_en=35, step=2.5)
+
+    PlotScatter(zoom=False)
+    PlotScatter(zoom=True)
 
 
 PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=True)
