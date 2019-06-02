@@ -31,7 +31,19 @@ class AnalyseAllCellIDs(object):
 
         self.directory = directory
         self.txt_file = txt_file
+        self.frames = 1105
 
+        """
+        # Find out how long your movie is:
+        exp_type = txt_file.split("/")[-5]
+        date = txt_file.split("/")[-4]
+        pos = txt_file.split("/")[-3]
+        summary_file = "/Volumes/lowegrp/Data/Kristina/{}/summary_movies.txt".format(exp_type)
+        for line in open(summary_file, "r"):
+            line = line.rstrip().split("\t")
+            if line[1] == date and line[2] == pos:
+                self.frames = int(line[3])
+        """
 
     def PlotCellIDLifeTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
@@ -59,11 +71,11 @@ class AnalyseAllCellIDs(object):
         # Plot the thing:
         for mini_x, mini_y in zip(x_axis, y_axis):
             plt.plot(mini_x, mini_y)
-        plt.xticks(np.arange(0, 1200 + 1, step=200))
-        plt.xlim(-50, 1250)
+        plt.xticks(np.arange(0, self.frames + 1, step=200))
+        plt.xlim(-50, self.frames + 50)
         plt.xlabel('Frame number')
         plt.ylabel('Cell ID label')
-        plt.title('Lifetime of all cell_ID labels')
+        plt.title('Lifetime of all cell_ID labels\n(movie = {} frames)'.format(self.frames))
         plt.savefig(self.directory + "Plot_Cell_ID_Label_LifeTime.jpeg", bbox_inches="tight")
 
         if show is True:
@@ -76,7 +88,11 @@ class AnalyseAllCellIDs(object):
 
             # Output 2 lists:
         # cell_ID_frame_list -> [[0, 1, 2, ...], [0, 1, 2, ...], ...]
-        # concat_frame_list -> [0, 1, 2, ..., 0, 1, 2, ..., ...] """
+        # concat_frame_list -> [0, 1, 2, ..., 0, 1, 2, ..., ...]
+
+        TODO: Plot an 'ideal' line into the graph?
+
+        """
 
         cell_ID_frame_list = []
 
@@ -91,7 +107,7 @@ class AnalyseAllCellIDs(object):
 
         # Prepare the axes:
         concat_frame_list = sum(cell_ID_frame_list, [])
-        x_axis = list(range(1, 1200 + 1))
+        x_axis = list(range(1, self.frames + 1))
         y_axis = []
 
         for frame in x_axis:
@@ -99,19 +115,16 @@ class AnalyseAllCellIDs(object):
 
         # Plot the thing:
         plt.scatter(x_axis, y_axis, c="salmon", alpha=0.5)
-        plt.xlim(-100, 1300)
-        plt.xticks(np.arange(0, 1200 + 1, step=200))
+        plt.xlim(-100, self.frames + 100)
+        plt.xticks(np.arange(0, self.frames + 1, step=200))
         plt.xlabel('Frame number')
         plt.ylabel('Cell count (total cell_IDs)')
-        plt.title('Cell Count per Frame (Count of Cell_ID Labels)')
+        plt.title('Cell Count per Frame (Count of Cell_ID Labels)\n(movie = {} frames)'.format(self.frames))
         plt.savefig(self.directory + "Plot_Cell_ID_Count_Per_Frame.jpeg", bbox_inches="tight")
 
         if show is True:
             plt.show()
         plt.close()
-
-        return x_axis, y_axis
-        # TODO: Plot an 'ideal' line into the graph?
 
 
     def PlotCellCycleAbsoluteTime(self, show=False):
@@ -127,13 +140,13 @@ class AnalyseAllCellIDs(object):
             y_axis_3.append(int(line[3]))
 
         plt.scatter(x_axis_3, y_axis_3, alpha=0.3, c="forestgreen")
-        plt.xlim(-200, 5000)
-        plt.xticks(list(range(0, 4801, 400)))
+        plt.xlim(-200, self.frames * 4 + 200)
+        plt.xticks(list(range(0, self.frames * 4 + 1, 400)))
         plt.xlabel("Absolute time [mins]")
-        plt.ylim(-200, 5000)
-        plt.yticks(list(range(0, 4801, 400)))
+        plt.ylim(-200, self.frames * 4 + 200)
+        plt.yticks(list(range(0, self.frames * 4 + 1, 400)))
         plt.ylabel("Cell cycle time [mins]")
-        plt.title("Absolute time vs Cell cycle duration")
+        plt.title("Absolute time vs Cell cycle duration\n(movie = {} frames)".format(self.frames))
         plt.savefig(self.directory + "Absolute_Time_per_Cell_Cycle_Time.jpeg", bbox_inches="tight")
 
         if show is True:
@@ -161,10 +174,8 @@ class AnalyseAllCellIDs(object):
                 continue
             # Include only non-root & non-leaf cell_IDs:
             if line[6] == "False" and line[7] == "False":
-                # Include only cell_IDs below the division time limit:
-                if isinstance(limit, int):
-                    if float(line[4]) <= float(limit):
-                        cct_hrs.append(float(line[4]))
+                if float(line[4]) <= float(limit):
+                    cct_hrs.append(float(line[4]))
 
         # Define bin edges & set axes ticks according to the limit:
         if limit > 5:
@@ -223,7 +234,8 @@ class AnalyseAllCellIDs(object):
         cct_hrs_interval = [item for item in cct_hrs if float(item) > start and float(item) < end]
 
         sub_axes = plt.axes([0.45, 0.5, 0.4, 0.35])  # left, bottom, width, height
-        n_per_bin_interval, _, _ = sub_axes.hist(x=cct_hrs_interval, bins=bins_interval, color='lightgreen', edgecolor='green', linewidth=1.0)
+        n_per_bin_interval, _, _ = sub_axes.hist(x=cct_hrs_interval, bins=bins_interval, color='lightgreen',
+                                                 alpha=0.8, edgecolor='green', linewidth=1.0)
         upper = int(max(n_per_bin_interval))
         if upper <= 20:
             step_size = 2
@@ -243,3 +255,10 @@ class AnalyseAllCellIDs(object):
         if show is True:
             plt.show()
         plt.close()
+
+
+call = AnalyseAllCellIDs("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
+call.PlotCellIDLifeTime(show=True)
+call.PlotCellIDsPerFrame(show=True)
+call.PlotCellCycleAbsoluteTime(show=True)
+call.PlotHist_CellCycleDuration(show=True)

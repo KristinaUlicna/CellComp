@@ -39,6 +39,8 @@ class PlotHistGenerationCCT(object):
             print_stats (boolean, set to False)     ->    show the generation_list stats or not
 
         Return:
+            "pseudo return" - it's a self.variable so no need for returns!
+
             generation_list (list)  ->   [[16.93, 5.78, 13.40, ...], [16.93, 5.78, 13.40, ...], []]
                                           |-> generation #1          |-> generation #2            |-> file
         """
@@ -55,16 +57,28 @@ class PlotHistGenerationCCT(object):
                 self.generation_list.append(([] * (gen - len(self.generation_list))))
             self.generation_list[gen-1].append(cct)
 
+        # Calculate the mean & st.dev for each generation:
+        self.mean = [[] for _ in range(len(self.generation_list))]
+        self.std = [[] for _ in range(len(self.generation_list))]
+
+        for number, gen in enumerate(self.generation_list):
+            if len(gen) >= 2:
+                self.mean[number] = round(stats.mean(gen), 2)
+                self.std[number] = round(stats.stdev(gen), 2)
+            elif len(gen) == 1:
+                self.mean[number] = gen
+                self.std[number] = 0
+            else:
+                self.mean[number] = 0
+                self.std[number] = 0
+
         # Print summary:
         if print_stats is True:
             print ("Txt_file processed:\t{}".format(self.txt_file))
-            gen_list = []
-            for gen in self.generation_list:
-                gen_list.append(len(gen))
-            print ("Generations total = {}; Length of sub-lists = {}; Whole gen list = {}" \
-                   .format(len(self.generation_list), gen_list, self.generation_list))
-
-        return self.generation_list
+            print ("Whole generation list:\t{}".format(self.generation_list))
+            for order, gen in enumerate(self.generation_list):
+                print ("Gen #{}\tlength = {}\tmean = {}; st.dev. = {}\tgen-sublist: {}"
+                       .format(order, len(gen), self.mean[order], self.std[order], gen))
 
 
     def PlotHistSimple(self, show=False):
@@ -91,23 +105,16 @@ class PlotHistGenerationCCT(object):
         bin_xticks = list(range(0, bins + 2, 2))
 
         # Plot the 'stacked' histogram:
-        self.values_per_bin = [[] for i in range(len(self.generation_list))]
-        self.mean = [[] for i in range(len(self.generation_list))]
-        self.std = [[] for i in range(len(self.generation_list))]
+        self.values_per_bin = [[] for _ in range(len(self.generation_list))]
 
         for number, gen in enumerate(self.generation_list):
-            if len(gen) > 1:
-                self.mean[number] = round(stats.mean(gen), 2)
-                self.std[number] = round(stats.stdev(gen), 2)
             self.values_per_bin[number], _, _ = plt.hist(x=gen, bins=bin_edges, edgecolor='black', linewidth=1.0, alpha=0.5,
                                                 label='Generation #{}\ncellIDs = {}'.format(number + 1, len(gen)))
             if number == 0:
                 # One st.dev away from the mean:
-                if self.mean[number] == []:
-                    self.mean[number] = 0
-                    self.std[number] = 0
                 plt.axvline(self.mean[number], color='gold', linestyle='dashed', linewidth=2.0, label= \
-                "Generation #{};\nmean ± st.dev\n({} ± {})".format(number + 1, self.mean[number], self.std[number]))
+                            "Generation #{};\nmean ± st.dev\n({} ± {})" \
+                            .format(number + 1, self.mean[number], self.std[number]))
                 plt.axvline(self.mean[number] + self.std[number], color='gold', linestyle='dashed', linewidth=1.0)
                 plt.axvline(self.mean[number] - self.std[number], color='gold', linestyle='dashed', linewidth=1.0)
 
@@ -133,6 +140,97 @@ class PlotHistGenerationCCT(object):
         plt.close()
 
 
+    def PlotHistNormalisedTOBEFIXED(self, show=False):
+        """ Plots normalised BAR PLOT (not histogram!) for generation 1 of the txt file.
+            -> normalises the bars to the relative percentage of highest bin value (=1.0)
+
+        Args:
+            txt_file (string)       -> file to be analysed (preferrably cellIDdetails_merged.txt)
+            show (boolean)          -> whether to visualise the figure in SciView or not
+
+        Return:
+            None.
+            Plots visualised (optional) & saved in the specified directory.
+
+        Notes:
+            TODO: Fix this one!
+            TODO: Expand to more than 2 generations when data is available.
+        """
+
+        # Convert the array into lists & calculate the percentage against the highest bin:
+
+        values_per_bin = self.values_per_bin
+        number_of_bins = [[] for _ in range(len(values_per_bin))]
+
+        for order, array in enumerate(values_per_bin):
+            number_of_bins[order] = len(array)
+            maximum = array.max()
+            values_per_bin[order] = array.tolist()
+            values_per_bin[order] = [round(value * 100 / maximum, 2) for value in values_per_bin[order]]
+        print(values_per_bin)
+
+        number_of_bins = list(range(1, len(values_per_bin[0]) + 1, 1))
+        print (len(values_per_bin[0]))
+        print (number_of_bins)
+
+        for values in values_per_bin:
+            plt.bar(x=number_of_bins, height=values)
+        plt.show()
+        plt.close()
+
+
+        """
+        # Loop through first two generations (at the moment, there is not enough data available for gen 2+)
+        for gen in [1, 2]:
+            try:
+                values_per_bin = self.values_per_bin[gen - 1]
+            except:
+                print("Warning, not enough data to normalise generation {}!".format(gen))
+                continue
+            if gen == 1:
+                color = "dodgerblue"
+                alpha = 0.5
+            elif gen == 2:
+                color = "orange"
+                alpha = 0.5
+            else:
+                print("Warning, not enough data to normalise generation {}+!".format(gen))
+                break
+
+            # What are you normalising against?
+            values_per_bin = [int(item) for item in values_per_bin]
+            sum_cellIDs = sum(list(values_per_bin))
+            norm_100 = max(list(values_per_bin))
+
+            # Rule of three:    norm_100 is 100%, therefore values_per_bin[index] is x%:
+            norm_x_axis = [item + 0.5 for item in list(range(0, len(values_per_bin)))]
+            norm_y_axis = [round(item * 100 / norm_100, 2) for item in values_per_bin]
+
+            # Plot the thing:
+            plt.bar(x=norm_x_axis, height=norm_y_axis, color=color, edgecolor='black', linewidth=1.0, alpha=alpha,
+                    label='Generation #{}\ncellIDs = {}'.format(gen, sum_cellIDs))
+            plt.axvline(self.mean[gen - 1], color=color, linestyle='dashed', linewidth=2.0, label= \
+                "Generation #{};\nmean ± st.dev\n({} ± {})".format(gen, self.mean[gen - 1], self.std[gen - 1]))
+            plt.axvline(self.mean[gen - 1] + self.std[gen - 1], color=color, linestyle='dashed', linewidth=1.0)
+            plt.axvline(self.mean[gen - 1] - self.std[gen - 1], color=color, linestyle='dashed', linewidth=1.0)
+
+            # Tidy up the figure:
+            plt.legend(loc='upper right')
+            plt.title(
+                "Normalised histogram for {} generations ({})".format(gen, "cellIDdetails_" + self.file_type + ".txt"))
+            plt.xticks(list(range(0, len(values_per_bin) + 1, 2)))
+            plt.xlabel("Cell Cycle Duration [hours]")
+            plt.ylim(-5, 105)
+            plt.ylabel("Total CellID Count [%]")
+
+        # Save, show & close:
+        plt.savefig(self.directory + 'Hist_Generational_CCT_{}_Normalised.jpeg'.format(self.file_type),
+                    bbox_inches="tight")
+        if show is True:
+            plt.show()
+        plt.close()
+        """
+
     def PlotHistNormalised(self, show=False):
         """ Plots normalised BAR PLOT (not histogram!) for generation 1 of the txt file.
             -> normalises the bars to the relative percentage of highest bin value (=1.0)
@@ -144,11 +242,13 @@ class PlotHistGenerationCCT(object):
         Return:
             None.
             Plots visualised (optional) & saved in the specified directory.
+
+        Notes:
             TODO: Expand to more than 2 generations when data is available.
         """
 
-        # Loop through first two generations (at the moment, there is not enough data available for gen 3+)
-        for gen in [1, 2]:
+        # Loop through first two generations (at the moment, there is not enough data available for gen 2+)
+        for gen in [1, 2, 3]:
             try:
                 values_per_bin = self.values_per_bin[gen - 1]
             except:
@@ -174,7 +274,7 @@ class PlotHistGenerationCCT(object):
             norm_y_axis = [round(item * 100 / norm_100, 2) for item in values_per_bin]
 
             # Plot the thing:
-            plt.bar(x=norm_x_axis, height=norm_y_axis, color=color, edgecolor='black', linewidth=1.0, alpha=alpha,
+            plt.bar(x=norm_x_axis, height=norm_y_axis, color=color, edgecolor='black', linewidth=1.0, alpha=0.5,
                     label='Generation #{}\ncellIDs = {}'.format(gen, sum_cellIDs))
             plt.axvline(self.mean[gen-1], color=color, linestyle='dashed', linewidth=2.0, label= \
                         "Generation #{};\nmean ± st.dev\n({} ± {})".format(gen, self.mean[gen-1], self.std[gen-1]))
@@ -183,7 +283,8 @@ class PlotHistGenerationCCT(object):
 
             # Tidy up the figure:
             plt.legend(loc='upper right')
-            plt.title("Normalised histogram for {} generations ({})".format(gen, "cellIDdetails_" + self.file_type + ".txt"))
+            plt.title("Normalised histogram for {} generations ({})"
+                      .format(gen, "cellIDdetails_" + self.file_type + ".txt"))
             plt.xticks(list(range(0, len(values_per_bin) + 1, 2)))
             plt.xlabel("Cell Cycle Duration [hours]")
             plt.ylim(-5, 105)
@@ -212,9 +313,6 @@ class PlotHistGenerationCCT(object):
             plt.hist(gen, bins=n_bins, density=True, histtype='step', cumulative=True, linewidth=2.0,
                         label='Generation #{}\ncellIDs = {}'.format(number + 1, len(gen)))
             if number <= 2:
-                if self.mean[number] == []:
-                    self.mean[number] = 0
-                    self.std[number] = 0
                 plt.axvline(self.mean[number], ymin=mean_std_lim[number][0], ymax=mean_std_lim[number][1],
                             linestyle='dashed', linewidth=2.0, color=color_list[number], alpha=0.5,
                             label="Generation #{};\nmean ± st.dev\n({} ± {})".format(number + 1, self.mean[number], self.std[number]))
@@ -222,8 +320,6 @@ class PlotHistGenerationCCT(object):
                             color=color_list[number], linestyle='dashed', linewidth=1.0)
                 plt.axvline(self.mean[number] - self.std[number], ymin=mean_std_lim[number][0], ymax=mean_std_lim[number][1],
                             color=color_list[number], linestyle='dashed', linewidth=1.0)
-
-        # TODO: Add a line showing the expected distribution.
 
         # Tidy up the figure:
         plt.grid(False)
@@ -242,3 +338,10 @@ class PlotHistGenerationCCT(object):
         if show is True:
             plt.show()
         plt.close()
+
+
+call = PlotHistGenerationCCT("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
+call.CreateGenerationList(print_stats=True)
+call.PlotHistSimple(show=False)
+call.PlotHistNormalised(show=True)
+#call.PlotHistNormalisedOLD(show=True)
