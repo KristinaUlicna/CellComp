@@ -15,18 +15,17 @@ sys.path.append("../")
 # Call the class 'ProcessMovies' & its 'SegClass' & 'Tracking' functions:
 
 from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
-from JobScriptCreator_Class import ProcessMovies
+from JobScript_Creator.JobScriptCreator_Class import ProcessMovies
 
 
 # Iterate through all movies available in selected folder:
-# 'MDCK_WT_Pure' or 'MDCK_Sc_Tet-_Pure' or 'MDCK_Sc_Tet+_Pure'
-
 
 xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
 
-for file in xml_file_list:
-    print("Writing job for file: {}".format(file))
-    ProcessMovies(xml_file=file).SegClass(BF=True, GFP=True, RFP=True)
+for file in sorted(xml_file_list):
+    if "tracks_type1" in file:
+        print("Writing job for file: {}".format(file))
+        ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
 
 
 

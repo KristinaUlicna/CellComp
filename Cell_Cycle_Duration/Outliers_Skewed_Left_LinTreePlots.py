@@ -69,7 +69,7 @@ def AnalyseLeftOutliers(txt_file):
 
 
 
-AnalyseLeftOutliers("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
+#AnalyseLeftOutliers("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
 
 #AnalyseLeftOutliers("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos7/cellIDdetails_filtered.txt")
 

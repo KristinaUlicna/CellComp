@@ -16,68 +16,71 @@ import statistics as stats
 import numpy as np
 import math
 import os
+import sys
+sys.path.append("../")
+from Whole_Movie_Check_Plots.Movie_Frame_Length import FindMovieLength
 
 
 class AnalyseAllCellIDs(object):
-    """ """
 
     def __init__(self, txt_file):
-        """ Args:   txt_file (string)   ->   absolute path to a 'cellIDdetails_sorted.txt' file. """
+        """ Plots analysis graphs for each movie & distributes them into specific directories depending on the input file:
+
+        Args:
+            txt_file (string)   ->   absolute path to a 'cellIDdetails_XXX.txt' file.
+                                     '_raw.txt'     ->   directory = /analysis/movies/raw/
+                                     '_sorted.txt'  ->   directory = /analysis/movies/trimmed/
+        Return:
+            None.
+            Figures saved into appropriate directory.
+
+        """
+
+        data_date = txt_file.split("/")[-4]
+        frames = FindMovieLength(data_date=data_date)
 
         directory = txt_file.split("/")[:-1]
-        directory = '/'.join(directory) + "/movie/"
+        directory = '/'.join(directory)
+        if "raw" in txt_file:
+            directory += "/movie/raw/"
+            data_type = "raw"
+        if "sorted" in txt_file:
+            directory += "/movie/trimmed/"
+            data_type = "trimmed"
         if not os.path.exists(directory):
             os.makedirs(directory)
 
         self.directory = directory
         self.txt_file = txt_file
-        self.frames = 1105
+        self.frames = frames
+        self.data_type = data_type
 
-        """
-        # Find out how long your movie is:
-        exp_type = txt_file.split("/")[-5]
-        date = txt_file.split("/")[-4]
-        pos = txt_file.split("/")[-3]
-        summary_file = "/Volumes/lowegrp/Data/Kristina/{}/summary_movies.txt".format(exp_type)
-        for line in open(summary_file, "r"):
-            line = line.rstrip().split("\t")
-            if line[1] == date and line[2] == pos:
-                self.frames = int(line[3])
-        """
 
     def PlotCellIDLifeTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
 
+        # Prepare the axes:
         cell_ID_label_list = []
         cell_ID_frame_list = []
 
         for line in open(self.txt_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID':
+            if line[0] == 'Cell_ID' or len(line) < 8:
                 continue
-            cell_ID_label_list.append(int(line[0]))
-            cell_ID_frame_list.append(list(range(int(line[1]), int(line[2]) + 1)))  # includes the last frame
-            if int(line[1]) > int(line[2]):
-                raise Exception(
-                    "Warning, frameAppears ({}) > frameDisappears ({}) ! Tracking error!".format(int(line[1]), int(line[2])))
-
-        # Prepare the axes:
-        x_axis = cell_ID_frame_list
-        y_axis = []
-
-        for cell_ID, frame_list in zip(cell_ID_label_list, cell_ID_frame_list):
-            y_axis.append([cell_ID] * len(frame_list))
+            cell_ID_label_list.append([int(line[0]), int(line[0])])
+            cell_ID_frame_list.append([int(line[1]), int(line[2])])  # includes the last frame
 
         # Plot the thing:
-        for mini_x, mini_y in zip(x_axis, y_axis):
-            plt.plot(mini_x, mini_y)
-        plt.xticks(np.arange(0, self.frames + 1, step=200))
+        for x, y in zip(cell_ID_frame_list, cell_ID_label_list):
+            plt.plot(x, y)
+        plt.xticks(np.arange(0, self.frames + 201, step=200))
         plt.xlim(-50, self.frames + 50)
         plt.xlabel('Frame number')
         plt.ylabel('Cell ID label')
-        plt.title('Lifetime of all cell_ID labels\n(movie = {} frames)'.format(self.frames))
-        plt.savefig(self.directory + "Plot_Cell_ID_Label_LifeTime.jpeg", bbox_inches="tight")
+        plt.title('Lifetime of {} cell_ID labels\n(movie = {} frames)'.format(self.data_type, self.frames))
 
+        # Save, show & close:
+        plt.savefig(self.directory + "Plot_CellIDLabel_LifeTime.jpeg", bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
@@ -90,20 +93,15 @@ class AnalyseAllCellIDs(object):
         # cell_ID_frame_list -> [[0, 1, 2, ...], [0, 1, 2, ...], ...]
         # concat_frame_list -> [0, 1, 2, ..., 0, 1, 2, ..., ...]
 
-        TODO: Plot an 'ideal' line into the graph?
-
         """
 
         cell_ID_frame_list = []
 
         for line in open(self.txt_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID':
+            if line[0] == 'Cell_ID' or len(line) < 8:
                 continue
             cell_ID_frame_list.append(list(range(int(line[1]), int(line[2]) + 1)))  # includes the last frame
-            if int(line[1]) > int(line[2]):
-                raise Exception(
-                    "Warning, frameAppears ({}) > frameDisappears ({}) ! Tracking error!".format(int(line[1]), int(line[2])))
 
         # Prepare the axes:
         concat_frame_list = sum(cell_ID_frame_list, [])
@@ -116,12 +114,13 @@ class AnalyseAllCellIDs(object):
         # Plot the thing:
         plt.scatter(x_axis, y_axis, c="salmon", alpha=0.5)
         plt.xlim(-100, self.frames + 100)
-        plt.xticks(np.arange(0, self.frames + 1, step=200))
+        plt.xticks(np.arange(0, self.frames + 201, step=200))
         plt.xlabel('Frame number')
         plt.ylabel('Cell count (total cell_IDs)')
-        plt.title('Cell Count per Frame (Count of Cell_ID Labels)\n(movie = {} frames)'.format(self.frames))
-        plt.savefig(self.directory + "Plot_Cell_ID_Count_Per_Frame.jpeg", bbox_inches="tight")
+        plt.title('Cell_ID Labels Count ({}) per Frame\n(movie = {} frames)'.format(self.data_type, self.frames))
 
+        # Save, show & close:
+        plt.savefig(self.directory + "Plot_CellIDCount_PerFrame.jpeg", bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
@@ -130,38 +129,35 @@ class AnalyseAllCellIDs(object):
     def PlotCellCycleAbsoluteTime(self, show=False):
         """ Read the sorted .txt file with cell_ID details to plot graphs. """
 
-        x_axis_3 = []
-        y_axis_3 = []
+        x_axis = []
+        y_axis = []
         for line in open(self.txt_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID':
+            if line[0] == 'Cell_ID' or len(line) < 8:
                 continue
-            x_axis_3.append(int(line[1]) * 4)
-            y_axis_3.append(int(line[3]))
+            x_axis.append(int(line[1]) * 4)
+            y_axis.append(int(line[3]))
 
-        plt.scatter(x_axis_3, y_axis_3, alpha=0.3, c="forestgreen")
+        ticks = list(range(0, self.frames * 4 + 401, 400))
+        plt.scatter(x_axis, y_axis, alpha=0.3, c="forestgreen")
+        plt.plot([0, self.frames * 4], [self.frames * 4, 0], linewidth=1.2, linestyle='dashed', color='grey', alpha=0.7)
         plt.xlim(-200, self.frames * 4 + 200)
-        plt.xticks(list(range(0, self.frames * 4 + 1, 400)))
+        plt.xticks(ticks, rotation='vertical')
         plt.xlabel("Absolute time [mins]")
         plt.ylim(-200, self.frames * 4 + 200)
-        plt.yticks(list(range(0, self.frames * 4 + 1, 400)))
+        plt.yticks(ticks)
         plt.ylabel("Cell cycle time [mins]")
-        plt.title("Absolute time vs Cell cycle duration\n(movie = {} frames)".format(self.frames))
-        plt.savefig(self.directory + "Absolute_Time_per_Cell_Cycle_Time.jpeg", bbox_inches="tight")
+        plt.title("Absolute time vs Cell cycle duration of {} cell_IDs\n(movie = {} frames)".format(self.data_type, self.frames))
 
+        # Save, show & close:
+        plt.savefig(self.directory + "Scatter_AbsTime_vs_CCT.jpeg", bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
 
 
-    def PlotHist_CellCycleDuration(self, limit=80, show=False):
-        """ Read the sorted .txt file with cell_ID details to plot graphs.
-        Args:
-            Limit   -> (integer; set to 80 by default)      = whole time of the movie in hours.
-        Return:
-            n_per_bin, n_per_bin_length     = number of elements per each bin, number of bins
-
-        """
+    def PlotHistCellCycleDuration(self, limit=80, show=False):
+        """ Args:   Limit   -> (integer; set to 80 by default)  =  whole time of the movie in hours. """
 
         if int(limit) > 80:
             raise Exception("Warning, limit of {} is out of range of the movie duration (max. 80 hrs)".format(str(limit)))
@@ -170,7 +166,7 @@ class AnalyseAllCellIDs(object):
         cct_hrs = []
         for line in open(self.txt_file, "r"):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID':
+            if line[0] == 'Cell_ID' or len(line) < 8:
                 continue
             # Include only non-root & non-leaf cell_IDs:
             if line[6] == "False" and line[7] == "False":
@@ -190,20 +186,21 @@ class AnalyseAllCellIDs(object):
             bin_edges = [item / 60 for item in bin_edges]
 
 
+        # Calculate the mean & standard deviations:
+        if len(cct_hrs) <= 2:
+            mean, std = 0, 0
+        else:
+            mean = round(stats.mean(cct_hrs), 2)
+            std = round(stats.stdev(cct_hrs), 2)
+
         # Plot the thing: < B I G  P L O T >
         fig = plt.figure()
         fig.subplots_adjust(bottom=0.2)
 
         ax1 = fig.add_subplot(111)
         n_per_bin, _, _ = ax1.hist(cct_hrs, bins=bin_edges, color='lightskyblue', edgecolor='royalblue', linewidth=1.2)
-        ax1.set_title("Cell Cycle Duration of trimmed & filtered cell_IDs")
-
-        # Visualise the mean & standard deviations:
-        if len(cct_hrs) <= 2:
-            mean, std = 0, 0
-        else:
-            mean = round(stats.mean(cct_hrs), 2)
-            std = round(stats.stdev(cct_hrs), 2)
+        ax1.set_title("Cell Cycle Duration of {} Cell_IDs\nmean ± st.dev = {} ± {} (movie = {} frames)"
+                      .format(self.data_type, mean, std, self.frames))
 
         # Y-axis: Find y-axis maximum to define lower limit of y-axis
         ax1.set_ylabel("Cell ID count")
@@ -249,16 +246,8 @@ class AnalyseAllCellIDs(object):
         sub_axes.axvline(mean + std, color='gold', linestyle='dashed', linewidth=1.0)
         sub_axes.axvline(mean - std, color='gold', linestyle='dashed', linewidth=1.0)
 
-
         # Save, show & close:
         plt.savefig(self.directory + "Hist_Cell_Cycle_Duration.jpeg".format(limit), bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
-
-
-call = AnalyseAllCellIDs("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
-call.PlotCellIDLifeTime(show=True)
-call.PlotCellIDsPerFrame(show=True)
-call.PlotCellCycleAbsoluteTime(show=True)
-call.PlotHist_CellCycleDuration(show=True)

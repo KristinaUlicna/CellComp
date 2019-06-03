@@ -52,6 +52,3 @@ def GetMovieFilesPaths(exp_type = "MDCK_WT_Pure"):
                     txt_file_list.append(directory_txt)
 
     return xml_file_list, txt_file_list
-
-
-# TODO: Check at school if this works!

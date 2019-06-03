@@ -1,9 +1,14 @@
 import matplotlib.pyplot as plt
-import numpy as np
+import sys
+sys.path.append("../")
+
+from Cell_Cycle_Duration.Find_Family_Class import FindFamily
+
 
 def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
     """ Joint probability histograms with plt.hist2D on 'cellIDdetails_merged.txt' file.
-
+        TASK: If you are a parent with certain cell cycle duration, what is your likelihood
+                of producing progeny with the same cell cycle duration time?
     Args:
         exp_type (string)   -> "MDCK_WT_Pure" by default
 
@@ -12,34 +17,7 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
         Visualises the hist2D.
     """
 
-    # Define a function to find a parent of each cell if cell is in gen#2 or above (to get real div.time of non-root parent)
-    def FindCellParent(cell_ID):
-        cell_ID = cell_ID.split("-")
-        date, pos, cell = cell_ID[-1], cell_ID[-2], cell_ID[-3]
-        raw_file = "/Volumes/lowegrp/Data/Kristina/{}/{}/{}/analysis/cellIDdetails_filtered.txt" \
-                    .format(exp_type, date, pos)
-
-        # TODO: Remove this conditional statement after 'cellIDdetails_merged.txt' is re-done!
-        if "pos11" in raw_file or "pos12" in raw_file or "pos13" in raw_file:
-            print ("Warning, movie no longer included!")
-            return [int(cell), "NaN"]
-
-        finding = False       # 'finding' is a marker => from this moment, look for 0 (so it doesn't return first 0 in file)
-        for line in open(raw_file, "r"):
-            line = line.rstrip().split("\t")
-            if line[0] == "Cell_ID" or len(line) < 8:
-                continue
-            if int(line[0]) == int(cell):
-                finding = True
-                generation = int(line[5])
-            if finding is True and int(line[5]) == generation - 1:
-                if generation > 1:
-                    return [int(line[0]), float(line[4]), int(line[5])]
-                else:
-                    return [int(line[0]), "NaN", int(line[5])]
-
-
-    # Call the function - create 2 lists:
+    # Call FindFamily().FindParent() for each cell_ID to get real div.time of non-root parent & daughter - create 2 lists:
     merged_file = "/Volumes/lowegrp/Data/Kristina/{}/cellIDdetails_merged.txt".format(exp_type)
     x_axis_list = [[], [], []]
     y_axis_list = [[], [], []]
@@ -48,7 +26,7 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
         line = line.rstrip().split("\t")
         if line[0] == "Cell_ID" or len(line) < 8:
             continue
-        parent_info = FindCellParent(cell_ID=line[0])
+        parent_info = FindFamily(cell_ID=line[0], filtered_file=merged_file).FindParent()
         if parent_info is not None and parent_info[1] != "NaN" and isinstance(parent_info[1], float):
             x_axis_list[parent_info[2]-1].append(parent_info[1])
             y_axis_list[parent_info[2]-1].append(float(line[4]))
@@ -56,20 +34,7 @@ def PlotJointProbabHistCCT(exp_type="MDCK_WT_Pure", show=False):
     print("Parent time list -> len: {}; {}".format(len(x_axis_list), x_axis_list))
     print("CellID time list -> len: {}; {}".format(len(y_axis_list), y_axis_list))
 
-    """
-    # Do sanity check for overwriting - count the number of lines:
-    counter = 0
-    for line in open(merged_file, 'r'):
-        line = line.rstrip().split("\t")
-        if line[0] == "Cell_ID" or len(line) < 8:
-            continue
-        if int(line[5]) > 1:
-            print(line)
-            counter += 1
-    print("Counter: {}".format(counter))
-    print(len(x_axis_list) == len(y_axis_list) == counter)
-    """
-
+    # Define a function to plot 2D histogram (irre)
     def PlotScatter(zoom=False, show=show):
 
         # Plot the thing:

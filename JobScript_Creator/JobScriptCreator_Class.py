@@ -150,7 +150,6 @@ class ProcessMovies():
             Creates 4 files: 'hypothesis_typeX.txt', 'optimised_typeX.txt', 'tracks_typeX.mat', 'tracks_typeX.xml'.
             (X = 1 for 'GFP', X = 2 for 'RFP')
             All saved inside the HDF folder with 'segmented.hdf5' file which was used as input for tracking.
-            TODO: Check if formatted parameters work well!
         """
 
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
@@ -163,7 +162,7 @@ class ProcessMovies():
 
         # Create a .job file:
         job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
-        #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.type) + job_name + '.job', 'w')
+        #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.exp_type) + job_name + '.job', 'w')
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
@@ -173,23 +172,24 @@ class ProcessMovies():
             if item is False:
                 del channels[order]
 
-        frame_volume = 1400
-        if self.exp_type == "MDCK_WT_Pure":
-            frame_volume = 1200
-        elif self.exp_type == "MDCK_90WT_10Sc_NoComp":
-            frame_volume = 1500
+        frame_volume = None
+        #if self.exp_type == "MDCK_WT_Pure":
+        #    frame_volume = 1200
+        if self.exp_type == "MDCK_90WT_10Sc_NoComp":
+            if self.data_date == "17_03_27":
+                frame_volume = 1447
+            if self.data_date == "17_07_24":
+                frame_volume = 1105
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
                 .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = Data_2\n'
-        string += 'user = ' + str(self.user) + '\npriority = 1\n'
+        string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        string += 'params = {"path": "{}", "volume":((0,1200),(0,1600),(-1,1),(0,{})), "to_track":{}, "config": "MDCK_config_Kristina.json"}\n'.format(path, frame_volume, channels)
-        string += 'options = {}'
-
-        # TODO: FIX THIS!!!
+        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,' + str(frame_volume) \
+                        + ')), "to_track":' + str(channels) +', "config": "MDCK_config_Kristina.json"}\noptions = {}'
 
         print (string)
         self.job_file.write(string)

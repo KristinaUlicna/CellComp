@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
 from Cell_Cycle_Duration.Plot_CC_Duration_Hist import PlotHistGenerationCCT
 
+# TODO: What's the point of having this function separate
+# if the script 'Plot_CC_Duration_Hist' has a function to do the same?
 
 def PlotHistCumul_AllMovies(exp_type="MDCK_WT_Pure", generation=1, show=False):
     """ Identify outlier movies by plotting an CDF.
@@ -47,7 +49,8 @@ def PlotHistCumul_AllMovies(exp_type="MDCK_WT_Pure", generation=1, show=False):
                      label='{}-{}\ncellIDs = {}'.format(file[-4], file[-3], len(file_gen)))
 
     # Tidy up the figure:
-    plt.title("Cumulative step histograms:\nGeneration #{} - Merged data vs. 18 'MDCK_WT_Pure' movies".format(generation))
+    plt.title("Cumulative step histograms:\nGeneration #{} - Merged data vs. {} '{}' movies"
+              .format(generation, len(txt_file_list), exp_type))
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=5)
     plt.ylabel('Likelihood of occurrence')
     plt.xlabel('Cell Cycle Duration [hours]')
@@ -60,8 +63,3 @@ def PlotHistCumul_AllMovies(exp_type="MDCK_WT_Pure", generation=1, show=False):
     if show is True:
         plt.show()
     plt.close()
-
-
-# Call the function:
-for gen in [1, 2, 3]:
-    PlotHistCumul_AllMovies(exp_type="MDCK_WT_Pure", generation=gen, show=True)

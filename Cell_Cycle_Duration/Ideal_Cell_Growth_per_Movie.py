@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 
-def PlotIdealCellGrowth():
-    """ Plot an 'ideal' growth curve for MDCK cells
-        with variable cell cycle duration & starting cell amount.
+# TODO: Calculate the 'off-factor'
+# = how many cellIDs should I have per movie in total,
+# considering the starting number of cells?
 
-    """
+
+def PlotIdealCellGrowth():
+    """ Plot an 'ideal' growth curve for MDCK cells with variable cell cycle duration & starting cell amount. """
 
     # Make vectors:
     def MakeVectors(cells_start, doubling_time):

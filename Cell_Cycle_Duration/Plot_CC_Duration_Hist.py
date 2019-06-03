@@ -5,7 +5,7 @@ import math
 import os
 
 from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
-# TODO: Make a class out of this!
+
 
 class PlotHistGenerationCCT(object):
     """ Try / except if functions are not called in order! """
@@ -338,10 +338,3 @@ class PlotHistGenerationCCT(object):
         if show is True:
             plt.show()
         plt.close()
-
-
-call = PlotHistGenerationCCT("/Users/kristinaulicna/Documents/Rotation_2/Cell_Competition/Example_Movie/17_07_24-pos6/cellIDdetails_filtered.txt")
-call.CreateGenerationList(print_stats=True)
-call.PlotHistSimple(show=False)
-call.PlotHistNormalised(show=True)
-#call.PlotHistNormalisedOLD(show=True)

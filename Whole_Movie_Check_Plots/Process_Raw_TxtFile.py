@@ -29,7 +29,7 @@ class ProcessRawTxtFile(object):
         self.line_list = []
 
 
-    def TrimCellIDFile(self):
+    def TrimCellIDFile(self, trimming_limit=75):
         """ Trims (excludes) all cell_IDs which appear for the movie for less or equal to 20 minutes = 5 frames.
             This is an 'informative' file. Will probably not be used for further analysis,
             but is handy for printing summary statistics for each movie. """
@@ -47,7 +47,7 @@ class ProcessRawTxtFile(object):
                     header_string += "\n"
                     self.header_string = header_string
                 else:
-                    if float(line[3]) > 20:
+                    if float(line[3]) > trimming_limit * 4:
                         self.line_list.append(line)
 
         # Write the 'cellIDdetails_trimmed.txt' file & type the header:

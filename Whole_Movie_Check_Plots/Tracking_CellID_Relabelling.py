@@ -1,15 +1,18 @@
-# TODO: Plot a 'stacked' barplot (for each 'cellIDdetails_sorted.txt' file):
-
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import sys
 
-def VisualiseCellIDRelabelling(txt_file, show=False):
-    """ Plot the barplot for each 'cellIDdetails_sorted.txt' file
+sys.path.append("../")
+from Whole_Movie_Check_Plots.Movie_Frame_Length import FindMovieLength
+
+
+def VisualiseCellIDRelabelling(txt_file, show=False, print_stats=False):
+    """ Plot the barplot for each 'cellIDdetails_sorted.txt' (or '_raw.txt') file
         to see how many cellIDs get re-labelled at each frame.
 
     Args:
-        txt_file (string)       -> absolute directory to 'cellIDdetails_sorted.txt' (preferrably)
+        txt_file (string)       -> absolute directory to 'cellIDdetails_sorted.txt'
 
     Return:
         None.
@@ -22,13 +25,15 @@ def VisualiseCellIDRelabelling(txt_file, show=False):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    movie_length = 1200         # TODO: import this information from 'summary_movies.txt' according to the movie name!
+    data_date = txt_file.split("/")[-4]
+    movie_length = FindMovieLength(data_date=data_date)
+
     frame_appear = []
     frame_ceased = []
 
     for line in open(txt_file, "r"):
         line = line.rstrip().split("\t")
-        if line[0] == "Cell_ID":
+        if line[0] == "Cell_ID" or len(line) < 8:
             continue
         # Aim for Root & Leaf cells only:
         if line[6] == "True" and line[7] == "True":
@@ -49,10 +54,11 @@ def VisualiseCellIDRelabelling(txt_file, show=False):
     cells_start = axis_appear.pop(0)    # remove the starting count of cells
     axis_appear = axis_appear + [0]     # add 0 to the end to even the lengths of the axes lists
 
-    print ("Seeded cells: cell count at the 1st frame: {}".format(cells_start))
-    print ("X-Axis: len = {}\t{}".format(len(axis_frames), axis_frames))
-    print ("Y-Axis Appear: len = {}\t{}".format(len(axis_appear), axis_appear))
-    print ("Y-Axis Ceased: len = {}\t{}".format(len(axis_ceased), axis_ceased))
+    if print_stats is True:
+        print ("Seeded cells: cell count at the 1st frame: {}".format(cells_start))
+        print ("X-Axis: len = {}\t{}".format(len(axis_frames), axis_frames))
+        print ("Y-Axis Appear: len = {}\t{}".format(len(axis_appear), axis_appear))
+        print ("Y-Axis Ceased: len = {}\t{}".format(len(axis_ceased), axis_ceased))
 
     # Create return vector to check for odd frames where a lot of re-labelling happens:
     odd_frames = []
@@ -69,8 +75,9 @@ def VisualiseCellIDRelabelling(txt_file, show=False):
             odd_pairs += 1
         current_frame = number
 
-    percentage = round(float(odd_pairs) / (len(odd_frames) / 2) * 100, 2)
-    print ("{}% of odd frames (where over {} cellIDs are re-labelled) come in pairs.".format(percentage, cut_off))
+    if print_stats is True:
+        percentage = round(float(odd_pairs) / (len(odd_frames) / 2) * 100, 2)
+        print ("{}% of odd frames (where over {} cellIDs are re-labelled) come in pairs.".format(percentage, cut_off))
 
 
     # Plot the thing:
@@ -83,7 +90,7 @@ def VisualiseCellIDRelabelling(txt_file, show=False):
               "\n{} Root & Leaf cellIDs only included; {} seeded cells at 1st frame".format(len(frame_ceased), cells_start))
 
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), ncol=2)      # bbox_to_anchor (tuple) -> (x-axis, y-axis)
-    plt.ylim(-5, 205)      # TODO: Interrupt the y-axis to plot frame 1200 y-value.
+    plt.ylim(-5, 205)
     plt.ylabel("Count of cellIDs ceased/appearing")
     plt.xlabel("Frame number")
     plt.xticks(list(range(0, movie_length + 200, 200)))

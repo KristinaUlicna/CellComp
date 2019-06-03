@@ -94,6 +94,8 @@ def Traverse_Trees(tree, txt_file):        # define the recursive function
     gen = int(tree.depth)
     is_root = True if tree.depth == 0 else False
     is_leaf = tree.leaf
+    if frm_st > frm_en:
+        raise Exception("Warning, frameAppears ({}) > frameDisappears ({}) ! Tracking error!".format(frm_st, frm_en))
     details = [str(item) for item in [cell_ID, frm_st, frm_en, cct_m, cct_h, gen, is_root, is_leaf]]
 
     # Write the details into a 'cellIDdetails_raw.txt' file:
