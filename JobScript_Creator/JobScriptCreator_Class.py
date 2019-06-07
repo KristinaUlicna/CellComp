@@ -128,7 +128,7 @@ class ProcessMovies():
             .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = f2dafed81fd87a66bf0028a16b1473cd\n'
-        string += 'user = ' + str(self.user) + '\npriority = 99\n'
+        string += 'user = ' + str(self.user) + '\npriority = 1\n'
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\n'
         string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
@@ -185,7 +185,7 @@ class ProcessMovies():
                 .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = Data_2\n'
-        string += 'user = ' + str(self.user) + '\npriority = 99\n'
+        string += 'user = ' + str(self.user) + '\npriority = 1\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,' + str(frame_volume) \

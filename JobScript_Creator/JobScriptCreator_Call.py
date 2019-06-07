@@ -25,7 +25,8 @@ xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
 for file in sorted(xml_file_list):
     if "tracks_type1" in file:
         print("Writing job for file: {}".format(file))
-        ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
+        ProcessMovies(xml_file=file).SegClass(BF=True, GFP=True, RFP=True)
+        #ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
 
 
 

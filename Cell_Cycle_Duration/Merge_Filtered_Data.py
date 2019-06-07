@@ -10,6 +10,7 @@ from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
 def MergeFilteredData(exp_type = "MDCK_WT_Pure"):
     """ Merge all filtered data to a single txt.file,
         Change the cellID naming from current '1', '2', etc to '1-pos0-17_07_31'
+
     Args:
         exp_type (string); "MDCK_WT_Pure" by default    ->    cell type to be analysed
 
@@ -33,7 +34,7 @@ def MergeFilteredData(exp_type = "MDCK_WT_Pure"):
 
     for filtered_file in txt_file_list:
         filtered_file = filtered_file.replace("raw", "filtered")
-        #print("Filtered file (input): {}".format(filtered_file))
+        print("Filtered file (input): {}".format(filtered_file))
         filtered_file_name = str(filtered_file).split('/')
         for line in open(filtered_file, 'r'):
             line = line.rstrip().split("\t")

@@ -49,7 +49,7 @@ class PlotHistGenerationCCT(object):
         self.generation_list = [[]]
         for line in open(self.txt_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == "Cell_ID":
+            if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date":
                 continue
             gen = int(line[5])
             cct = float(line[4])               # cell cycle duration in hours

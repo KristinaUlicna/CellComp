@@ -18,18 +18,20 @@ class FindFamily(object):
 
     def __init__(self, cell_ID, filtered_file):
 
-        self.cell_ID = cell_ID
-        self.filtered_file = filtered_file
-        self.raw_file = self.filtered_file.replace("filtered", "raw")
-
         if "merged" in filtered_file:
             exp_type = filtered_file.split("/")[-2]
             cell_name = str(cell_ID).split("-")
             date = cell_name[-1]
             pos = cell_name[-2]
             self.cell_ID = int(cell_name[-3])
+            self.filtered_file = "/Volumes/lowegrp/Data/Kristina/{}/{}/{}/analysis/cellIDdetails_filtered.txt" \
+                                 .format(exp_type, date, pos)
             self.raw_file = "/Volumes/lowegrp/Data/Kristina/{}/{}/{}/analysis/cellIDdetails_raw.txt" \
                             .format(exp_type, date, pos)
+        else:
+            self.cell_ID = cell_ID
+            self.filtered_file = filtered_file
+            self.raw_file = filtered_file.replace("filtered", "raw")
 
 
     def FindItself(self):
@@ -38,8 +40,10 @@ class FindFamily(object):
         cell_info = []
         for line in open(self.filtered_file, "r"):
             line = line.rstrip().split("\t")
-            if line[0] == "Cell_ID" or len(line) < 8:
+            if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date" or len(line) < 8:
                 continue
+            if "-" in line[0]:
+                line[0] = line[0].split("-")[0]
             if int(line[0]) == self.cell_ID:
                 cell_info = [int(line[0]), float(line[4]), int(line[5])]
                 return cell_info
@@ -52,11 +56,10 @@ class FindFamily(object):
     def FindRoot(self):
         """ Finds the root of the tree so that you can plot the tree easily. """
 
-        cell_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file)
-        cell_info = cell_info.FindItself()
+        cell_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file).FindItself()
 
         if cell_info[2] == 0:       # if the query cell is a root itself, return it's details, otherwise search for root
-            print("Warning, query cell_ID {} is a root itself!".format(cell_ID))
+            print("Warning, query cell_ID {} is a root itself!".format(self.cell_ID))
             return cell_info
         else:
             finding = False
@@ -73,8 +76,7 @@ class FindFamily(object):
     def FindParent(self):
         """ Finds the parent (i.e. cell_ID one generation above) of the desired cell. """
 
-        cell_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file)
-        cell_info = cell_info.FindItself()
+        cell_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file).FindItself()
 
         if cell_info[2] == 0:  # if the query cell is a root itself, return it's details, otherwise search for root
             print ("Warning, query cell_ID {} is a root - it doesn't have a parent!".format(self.cell_ID))
@@ -83,9 +85,9 @@ class FindFamily(object):
             finding = False
             for line in open(self.raw_file, "r"):
                 line = line.rstrip().split("\t")
-                if line[0] == "Cell_ID" or len(line) < 8:
+                if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date" or len(line) < 8:
                     continue
-                if int(line[0]) == int(self.cell_ID):
+                if int(line[0]) == cell_info[0]:
                     finding = True
                     generation = int(line[5])
                 if finding is True and int(line[5]) == generation - 1:
@@ -101,20 +103,19 @@ class FindFamily(object):
             & looks for the sister cell (i.e. the parent's other child)
             on the same depth as the desired cell. """
 
-        # Call previous function to get the parent name:
+        cell_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file).FindItself()
         parent_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file).FindParent()
-        parent = parent_info[0]
 
-        # Read the same file in reversed order:
+        # Read the same file in REVERSED order:
         finding = False
         for line in reversed(list(open(self.raw_file, "r"))):
             line = line.rstrip().split("\t")
-            if line[0] == "Cell_ID" or len(line) < 8:
+            if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date" or len(line) < 8:
                 continue
-            if int(line[0]) == parent:
+            if int(line[0]) == parent_info[0]:
                 finding = True
                 generation = int(line[5])
-            if finding is True and int(line[5]) == generation + 1 and int(line[0]) != self.cell_ID:
+            if finding is True and int(line[5]) == generation + 1 and int(line[0]) != cell_info[0]:
                 if line[7] != "True":                       # if cell is not leaf
                     return [int(line[0]), float(line[4]), int(line[5])]
                 else:
@@ -135,8 +136,10 @@ class FindFamily(object):
         else:
             for line in open(self.raw_file, "r"):
                 line = line.rstrip().split("\t")
-                if line[0] == "Cell_ID" or len(line) < 8:
+                if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date" or len(line) < 8:
                     continue
+                if "-" in line[0]:
+                    line[0] = line[0].split("-")[0]
                 # Find the 'grandmother' cell = cell 2 generations up:
                 if int(line[0]) == self.cell_ID:
                     parent_info = FindFamily(cell_ID=self.cell_ID, filtered_file=self.filtered_file).FindParent()
@@ -158,8 +161,10 @@ class FindFamily(object):
         else:
             for line in open(self.raw_file, "r"):
                 line = line.rstrip().split("\t")
-                if line[0] == "Cell_ID" or len(line) < 8:
+                if line[0] == "Cell_ID" or line[0] == "Cell_ID-posX-date" or len(line) < 8:
                     continue
+                if "-" in line[0]:
+                    line[0] = line[0].split("-")[0]
                 # TODO: cousins only present in gen #3 & above - finish function:
         return ["To be updated"]
 
