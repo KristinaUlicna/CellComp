@@ -26,7 +26,8 @@ def VisualiseCellIDRelabelling(txt_file, show=False, print_stats=False):
         os.makedirs(directory)
 
     data_date = txt_file.split("/")[-4]
-    movie_length = FindMovieLength(data_date=data_date)
+    #movie_length = FindMovieLength(data_date=data_date)
+    movie_length = 1198
 
     frame_appear = []
     frame_ceased = []
@@ -43,6 +44,8 @@ def VisualiseCellIDRelabelling(txt_file, show=False, print_stats=False):
     # Count how many times each frame is mentioned in the created lists:
     frame_list = list(range(0, movie_length, 1))
     axis_frames = [item + 1 for item in frame_list]
+    axis_frames.pop(-1)
+    axis_frames.pop(-1)
     axis_appear = []
     axis_ceased = []
 
@@ -53,6 +56,12 @@ def VisualiseCellIDRelabelling(txt_file, show=False, print_stats=False):
     # Modify 'axis_appear' list to shift it one item to the left relative to 'axis-cease' list:
     cells_start = axis_appear.pop(0)    # remove the starting count of cells
     axis_appear = axis_appear + [0]     # add 0 to the end to even the lengths of the axes lists
+
+    # Pop the last 2 frames out:
+    axis_appear.pop(-1)
+    axis_appear.pop(-1)
+    axis_ceased.pop(-1)
+    axis_ceased.pop(-1)
 
     if print_stats is True:
         print ("Seeded cells: cell count at the 1st frame: {}".format(cells_start))
@@ -83,21 +92,27 @@ def VisualiseCellIDRelabelling(txt_file, show=False, print_stats=False):
     # Plot the thing:
 
         # Full-sized figure:
-    plt.figure(figsize=(8, 6))
+    plt.figure(figsize=(18, 6))
     plt.bar(x=np.array(axis_frames)-0.2, height=axis_ceased, width=0.4, color="green", label="Cells ceasing at frame 'n'")
     plt.bar(x=np.array(axis_frames)+0.2, height=axis_appear, width=0.4, color="orange", label="Cells appearing at frame 'n+1'")
     plt.title("CellID 're-labelling' issue by the tracker (v0.2.9)"
               "\n{} Root & Leaf cellIDs only included; {} seeded cells at 1st frame".format(len(frame_ceased), cells_start))
 
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), ncol=2)      # bbox_to_anchor (tuple) -> (x-axis, y-axis)
-    plt.ylim(-5, 205)
-    plt.ylabel("Count of cellIDs ceased/appearing")
+    plt.xlim(-10, 1210)
+    plt.ylim(-5, 150)
+    plt.grid(b=None, which='major', axis='y')
+    plt.ylabel("Count of cell-IDs ceasing/appearing")
+    yticks = list(range(0, 146, 10))
+    plt.yticks(ticks=yticks, labels=yticks)
+    #plt.yticks(list(range(0, 111, 10)))
     plt.xlabel("Frame number")
-    plt.xticks(list(range(0, movie_length + 200, 200)))
+    xticks = list(range(0, movie_length + 200, 200))
+    plt.xticks(ticks=xticks, labels=xticks)
 
         # Detailed figure:
     start, end = 0, 20
-    sub_axes = plt.axes([0.17, 0.5, 0.5, 0.35])       # left, bottom, width, height
+    sub_axes = plt.axes([0.17, 0.4, 0.5, 0.45])       # left, bottom, width, height
     sub_axes.bar(x=np.array(axis_frames[start:end])-0.2, height=axis_ceased[start:end], width=0.4, color="green")
     sub_axes.bar(x=np.array(axis_frames[start:end])+0.2, height=axis_appear[start:end], width=0.4, color="orange")
     sub_axes.grid(b=None, which='major', axis='y')

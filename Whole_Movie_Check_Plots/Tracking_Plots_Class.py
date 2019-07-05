@@ -38,13 +38,14 @@ class AnalyseAllCellIDs(object):
 
         data_date = txt_file.split("/")[-4]
         frames = FindMovieLength(data_date=data_date)
+        data_type = None
 
         directory = txt_file.split("/")[:-1]
-        directory = '/'.join(directory)
+        directory = '/'.join(directory) + "/"
         if "raw" in txt_file:
             directory += "/movie/raw/"
             data_type = "raw"
-        if "sorted" in txt_file:
+        if "sorted" in txt_file or "filtered" in txt_file:
             directory += "/movie/trimmed/"
             data_type = "trimmed"
         if not os.path.exists(directory):
@@ -54,6 +55,9 @@ class AnalyseAllCellIDs(object):
         self.txt_file = txt_file
         self.frames = frames
         self.data_type = data_type
+
+        self.mean = None
+        self.std = None
 
 
     def PlotCellIDLifeTime(self, show=False):
@@ -156,7 +160,7 @@ class AnalyseAllCellIDs(object):
         plt.close()
 
 
-    def PlotHistCellCycleDuration(self, limit=80, show=False):
+    def PlotHistCellCycleDurationORIGINAL(self, limit=80, show=False):
         """ Args:   Limit   -> (integer; set to 80 by default)  =  whole time of the movie in hours. """
 
         if int(limit) > 80:
@@ -248,6 +252,77 @@ class AnalyseAllCellIDs(object):
 
         # Save, show & close:
         plt.savefig(self.directory + "Hist_Cell_Cycle_Duration.jpeg".format(limit), bbox_inches="tight")
+        if show is True:
+            plt.show()
+        plt.close()
+
+
+    def PlotHistCellCycleDuration(self, show=False):
+        """ Args:   Limit   -> (integer; set to 80 by default)  =  whole time of the movie in hours. """
+
+        # Extract cell cycle duration according to given limit:
+        cct_hrs = []
+        for line in open(self.txt_file, "r"):
+            line = line.rstrip().split("\t")
+            if line[0] == 'Cell_ID' or len(line) < 8:
+                continue
+            # Include only non-root & non-leaf cell_IDs:
+            if line[6] == "False" and line[7] == "False":
+                cct_hrs.append(float(line[4]))
+
+        # Define bin edges & set axes ticks according to the limit:
+        ticks_hrs = list(range(0, 81, 10))
+        bin_edges = list(range(0, 81, 4))
+
+        # Calculate the mean & standard deviations:
+        if len(cct_hrs) <= 2:
+            self.mean, self.std = 0, 0
+        else:
+            self.mean = round(stats.mean(cct_hrs), 2)
+            self.std = round(stats.stdev(cct_hrs), 2)
+
+        # Plot the thing: < B I G  P L O T >
+        fig = plt.figure()
+        fig.subplots_adjust(bottom=0.2)
+
+        ax1 = fig.add_subplot(111)
+        n_per_bin, _, _ = ax1.hist(cct_hrs, bins=bin_edges, color='royalblue', edgecolor='royalblue', linewidth=1.2, alpha=0.5)
+        ax1.set_title("Cell Cycle Duration of {} Cell_IDs\nmean ± st.dev = {} ± {} (movie = {} frames)"
+                      .format(self.data_type, self.mean, self.std, self.frames))
+
+        # Y-axis: Find y-axis maximum to define lower limit of y-axis
+        ax1.set_ylabel("Cell ID count")
+        ax1.set_ylim((n_per_bin.max() * -1) / 10)       # y_lim = -10% of max y-axis value
+        ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
+
+        # X-axis: Hour scale:
+        ax1.set_xlim(ticks_hrs[0] - 4, ticks_hrs[-1] + 4)
+        ax1.set_xticks(ticks_hrs)
+        ax1.set_xlabel("Cell Cycle Time [hours]")
+
+        # Plot the thing: < S U B  P L O T >
+        start, end = 10, 30
+        bins_interval = list(range(start, end + 1, 1))
+        cct_hrs_interval = [item for item in cct_hrs if float(item) > start and float(item) < end]
+
+        sub_axes = plt.axes([0.45, 0.5, 0.4, 0.35])  # left, bottom, width, height
+        n_per_bin_interval, _, _ = sub_axes.hist(x=cct_hrs_interval, bins=bins_interval, color='lightgreen',
+                                                 alpha=0.8, edgecolor='green', linewidth=1.0)
+        upper = int(max(n_per_bin_interval))
+        if upper <= 20:
+            step_size = 2
+        else:
+            step_size = 5
+        sub_axes.set_xticks(list(range(start, end + 1, 2)))
+        sub_axes.set_yticks(list(range(0, upper + step_size, step_size)))
+        sub_axes.set_ylim(-1.0, upper + step_size)
+
+        sub_axes.axvline(self.mean, color='gold', linestyle='dashed', linewidth=1.5, label="Mean Gen #1")
+        sub_axes.axvline(self.mean + self.std, color='gold', linestyle='dashed', linewidth=1.0)
+        sub_axes.axvline(self.mean - self.std, color='gold', linestyle='dashed', linewidth=1.0)
+
+        # Save, show & close:
+        plt.savefig(self.directory + "Hist_Cell_Cycle_Duration.jpeg", bbox_inches="tight")
         if show is True:
             plt.show()
         plt.close()
