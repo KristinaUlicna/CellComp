@@ -9,7 +9,7 @@ from Cell_Cycle_Duration.Plot_CC_Duration_Hist import PlotHistGenerationCCT
 def ShortlistOutliers(left_or_right="left"):
     """
     Args:
-        left_or_right (string) -> "left" or "right"
+        left_or_right (string) -> "left" or "right" or "middle"
 
     """
 
@@ -30,8 +30,11 @@ def ShortlistOutliers(left_or_right="left"):
     if left_or_right == "right":
         outlier_boundary_lower = round(mean_list[0] + 1 * std_list[0], 2)
         outlier_boundary_upper = round(mean_list[0] + 2 * std_list[0], 2)
-    if left_or_right != "left" and left_or_right != "right":
-        raise Exception("Warning, specify which outliers you want: 'left' or 'right'")
+    if left_or_right == "middle":
+        outlier_boundary_lower = round(mean_list[0] - 1 * std_list[0], 2)
+        outlier_boundary_upper = round(mean_list[0] + 1 * std_list[0], 2)
+    if left_or_right != "left" and left_or_right != "right" and left_or_right != "middle":
+        raise Exception("Warning, specify which outliers you want: 'left' or 'right' or 'middle'")
     print ("Outlier boundaries: lower = {}, upper = {}".format(outlier_boundary_lower, outlier_boundary_upper))
 
 
@@ -47,7 +50,3 @@ def ShortlistOutliers(left_or_right="left"):
     print ("Outliers List: len = {} -> {}".format(len(outliers_list), outliers_list))
 
     return outliers_list
-
-
-left_outliers = ShortlistOutliers(left_or_right="left")
-right_outliers = ShortlistOutliers(left_or_right="right")
