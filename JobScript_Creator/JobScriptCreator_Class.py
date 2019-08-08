@@ -191,6 +191,5 @@ class ProcessMovies():
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,' + str(frame_volume) \
                         + ')), "to_track":' + str(channels) +', "config": "MDCK_config_Kristina.json"}\noptions = {}'
 
-        print (string)
         self.job_file.write(string)
         self.job_file.close()

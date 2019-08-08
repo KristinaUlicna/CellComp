@@ -26,7 +26,7 @@ for key, value in dictionary.items():
         plt.scatter(x=frame_list, y=density_list)
         plt.title("Cell-ID #{} density plot".format(key))
         plt.xlabel("Frame #")
-        plt.ylabel("Density [units?]")
+        plt.ylabel("Density [μm-2]")
         plt.ylim(0, 0.001)
 
         #plt.savefig("/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/ExampleDensityCellID4511.jpeg")

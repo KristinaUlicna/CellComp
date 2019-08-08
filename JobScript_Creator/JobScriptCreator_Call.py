@@ -21,13 +21,15 @@ from JobScript_Creator.JobScriptCreator_Class import ProcessMovies
 # Iterate through all movies available in selected folder:
 
 xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
-
+"""
 for file in sorted(xml_file_list):
     if "tracks_type1" in file:
+        if "17_07_24" in file and "pos13" in file:
+            continue
         print("Writing job for file: {}".format(file))
-        ProcessMovies(xml_file=file).SegClass(BF=True, GFP=True, RFP=True)
-        #ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
-
+        #ProcessMovies(xml_file=file).SegClass(BF=True, GFP=True, RFP=True)
+        ProcessMovies(xml_file=file).Tracking(to_track_GFP=True, to_track_RFP=True)
+"""
 
 
 """
@@ -81,8 +83,12 @@ for position in range(7, 10):
 
 
 # Create jobs for a single, specific position:
-"""
-call = ProcessMovies(6, data_date='17_07_24')
-call.SegClass()
-call.Tracking()
-"""
+
+call = ProcessMovies(pos=0, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+call.Tracking(to_track_GFP=True, to_track_RFP=True)
+
+call = ProcessMovies(pos=4, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+call.Tracking(to_track_GFP=True, to_track_RFP=True)
+
+call = ProcessMovies(pos=6, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+call.Tracking(to_track_GFP=True, to_track_RFP=True)

@@ -8,7 +8,7 @@ start_time = time.process_time()
 
 import sys
 sys.path.append("../")
-from Processing_MatLab_Files.Finding_Density_Values import FindDensitySpan
+from Cell_Local_Density.Finding_Density_Values import FindDensitySpan
 
 
 # Do the analysis for 1 example file:

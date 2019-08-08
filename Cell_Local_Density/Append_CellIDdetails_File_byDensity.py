@@ -3,7 +3,7 @@ sys.path.append("../")
 
 import yaml
 from Whole_Movie_Check_Plots.Server_Movies_Paths import GetMovieFilesPaths
-from Processing_MatLab_Files.Finding_Density_Values import FindDensitySpan
+from Cell_Local_Density.Finding_Density_Values import FindDensitySpan
 
 # Import directories for all movies available:
 _, txt_file_list = GetMovieFilesPaths(exp_type="MDCK_WT_Pure")

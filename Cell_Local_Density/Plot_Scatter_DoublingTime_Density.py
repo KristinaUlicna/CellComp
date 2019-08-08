@@ -10,9 +10,10 @@ def GetGenerationDataforScatter(generation, span):
         span (int)          -> a value of an index for that particular range of densities
                                 ('8' for "birth", '9' for "one_quarter", '10' for "half_way",
                                  '11' for "three_quarters", '12' for "mitosis")
-    #TODO: Add option for span!
-    :param generation:
-    :return:
+    Return:
+        duration (list)     -> list of floats = cell cycle duration
+        density (list)      -> list of floats = density of cell in that particular timepoint
+
     """
 
     duration = []
@@ -42,3 +43,7 @@ for span in [8, 9, 10, 11, 12]:
                 .format(span), bbox_inches="tight")
     plt.show()
     plt.close()
+
+
+# TODO: Add pseudocells for generation #3
+#duration, density = GetGenerationDataforScatter(generation=3, span="birth")

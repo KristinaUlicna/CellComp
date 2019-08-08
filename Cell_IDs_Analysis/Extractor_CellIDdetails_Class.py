@@ -41,13 +41,23 @@ class GetCellDetails(object):
     def __init__(self, xml_file):
 
         # Create a .txt file from an .xml file in the same file directory:
+
+        exp_type = xml_file.split("/")[-5]
+        if "tracks_type1" in xml_file:
+            channel = "GFP"
+        if "tracks_type2" in xml_file:
+            channel = "RFP"
+
         xml_file_dir = xml_file.split("/")
         xml_file_dir = xml_file_dir[:-1]
         xml_file_dir = '/'.join(xml_file_dir) + "/"
 
         # Make you same processed .txt files into an '/analysis/' folder on server:
         if xml_file_dir.endswith("/tracks/"):
-            xml_file_dir = xml_file_dir[:-8] + "/analysis/"
+            if exp_type == "MDCK_90WT_10Sc_NoComp":
+                xml_file_dir = xml_file_dir[:-8] + "/analysis/channel_{}/".format(channel)
+            else:
+                xml_file_dir = xml_file_dir[:-8] + "/analysis/"
             if not os.path.exists(xml_file_dir):
                 os.makedirs(xml_file_dir)
 

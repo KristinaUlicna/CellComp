@@ -19,8 +19,8 @@ def ShortlistOutliers(left_or_right="left"):
     call.CreateGenerationList()
     mean_list = call.mean
     std_list = call.std
-    print ("\nGenerational means:\t{}".format(mean_list))
-    print ("Generational st.dev:\t{}".format(std_list))
+    #print ("\nGenerational means:\t{}".format(mean_list))
+    #print ("Generational st.dev:\t{}".format(std_list))
 
     # TODO: This is only done for generation #1!!! Is this correct? Compare to mean & st.dev. of generation 2!
     # Define boundaries of the outliers: upper = 1 st.dev down from mean, lower = 2 st.devs down from mean!
@@ -35,7 +35,7 @@ def ShortlistOutliers(left_or_right="left"):
         outlier_boundary_upper = round(mean_list[0] + 1 * std_list[0], 2)
     if left_or_right != "left" and left_or_right != "right" and left_or_right != "middle":
         raise Exception("Warning, specify which outliers you want: 'left' or 'right' or 'middle'")
-    print ("Outlier boundaries: lower = {}, upper = {}".format(outlier_boundary_lower, outlier_boundary_upper))
+    #print ("Outlier boundaries: lower = {}, upper = {}".format(outlier_boundary_lower, outlier_boundary_upper))
 
 
     # Find the cells which have doubling time below/above the one or two st.devs far from the mean:
@@ -47,6 +47,6 @@ def ShortlistOutliers(left_or_right="left"):
             continue
         if float(line[4]) > outlier_boundary_lower and float(line[4]) <= outlier_boundary_upper:
             outliers_list.append(line[0])
-    print ("Outliers List: len = {} -> {}".format(len(outliers_list), outliers_list))
+    #print ("Outliers List: len = {} -> {}".format(len(outliers_list), outliers_list))
 
     return outliers_list

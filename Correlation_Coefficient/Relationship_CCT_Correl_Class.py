@@ -16,6 +16,7 @@ import sys
 sys.path.append("../")
 
 from Cell_Cycle_Duration.Find_Family_Class import FindFamily
+from Cell_Cycle_Duration.Shortlist_Outliers import ShortlistOutliers
 
 
 class Correlation(object):
@@ -30,24 +31,36 @@ class Correlation(object):
 
     Args:
         CAPITALISE EACH WORD!
-        x_cct (string) -> who are you comparing? e.g. "Parent" or "Grandparent" or "Sibling_1"
-        y_cct (string) -> to whom are you comparing? e.g. "Child" or "Grandchild" or "Sibling_2"
+        x_cct (string)      -> who are you comparing?
+                                ("Parent" or "Grandparent" or "Sibling")
+        y_cct (string)      -> to whom are you comparing?
+                                ("Child" or "Grandchild" or "Sibling")
+        category (string)   -> cell group according to its division subcategory
+                                ("all", "left", "middle", "right")
 
     Return:
         coeff (float) -> numerical value for correlation coefficient
 
     """
 
-    def __init__(self, x_type, y_type):
+    def __init__(self, x_type, y_type, category="all"):
 
+        # Initialise the class arguments:
         self.merged_file = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/cellIDdetails_merged.txt"
         self.x_type = x_type
         self.y_type = y_type
+        self.category = category
+
+        # Initialise variables which will be calculated:
         self.coeff = 0
         self.x_data_details = []
         self.y_data_details = []
         self.x_cct = []
         self.y_cct = []
+
+        # What cells do I want to analyse?
+        if self.category != "all":
+            self.cells_to_analyse = ShortlistOutliers(left_or_right=self.category)
 
 
     def CalculateCorrCoeff(self):
@@ -58,6 +71,10 @@ class Correlation(object):
         for line in open(self.merged_file, "r"):
             line = line.rstrip().split("\t")
             if line[0] != "Cell_ID-posX-date":
+                # Insert 'if' statement to make sure you only analyse the wanted cell subcategory:
+                if self.category != "all":
+                    if line[0] not in self.cells_to_analyse:
+                        continue
                 if int(line[5]) > 1:
                     y_data = [int(line[0].split("-")[0]), float(line[4]), int(line[5])]
                     y_data_details.append(y_data)
@@ -65,7 +82,7 @@ class Correlation(object):
                         x_data = FindFamily(cell_ID=line[0], filtered_file=self.merged_file).FindParent()
                     elif self.x_type == "Grandparent":
                         x_data = FindFamily(cell_ID=line[0], filtered_file=self.merged_file).FindGrandparent()
-                    elif self.x_type == "Sibling_1":
+                    elif self.x_type == "Sibling":
                         x_data = FindFamily(cell_ID=line[0], filtered_file=self.merged_file).FindSibling()
                     else:
                         x_data = [None, None, None]
@@ -74,8 +91,10 @@ class Correlation(object):
         self.x_data_details = x_data_details
         self.y_data_details = y_data_details
 
+        """
         print("{} details: {}".format(self.x_type, x_data_details))
         print("{} details: {}".format(self.y_type, y_data_details))
+        """
 
         # Create vectors of CCT for parent (=x) and for child (=y):
         for item_1, item_2 in zip(x_data_details, y_data_details):
@@ -83,15 +102,14 @@ class Correlation(object):
                 self.x_cct.append(item_1[1])
                 self.y_cct.append(item_2[1])
 
+        """
         print("{} CCT: {}".format(self.x_type, self.x_cct))
         print("{} CCT: {}".format(self.y_type, self.y_cct))
+        """
 
         # Calculate correlation coefficient:
         coeff = np.corrcoef(x=self.x_cct, y=self.y_cct)
         self.coeff = coeff[0][1]
-        print(self.coeff)
-
-        return self.coeff
 
 
     def PlotScatter(self, show=False, min=10, max=35):
@@ -114,7 +132,7 @@ class Correlation(object):
         plt.legend(handles=handles_list, loc='center left', bbox_to_anchor=(1, 0.5))
 
         # Initialise the text:
-        if self.y_type == "Sibling_2":
+        if self.y_type == "Sibling":
             plt.text(30, 12.5, 'Green Cell ID Pair #4682 & #4683\n(Tree Root ID= #595)',
                      bbox=dict(facecolor='green', alpha=0.5), horizontalalignment='center', verticalalignment='center')
         else:
@@ -144,3 +162,13 @@ class Correlation(object):
         if show is True:
             plt.show()
             plt.close()
+
+
+    def PlotCCTDiffHist(self, show=False):
+
+        return None
+
+
+    def PlotCCTRatioHist(self, show=False):
+
+        return None
