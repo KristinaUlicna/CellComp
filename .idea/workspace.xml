@@ -2,44 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/CellID_1151_Smoothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT_BarPlot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Gen3_LeafCells.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Correlation_Coefficient/Relationship_CCT_Correl_Call.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_Old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manual_Tracking_Tool/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell_Local_Density/help.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chris_Tracking/Chris_Tracking_Jobs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chris_Tracking/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Only.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignment/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Frame_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Location_Info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tracking_TroubleShooting/Reconstruct_Trees_Quickly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tracking_TroubleShooting/Tracker_Tree_Reconstruction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tracking_TroubleShooting/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Shortlist_Outliers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Shortlist_Outliers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_BarPlot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Calculation_Try.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_All.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlation_Coefficient/Relationship_CCT_Correl_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_Outliers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_GrandParent_GrandChild.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_Parent_Child.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Correl_Sibling_Sibling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/.idea/JobScripts.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Append_CellIDdetails_File_byDensity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Append_CellIDdetails_File_byDensity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Finding_Density_Values.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Finding_Density_Values.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Merge_Density_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Merge_Density_Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Density_Single_Cells.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Plot_Density_Single_Cells.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Scatter_DoublingTime_Density.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Plot_Scatter_DoublingTime_Density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Scatter_DoublingTime_Density_EachMovie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Plot_Scatter_DoublingTime_Density_EachMovie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Read_Cell_Density_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Read_Cell_Density_Files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/Read_Density_Dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Local_Density/Read_Density_Dictionary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing_MatLab_Files/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_Old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Script.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +33,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Efficient.coverage" NAME="GenTree_Call_Efficient Coverage Results" MODIFIED="1557225521571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Align_Gen_1.coverage" NAME="Align_Gen_1 Coverage Results" MODIFIED="1565607691885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
     <SUITE FILE_PATH="coverage/PythonScripts$Scipy_XML.coverage" NAME="Scipy_XML Coverage Results" MODIFIED="1554895760323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Parent_vs_Child_CCT_Outliers.coverage" NAME="Parent_vs_Child_CCT_Outliers Coverage Results" MODIFIED="1559742083253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plot_Density_Single_Cells.coverage" NAME="Plot_Density_Single_Cells Coverage Results" MODIFIED="1565015227013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Sine_Wave_Only.coverage" NAME="Sine_Wave_Only Coverage Results" MODIFIED="1565868950460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Cell_Cycle_Length_Sandler_Regression.coverage" NAME="Cell_Cycle_Length_Sandler_Regression Coverage Results" MODIFIED="1565887664317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$ANOVA_Generations_Function.coverage" NAME="ANOVA_Generations_Function Coverage Results" MODIFIED="1558618459565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Outliers_Skewed_Left_LinTreePlots.coverage" NAME="Outliers_Skewed_Left_LinTreePlots Coverage Results" MODIFIED="1559498764534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_with_file.coverage" NAME="Help_with_file Coverage Results" MODIFIED="1557825221675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
@@ -63,19 +50,22 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Help.coverage" NAME="Generation_Tree_by_ID_Help Coverage Results" MODIFIED="1556813339882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Final.coverage" NAME="GenTree_Call_Final Coverage Results" MODIFIED="1557004905474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Average_StFrame_Gen0_Analysis.coverage" NAME="Average_StFrame_Gen0_Analysis Coverage Results" MODIFIED="1563194019368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Smoothing_Spline_Percentage_CCT.coverage" NAME="Smoothing_Spline_Percentage_CCT Coverage Results" MODIFIED="1565791765552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
     <SUITE FILE_PATH="coverage/PythonScripts$Ideal_Cell_Growth_per_Movie.coverage" NAME="Ideal_Cell_Growth_per_Movie Coverage Results" MODIFIED="1558528376364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1559734106927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
-    <SUITE FILE_PATH="coverage/PythonScripts$help.coverage" NAME="help Coverage Results" MODIFIED="1565289118287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual_Tracking_Tool" />
+    <SUITE FILE_PATH="coverage/PythonScripts$help.coverage" NAME="help Coverage Results" MODIFIED="1565963246113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
     <SUITE FILE_PATH="coverage/PythonScripts$CellIDs_4682_4683.coverage" NAME="CellIDs_4682_4683 Coverage Results" MODIFIED="1564486035212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$Extractor_CellIDdetails_Call.coverage" NAME="Extractor_CellIDdetails_Call Coverage Results" MODIFIED="1565105199909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plot_CC_Duration_Hist_Call.coverage" NAME="Plot_CC_Duration_Hist_Call Coverage Results" MODIFIED="1559041318598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$2DHist_DoublingTimeVsFrame.coverage" NAME="2DHist_DoublingTimeVsFrame Coverage Results" MODIFIED="1563120065612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Sort_File_by_CellID.coverage" NAME="Sort_File_by_CellID Coverage Results" MODIFIED="1557405593022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Analysis_And_Plotting_Class.coverage" NAME="Analysis_And_Plotting_Class Coverage Results" MODIFIED="1558106113507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Sine_Wave.coverage" NAME="Sine_Wave Coverage Results" MODIFIED="1565612084562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
     <SUITE FILE_PATH="coverage/PythonScripts$MkDir_Option.coverage" NAME="MkDir_Option Coverage Results" MODIFIED="1558000712823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Trimming_Limit.coverage" NAME="Trimming_Limit Coverage Results" MODIFIED="1559556924291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Correl_GrandParent_GrandChild.coverage" NAME="Correl_GrandParent_GrandChild Coverage Results" MODIFIED="1564493524333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$Corr_Coeff_Values.coverage" NAME="Corr_Coeff_Values Coverage Results" MODIFIED="1565008176768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Smoothed_R2.coverage" NAME="Smoothed_R2 Coverage Results" MODIFIED="1565963812316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
     <SUITE FILE_PATH="coverage/PythonScripts$Tracking_CellID_Relabelling.coverage" NAME="Tracking_CellID_Relabelling Coverage Results" MODIFIED="1558881095307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Call_Generations.coverage" NAME="Call_Generations Coverage Results" MODIFIED="1555318508373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Maxi_Analysis.coverage" NAME="Maxi_Analysis Coverage Results" MODIFIED="1558532238588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -92,6 +82,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$CellParentPairs_Call.coverage" NAME="CellParentPairs_Call Coverage Results" MODIFIED="1556721881624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Maxi_Analysis_Scribble.coverage" NAME="Maxi_Analysis_Scribble Coverage Results" MODIFIED="1559059456333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_FINAL.coverage" NAME="GenTree_FINAL Coverage Results" MODIFIED="1557515097516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Artifacts_Frame_1.coverage" NAME="Artifacts_Frame_1 Coverage Results" MODIFIED="1565690803191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/PythonScripts$Absolute_Time_Vs_Cell_Cycle.coverage" NAME="Absolute_Time_Vs_Cell_Cycle Coverage Results" MODIFIED="1557405972705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Get_Paths.coverage" NAME="Get_Paths Coverage Results" MODIFIED="1559746861668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Short.coverage" NAME="GenTree_Call_Short Coverage Results" MODIFIED="1557144482351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
@@ -116,38 +107,46 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Generation_Tree_by_ID_Class.coverage" NAME="Generation_Tree_by_ID_Class Coverage Results" MODIFIED="1556876714620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call_Reconstructed.coverage" NAME="Cell_ID_Info_Extractor_Call_Reconstructed Coverage Results" MODIFIED="1557828816939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Tracking_Plots_Class.coverage" NAME="Tracking_Plots_Class Coverage Results" MODIFIED="1559506843332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Reconstruct_Trees_Quickly.coverage" NAME="Reconstruct_Trees_Quickly Coverage Results" MODIFIED="1565702691209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/PythonScripts$Fun_Generations.coverage" NAME="Fun_Generations Coverage Results" MODIFIED="1554297090479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plot_Scatter_DoublingTime_Density_EachMovie.coverage" NAME="Plot_Scatter_DoublingTime_Density_EachMovie Coverage Results" MODIFIED="1562949523007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_MatLab_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Shortlist_Outliers.coverage" NAME="Shortlist_Outliers Coverage Results" MODIFIED="1564580019861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Merge_Density_Data.coverage" NAME="Merge_Density_Data Coverage Results" MODIFIED="1562947684730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_MatLab_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Call_Fun_Lineage.coverage" NAME="Call_Fun_Lineage Coverage Results" MODIFIED="1554203106778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call_Restructured.coverage" NAME="Cell_ID_Info_Extractor_Call_Restructured Coverage Results" MODIFIED="1557822762245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Gen3_Cells.coverage" NAME="Gen3_Cells Coverage Results" MODIFIED="1565621028519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Sine_Wave_Auto_Call.coverage" NAME="Sine_Wave_Auto_Call Coverage Results" MODIFIED="1565624430099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
     <SUITE FILE_PATH="coverage/PythonScripts$Fun_DivisionTime.coverage" NAME="Fun_DivisionTime Coverage Results" MODIFIED="1554290221915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Maxi_Analysis_WildType.coverage" NAME="Maxi_Analysis_WildType Coverage Results" MODIFIED="1559576307776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Parent_vs_Child_CCT.coverage" NAME="Parent_vs_Child_CCT Coverage Results" MODIFIED="1559738829728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$SuperOutliers_Plot_LinTrees.coverage" NAME="SuperOutliers_Plot_LinTrees Coverage Results" MODIFIED="1559746343886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_2.coverage" NAME="Help_2 Coverage Results" MODIFIED="1554294009953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Tracker_Tree_Reconstruction.coverage" NAME="Tracker_Tree_Reconstruction Coverage Results" MODIFIED="1565626457050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/PythonScripts$Corr_Coeff_Try.coverage" NAME="Corr_Coeff_Try Coverage Results" MODIFIED="1564488598668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$JobScripts_ProcessMovies_Call.coverage" NAME="JobScripts_ProcessMovies_Call Coverage Results" MODIFIED="1556809020484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions_Call.coverage" NAME="GenTree_Functions_Call Coverage Results" MODIFIED="1557005923040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Gen2_Sine_Wave.coverage" NAME="Gen2_Sine_Wave Coverage Results" MODIFIED="1565621743771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
     <SUITE FILE_PATH="coverage/PythonScripts$How_Many_Frames.coverage" NAME="How_Many_Frames Coverage Results" MODIFIED="1559119619466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Chris_Tracking_Jobs.coverage" NAME="Chris_Tracking_Jobs Coverage Results" MODIFIED="1565692914269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chris_Tracking" />
     <SUITE FILE_PATH="coverage/PythonScripts$Server_Movies_Paths.coverage" NAME="Server_Movies_Paths Coverage Results" MODIFIED="1559549217930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Probability_Histograms.coverage" NAME="Probability_Histograms Coverage Results" MODIFIED="1557410118119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Filter_Roots_and_Leaves.coverage" NAME="Filter_Roots_and_Leaves Coverage Results" MODIFIED="1558081013304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Server_And_Movies" />
     <SUITE FILE_PATH="coverage/PythonScripts$Correl_Density_CCT_BarPlot.coverage" NAME="Correl_Density_CCT_BarPlot Coverage Results" MODIFIED="1565006544959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_MatLab_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Joint_Probab_Hist2D.coverage" NAME="Joint_Probab_Hist2D Coverage Results" MODIFIED="1564505065588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Average_StFrame_Gen0.coverage" NAME="Average_StFrame_Gen0 Coverage Results" MODIFIED="1563123170451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Artifacts_Location_Info.coverage" NAME="Artifacts_Location_Info Coverage Results" MODIFIED="1565364469041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/PythonScripts$Iterate_Server_Folders.coverage" NAME="Iterate_Server_Folders Coverage Results" MODIFIED="1557762239678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Gen_Trees.coverage" NAME="Gen_Trees Coverage Results" MODIFIED="1555337793270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plot_Scatter_DoublingTime_Density.coverage" NAME="Plot_Scatter_DoublingTime_Density Coverage Results" MODIFIED="1562948642969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_MatLab_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cumulative_Hist_WT_Movies.coverage" NAME="Cumulative_Hist_WT_Movies Coverage Results" MODIFIED="1559140151414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Smoothing_Spline_Percentage_CCT_Function.coverage" NAME="Smoothing_Spline_Percentage_CCT_Function Coverage Results" MODIFIED="1565793582535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
     <SUITE FILE_PATH="coverage/PythonScripts$Relationship_CCT_Correl_Call.coverage" NAME="Relationship_CCT_Correl_Call Coverage Results" MODIFIED="1565014210687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$Manual_Tree_Plotter_Tool.coverage" NAME="Manual_Tree_Plotter_Tool Coverage Results" MODIFIED="1565109897911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Class_Efficient.coverage" NAME="GenTree_Class_Efficient Coverage Results" MODIFIED="1557521654842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Find_Family.coverage" NAME="Find_Family Coverage Results" MODIFIED="1559249291744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Finding_Density_Values.coverage" NAME="Finding_Density_Values Coverage Results" MODIFIED="1562934213555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Processing_MatLab_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Correl_Sibling_Sibling.coverage" NAME="Correl_Sibling_Sibling Coverage Results" MODIFIED="1564496322070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Cell_Cycle_Length_Sandler.coverage" NAME="Cell_Cycle_Length_Sandler Coverage Results" MODIFIED="1565178131997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Cell_Cycle_Length_Sandler.coverage" NAME="Cell_Cycle_Length_Sandler Coverage Results" MODIFIED="1565885986462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$JobScriptCreator_Call.coverage" NAME="JobScriptCreator_Call Coverage Results" MODIFIED="1565190454831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_Count_per_Frame.coverage" NAME="Cell_Count_per_Frame Coverage Results" MODIFIED="1557611933303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Movie_Statistics_Table.coverage" NAME="Movie_Statistics_Table Coverage Results" MODIFIED="1560171175654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
@@ -159,6 +158,8 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Movie_Frame_Length.coverage" NAME="Movie_Frame_Length Coverage Results" MODIFIED="1559567767903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Cell_ID_Info_Extractor_Call.coverage" NAME="Cell_ID_Info_Extractor_Call Coverage Results" MODIFIED="1557766658784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Correl_Coeff_Calc_Plots_Class_Outliers.coverage" NAME="Correl_Coeff_Calc_Plots_Class_Outliers Coverage Results" MODIFIED="1564583096427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Smoothing_Spline_Percentage_CCT_Call.coverage" NAME="Smoothing_Spline_Percentage_CCT_Call Coverage Results" MODIFIED="1565961179419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Sine_Wave_Auto.coverage" NAME="Sine_Wave_Auto Coverage Results" MODIFIED="1565623280705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
     <SUITE FILE_PATH="coverage/PythonScripts$Joint_Probab_Hist2D_Function.coverage" NAME="Joint_Probab_Hist2D_Function Coverage Results" MODIFIED="1559306200066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Merge_CellID_Filtered_Files.coverage" NAME="Merge_CellID_Filtered_Files Coverage Results" MODIFIED="1558281429828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Max_Generation_Cell_Counts.coverage" NAME="Max_Generation_Cell_Counts Coverage Results" MODIFIED="1564505615272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
@@ -185,39 +186,40 @@
     <session id="-1755711611">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="14" />
+          <entry key="project.open.time.6" value="15" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="3" />
-          <entry key="py" value="482" />
+          <entry key="py" value="519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="3" />
-          <entry key="Python" value="482" />
+          <entry key="Python" value="519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="649" />
-          <entry key="py" value="179534" />
+          <entry key="dummy" value="667" />
+          <entry key="py" value="197283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="649" />
-          <entry key="Python" value="179532" />
+          <entry key="PLAIN_TEXT" value="667" />
+          <entry key="Python" value="197281" />
           <entry key="SQL" value="2" />
         </counts>
       </usages-collector>
@@ -226,19 +228,104 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Script.py">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Read_Density_Dictionary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="120">
+              <caret line="7" lean-forward="true" selection-start-line="6" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+              <folding>
+                <element signature="e#96#127#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="66" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Only.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1800">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#329#360#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#150#161#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
+            <state relative-caret-position="1554">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+              <folding>
+                <element signature="e#35#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/help.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-743" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -255,23 +342,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3596</find>
-      <find>3618</find>
-      <find>3813</find>
-      <find>pos13</find>
-      <find>2080</find>
-      <find>cct_hrs</find>
-      <find>directory</find>
-      <find>txt_file</find>
-      <find>self.mean</find>
-      <find>findfa</find>
-      <find>sum_cellIDs</find>
-      <find>x_axis</find>
-      <find>percentage</find>
-      <find>-0.66</find>
-      <find>0.66</find>
-      <find>os.p</find>
-      <find>self.data_type</find>
       <find>brick</find>
       <find>int</find>
       <find>64:</find>
@@ -285,6 +355,23 @@
       <find>x_cct</find>
       <find>coeff</find>
       <find>_1</find>
+      <find>2019</find>
+      <find>75</find>
+      <find>74</find>
+      <find>273</find>
+      <find>441</find>
+      <find>308</find>
+      <find>610</find>
+      <find>592</find>
+      <find>683</find>
+      <find>338</find>
+      <find>666</find>
+      <find>728</find>
+      <find>551</find>
+      <find>832</find>
+      <find>805</find>
+      <find>596</find>
+      <find>739</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -294,27 +381,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Processing_MatLab_Files/Merge_Density_Data.py" />
-        <option value="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Scatter_DoublingTime_Density.py" />
-        <option value="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Scatter_DoublingTime_Density_EachMovie.py" />
-        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Average_StFrame_Gen0.py" />
-        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Average_StFrame_Gen0_Analysis.py" />
-        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/2DHist_DoublingTimeVsFrame.py" />
-        <option value="$PROJECT_DIR$/Oscillations_Analysis/help.py" />
-        <option value="$PROJECT_DIR$/Oscillations_Analysis/help_2.py" />
-        <option value="$PROJECT_DIR$/Oscillations_Analysis/Average_StFrame_Gen0.py" />
-        <option value="$PROJECT_DIR$/Oscillations_Analysis/Average_StFrame_Gen0_Analysis.py" />
-        <option value="$PROJECT_DIR$/Processing_MatLab_Files/Plot_Density_Single_Cells.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Try.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Calculations.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Sibling1_Sibling2.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/CellIDs_4682_4683.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Parent_Child.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_GrandParent_GrandChild.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Sibling_Sibling.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Calculation_Try.py" />
-        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Max_Generation_Cell_Counts.py" />
-        <option value="$PROJECT_DIR$/Correlation_Coefficient_Outliers/Correl_Parent_Child_Fast.py" />
         <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc.py" />
         <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class.py" />
         <option value="$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_Outliers.py" />
@@ -339,12 +405,33 @@
         <option value="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Call.py" />
         <option value="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" />
         <option value="$PROJECT_DIR$/Cell_IDs_Analysis/Manual_Tree_Plotter_Tool.py" />
-        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" />
         <option value="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py" />
         <option value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_New.py" />
         <option value="$PROJECT_DIR$/Manual_Tracking_Tool/help.py" />
-        <option value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" />
         <option value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py" />
+        <option value="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Location_Info.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Align_Gen_1.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Gen3_Cells.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Gen3_Cells_Vectors.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Gen2_Sine_Wave.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto_Call.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto.py" />
+        <option value="$PROJECT_DIR$/Tracking_TroubleShooting/Tracker_Tree_Reconstruction.py" />
+        <option value="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" />
+        <option value="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Frame_1.py" />
+        <option value="$PROJECT_DIR$/Chris_Tracking_Jobs.py" />
+        <option value="$PROJECT_DIR$/Chris_Tracking/Chris_Tracking_Jobs.py" />
+        <option value="$PROJECT_DIR$/Tracking_TroubleShooting/Reconstruct_Trees_Quickly.py" />
+        <option value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" />
+        <option value="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Only.py" />
+        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" />
+        <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" />
+        <option value="$PROJECT_DIR$/Cell_Local_Density/help.py" />
+        <option value="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py" />
+        <option value="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py" />
+        <option value="$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py" />
       </list>
     </option>
   </component>
@@ -354,8 +441,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="714" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -395,6 +482,16 @@
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Cell_Local_Density" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Chris_Tracking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
               <item name="JobScript_Creator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -406,6 +503,21 @@
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
               <item name="Oscillations_Analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Sequitr_Lineage_Trees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Sine_Wave_Alignment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Tracking_TroubleShooting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
@@ -426,18 +538,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Cell_Cycle_Duration" />
+      <recent name="$PROJECT_DIR$/Cell_Local_Density" />
+      <recent name="$PROJECT_DIR$/Tracking_TroubleShooting" />
       <recent name="$PROJECT_DIR$/Manual_Tracking_Tool" />
       <recent name="$PROJECT_DIR$/Correlation_Coefficient" />
-      <recent name="$PROJECT_DIR$/Processing_MatLab_Files" />
-      <recent name="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
-      <recent name="$PROJECT_DIR$/Cell_Cycle_Duration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chris_Tracking" />
       <recent name="$PROJECT_DIR$/Manual_Tracking_Tool" />
       <recent name="$PROJECT_DIR$/Oscillations_Analysis" />
       <recent name="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
       <recent name="$PROJECT_DIR$/Cell_Cycle_Duration" />
-      <recent name="$PROJECT_DIR$/Cell_IDs_Analysis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -452,8 +564,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.help">
-    <configuration name="GenTree_Plotting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Smoothed_R2">
+    <configuration name="Cell_Cycle_Length_Sandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -461,12 +573,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_IDs_Analysis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Cycle_Duration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -475,7 +587,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="JobScriptCreator_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Cell_Cycle_Length_Sandler_Regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,12 +595,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JobScript_Creator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Cycle_Duration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -497,7 +609,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Manual_Tree_Plotter_Tool_Function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Smoothed_R2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -505,12 +617,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual_Tracking_Tool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Local_Density" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_Old.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -519,7 +631,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Manual_Tree_Plotter_Tool_Function_New" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Smoothing_Spline_Percentage_CCT_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -527,12 +639,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual_Tracking_Tool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Local_Density" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -549,12 +661,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual_Tracking_Tool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_Local_Density" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_Local_Density/help.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -564,19 +676,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Manual_Tree_Plotter_Tool_Function" />
       <item itemvalue="Python.help" />
-      <item itemvalue="Python.JobScriptCreator_Call" />
-      <item itemvalue="Python.GenTree_Plotting" />
-      <item itemvalue="Python.Manual_Tree_Plotter_Tool_Function_New" />
+      <item itemvalue="Python.Smoothed_R2" />
+      <item itemvalue="Python.Cell_Cycle_Length_Sandler_Regression" />
+      <item itemvalue="Python.Cell_Cycle_Length_Sandler" />
+      <item itemvalue="Python.Smoothing_Spline_Percentage_CCT_Call" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Smoothed_R2" />
         <item itemvalue="Python.help" />
-        <item itemvalue="Python.Manual_Tree_Plotter_Tool_Function_New" />
-        <item itemvalue="Python.GenTree_Plotting" />
-        <item itemvalue="Python.JobScriptCreator_Call" />
-        <item itemvalue="Python.Manual_Tree_Plotter_Tool_Function" />
+        <item itemvalue="Python.Smoothing_Spline_Percentage_CCT_Call" />
+        <item itemvalue="Python.Cell_Cycle_Length_Sandler_Regression" />
+        <item itemvalue="Python.Cell_Cycle_Length_Sandler" />
       </list>
     </recent_temporary>
   </component>
@@ -594,9 +706,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24495678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23487031" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -628,148 +740,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Finding_Density_Values.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="98" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Append_CellIDdetails_File_byDensity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="71" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Oscillations_Analysis/help.py" />
-    <entry file="file://$PROJECT_DIR$/Oscillations_Analysis/Write_Gen0Parent_File.py" />
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Read_Density_Dictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#111#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Find_Family_Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1996">
-          <caret line="95" column="75" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_GrandParent_GrandChild.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Joint_Probab_Hist2D_Function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Max_Generation_Cell_Counts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="84" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Sibling_Sibling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="55" column="53" lean-forward="true" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Parent_Child.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="19" column="77" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Joint_Probab_Hist2D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient_Outliers/Correl_Parent_Child_Fast.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5877">
-          <caret line="253" column="22" lean-forward="true" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Parent_vs_Child_CCT_All_CellIDs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2812">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Parent_vs_Child_CCT_Outliers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3383">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Call.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Calculation_Try.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#35#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/CellIDs_4682_4683.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT_BarPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#58#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Plot_Scatter_DoublingTime_Density_EachMovie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -777,16 +747,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_Outliers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <element signature="e#394#431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_Outliers.py" />
     <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/SuperOutliers_Plot_LinTrees.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -794,16 +755,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_All.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding>
-            <element signature="e#394#431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Correl_Coeff_Calc_Plots_Class_All.py" />
     <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Shortlist_Outliers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -811,23 +763,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Values.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_BarPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#65#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_Values.py" />
+    <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Corr_Coeff_BarPlot.py" />
     <entry file="file://$PROJECT_DIR$/Correlation_Coefficient/Relationship_CCT_Correl_Class.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3936">
@@ -860,19 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="40" column="66" lean-forward="true" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/CellID_1151_Smoothing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="e#96#127#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Functions.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -924,32 +838,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1167">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Call.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="75" column="108" selection-start-line="75" selection-start-column="108" selection-end-line="75" selection-end-column="108" />
-          <folding>
-            <element signature="e#85#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -965,31 +855,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_Old.py">
+    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function_Old.py" />
+    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Script.py" />
+    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1912">
-          <caret line="139" column="25" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="25" />
+        <state relative-caret-position="378">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Script.py">
+    <entry file="file://$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Location_Info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Align_Gen_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-end-line="23" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Manual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Find_Family_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="95" column="75" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Gen2_Sine_Wave.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#71#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Gen3_Cells_Vectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="36" lean-forward="true" selection-start-line="2" selection-end-line="36" />
+          <folding>
+            <element signature="e#89#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto_Call.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chris_Tracking/Chris_Tracking_Jobs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Frame_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="288">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py">
+    <entry file="file://$PROJECT_DIR$/Tracking_TroubleShooting/Reconstruct_Trees_Quickly.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
+        <state relative-caret-position="193">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#99#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tracking_TroubleShooting/Tracker_Tree_Reconstruction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="16" column="96" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/CellID_1151_Smoothing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#96#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Call.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sequitr_Lineage_Trees/lineage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Read_Density_Dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" lean-forward="true" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Auto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="66" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Only.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#329#360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="e#96#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-743" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#150#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#35#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

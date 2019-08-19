@@ -27,13 +27,11 @@ def PlotLineageTree(root_ID, cell_ID, xml_file, show=False):
 
 
     # Define the directory to save into, show & close:
-    #directory = "/".join(xml_file.split("/")[:-1]) + "/outliers/"
-    directory = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/bulk_analysis/outliers_left/lineage_trees/"
+    directory = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/reconstruct_trees/"
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    plt.savefig(directory + "LinTree_Root_{}_CellID_{}_{}-{}.jpeg".format(root_ID, cell_ID, movie_pos, movie_date),
-                bbox_inches="tight")
     if show is True:
+        plt.savefig(directory + "LinTree_Root_{}.jpeg".format(root_ID), bbox_inches="tight")
         plt.show()
-    plt.close()
+        plt.close()

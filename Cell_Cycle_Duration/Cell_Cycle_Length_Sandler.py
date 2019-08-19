@@ -40,7 +40,7 @@ for index, bin in enumerate(hist_bins):
     length_list.append(len(bin))
     for value in bin:
         value_list[index].append(value[2])
-print (value_list)
+print ("HERE!:", value_list)
 
 
 # Calculate the means & std for each category:
