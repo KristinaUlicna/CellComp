@@ -31,7 +31,7 @@ class GetCellDetails(object):
 
     Return:
         None.
-        TODO: Writes a 'cellIDdetails_raw.txt' file (output) into the same directory as the xml_file (input).
+        Writes a 'cellIDdetails_raw.txt' file (output) into the /analysis/channel_XFP/ directory as the input specifies.
 
     Notes:
         To iterate over the class calling, re-open the file for appending with 'a' mode to write into it.
@@ -40,30 +40,26 @@ class GetCellDetails(object):
 
     def __init__(self, xml_file):
 
-        # Create a .txt file from an .xml file in the same file directory:
+        """ Create both paths: channel_GFP (for tracks_type1.xml) & channel_RFP (for tracks_type2.xml)
+            irrespectively of which type of xml_file you are using for cell_ID info extraction. """
 
-        exp_type = xml_file.split("/")[-5]
-        if "tracks_type1" in xml_file:
-            channel = "GFP"
-        if "tracks_type2" in xml_file:
-            channel = "RFP"
-
-        xml_file_dir = xml_file.split("/")
-        xml_file_dir = xml_file_dir[:-1]
-        xml_file_dir = '/'.join(xml_file_dir) + "/"
-
-        # Make you same processed .txt files into an '/analysis/' folder on server:
-        if xml_file_dir.endswith("/tracks/"):
-            if exp_type == "MDCK_90WT_10Sc_NoComp":
-                xml_file_dir = xml_file_dir[:-8] + "/analysis/channel_{}/".format(channel)
-            else:
-                xml_file_dir = xml_file_dir[:-8] + "/analysis/"
-            if not os.path.exists(xml_file_dir):
-                os.makedirs(xml_file_dir)
-
-        # Self-tag the input & output files:
+        # Create analysis directory for both channels:
         self.xml_file = xml_file
-        self.txt_file = xml_file_dir + "cellIDdetails_raw.txt"
+
+        directory = xml_file.split("/")[:-2]      # directory into ../user/exp_type/data_date/posX/
+        user, exp_type, data_date, pos = directory[-4], directory[-3], directory[-2], directory[-1]
+        directory = '/'.join(directory)
+        for channel in ["GFP", "RFP"]:
+            analysis_directory = directory + "/analysis/channel_{}/".format(channel)
+            if not os.path.exists(analysis_directory):
+                os.makedirs(analysis_directory)
+
+        #TODO: Check if movies with RFP channel only (Scribble) will output tracks_type2.xml file! If not, change below:
+
+        if "tracks_type1" in xml_file:
+            self.txt_file = directory + "/analysis/channel_GFP/cellIDdetails_raw.txt"
+        if "tracks_type2" in xml_file:
+            self.txt_file = directory + "/analysis/channel_RFP/cellIDdetails_raw.txt"
 
 
     def IterateTrees(self):
@@ -87,7 +83,7 @@ class GetCellDetails(object):
 
         # Loop through the trees:
         for node_order, tree in enumerate(trees):
-            Traverse_Trees(tree = tree, txt_file = self.txt_file)
+            Traverse_Trees(tree=tree, txt_file=self.txt_file)
 
         # When looping is finished, close the still opened file:
         file.close()

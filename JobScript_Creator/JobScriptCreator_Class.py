@@ -100,7 +100,7 @@ class ProcessMovies():
         self.jobs_dir = '/mnt/lowe-sn00/lowegrp/JobServer/jobs/'
 
 
-    def SegClass(self, BF=True, GFP=True, RFP=False):
+    def SegClass(self, BF=False, GFP=False, RFP=False):
         """ Segmentation & Classification of the BF, GFP & RFP movies.
 
         Args (Boolean; 'False' if only the 'noise' movie is provided):
@@ -122,9 +122,10 @@ class ProcessMovies():
             if item:
                 channels[order] += '_pos' + str(self.pos) + '.tif'
             else:
-                channels[order] += '_pos' + str(self.pos) + '_noise.tif'
+                #channels[order] += '_pos' + str(self.pos) + '_noise.tif'
+                channels[order] = 'GAUSSIAN_NOISE'
 
-        path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/'\
+        path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
             .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = f2dafed81fd87a66bf0028a16b1473cd\n'
@@ -132,14 +133,14 @@ class ProcessMovies():
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\n'
         string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
-                        '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}\n'
+                    '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}\n'
 
-        #print (string)
+        print (string)
         self.job_file.write(string)
         self.job_file.close()
 
 
-    def Tracking(self, to_track_GFP=True, to_track_RFP=False):
+    def Tracking(self, to_track_GFP=True, to_track_RFP=False, try_number=""):
         """ Tracking of the GFP & RFP movies against the brightfield.
 
         Args (Boolean; 'True' if channel is to be tracked, 'False' if omitted, i.e for pure populations):
@@ -162,6 +163,8 @@ class ProcessMovies():
 
         # Create a .job file:
         job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
+        if try_number != "":
+            job_name += "_Try_{}".format(try_number)
         #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.exp_type) + job_name + '.job', 'w')
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
@@ -188,8 +191,15 @@ class ProcessMovies():
         string += 'user = ' + str(self.user) + '\npriority = 1\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,' + str(frame_volume) \
-                        + ')), "to_track":' + str(channels) +', "config": "MDCK_config_Kristina.json"}\noptions = {}'
+        # With config:
+        string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
+                  + str(frame_volume) + ')), "to_track": {"GFP": "MDCK_config_try_13.json",  ' \
+                                        '"RFP": "MDCK_config_try_13.json"}}\noptions = {}'
+        print (string)
+
+        # Without config:
+        #string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-1,1),(0,' + str(frame_volume) \
+        #          + ')), "to_track":' + str(channels) + '\noptions = {}'
 
         self.job_file.write(string)
         self.job_file.close()

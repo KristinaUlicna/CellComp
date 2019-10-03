@@ -20,7 +20,8 @@ from JobScript_Creator.JobScriptCreator_Class import ProcessMovies
 
 # Iterate through all movies available in selected folder:
 
-xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
+#xml_file_list, _ = GetMovieFilesPaths(exp_type="MDCK_90WT_10Sc_NoComp")
+
 """
 for file in sorted(xml_file_list):
     if "tracks_type1" in file:
@@ -83,12 +84,26 @@ for position in range(7, 10):
 
 
 # Create jobs for a single, specific position:
-
+"""
 call = ProcessMovies(pos=0, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
 call.Tracking(to_track_GFP=True, to_track_RFP=True)
 
 call = ProcessMovies(pos=4, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
 call.Tracking(to_track_GFP=True, to_track_RFP=True)
+"""
 
-call = ProcessMovies(pos=6, data_date='17_03_27', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
-call.Tracking(to_track_GFP=True, to_track_RFP=True)
+# Track your template movie:
+call_template = ProcessMovies(pos=13, data_date='17_07_24', exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+call_template.Tracking(to_track_GFP=False, to_track_RFP=True, try_number=13_2)
+
+
+# Segment HeLa from Cell Tracking Challenge Dataset:
+
+#call_1 = ProcessMovies(pos=1, data_date='HeLa_H2B_GFP_GT', exp_type="Cell_Tracking_Challenge", user="Kristina")
+#call_1.SegClass(BF=False, GFP=True, RFP=False)
+#call_1.Tracking(to_track_GFP=True, to_track_RFP=True)
+
+#call_2 = ProcessMovies(pos=2, data_date='HeLa_H2B_GFP_GT', exp_type="Cell_Tracking_Challenge", user="Kristina")
+#call_2.SegClass(BF=False, GFP=True, RFP=False)
+#call_2.Tracking(to_track_GFP=True, to_track_RFP=True)
+
