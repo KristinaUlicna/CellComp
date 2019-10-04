@@ -8,8 +8,11 @@ def PrintDataSummary(file):
     :param file:
     :return:
     """
+
     gens_total = file.split("_families.txt")[0][-1]
     counter = 0
+    limit_low = 12.00
+    limit_high = 24.00
     cct_gens = [[] for i in range(3)]
     for line in open(file, "r"):
         line = line.rstrip().split("\t")
@@ -19,16 +22,16 @@ def PrintDataSummary(file):
         # Condition to only include families which take 12.00 < cct < 24.00 hours to divide:
         if len(line) <= 6:
             cct = float(line[1]), float(line[4])
-            if cct[0] > 12.00 and cct[0] < 24.00:
-                if cct[1] > 12.00 and cct[1] < 24.00:
+            if cct[0] > limit_low and cct[0] < limit_high:
+                if cct[1] > limit_low and cct[1] < limit_high:
                     counter += 1
                     for index in range(2):
                         cct_gens[index].append(cct[index])
         else:
             cct = float(line[1]), float(line[4]), float(line[7])
-            if cct[0] > 12.00 and cct[0] < 24.00:
-                if cct[1] > 12.00 and cct[1] < 24.00:
-                    if cct[2] > 12.00 and cct[2] < 24.00:
+            if cct[0] > limit_low and cct[0] < limit_high:
+                if cct[1] > limit_low and cct[1] < limit_high:
+                    if cct[2] > limit_low and cct[2] < limit_high:
                         counter += 1
                         for index in range(3):
                             cct_gens[index].append(cct[index])
