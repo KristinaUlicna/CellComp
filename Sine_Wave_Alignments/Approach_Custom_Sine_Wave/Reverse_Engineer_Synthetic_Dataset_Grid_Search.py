@@ -17,7 +17,7 @@ x_sine = np.linspace(0, repeats * per, int(per*10))
 y_sine = sine_function(x_sine, amp, per, shift_h, shift_v)
 
 
-# Now do the reverse engineering for 5-generational families with phases ranging between 0-24:
+# Now do the reverse engineering for x-generational families with phases ranging between 0-24:
 def SynthesizeData(phase, total_gen):
     """ Phase ranges from 0 to 24 with increments of 0.2. """
 

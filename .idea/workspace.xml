@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Data_File_Generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Top_Solution_Call.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Top_Solution_Function.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Reverse_Engineer_Synthetic_Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Reverse_Engineer_Synthetic_Dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sine_Wave_Alignments/help.py" afterDir="false" />
     </list>
@@ -44,7 +43,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Optimiser_Fitting_Single_Family_1.coverage" NAME="Optimiser_Fitting_Single_Family_1 Coverage Results" MODIFIED="1568304694531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Circadian_Rhythms" />
     <SUITE FILE_PATH="coverage/PythonScripts$Ideal_Cell_Growth_per_Movie.coverage" NAME="Ideal_Cell_Growth_per_Movie Coverage Results" MODIFIED="1558528376364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help.coverage" NAME="Help Coverage Results" MODIFIED="1559734106927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
-    <SUITE FILE_PATH="coverage/PythonScripts$help.coverage" NAME="help Coverage Results" MODIFIED="1570199090766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments" />
+    <SUITE FILE_PATH="coverage/PythonScripts$help.coverage" NAME="help Coverage Results" MODIFIED="1570615663977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments" />
     <SUITE FILE_PATH="coverage/PythonScripts$CellIDs_4682_4683.coverage" NAME="CellIDs_4682_4683 Coverage Results" MODIFIED="1564486035212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$Extractor_CellIDdetails_Call.coverage" NAME="Extractor_CellIDdetails_Call Coverage Results" MODIFIED="1565105199909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plot_CC_Duration_Hist_Call.coverage" NAME="Plot_CC_Duration_Hist_Call Coverage Results" MODIFIED="1559041318598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
@@ -80,7 +79,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Implement_Function_2.coverage" NAME="Implement_Function_2 Coverage Results" MODIFIED="1568721616756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Circadian_Rhythms" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_FINAL.coverage" NAME="GenTree_FINAL Coverage Results" MODIFIED="1557515097516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Artifacts_Frame_1.coverage" NAME="Artifacts_Frame_1 Coverage Results" MODIFIED="1565690803191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Reverse_Engineer_Synthetic_Dataset_Grid_Search.coverage" NAME="Reverse_Engineer_Synthetic_Dataset_Grid_Search Coverage Results" MODIFIED="1570206338004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Reverse_Engineer_Synthetic_Dataset_Grid_Search.coverage" NAME="Data_Shape_Summary Coverage Results" MODIFIED="1570277646057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
     <SUITE FILE_PATH="coverage/PythonScripts$Absolute_Time_Vs_Cell_Cycle.coverage" NAME="Absolute_Time_Vs_Cell_Cycle Coverage Results" MODIFIED="1557405972705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Get_Paths.coverage" NAME="Get_Paths Coverage Results" MODIFIED="1559746861668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Call_Short.coverage" NAME="GenTree_Call_Short Coverage Results" MODIFIED="1557144482351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
@@ -91,6 +90,7 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Correl_Coeff_Calc.coverage" NAME="Correl_Coeff_Calc Coverage Results" MODIFIED="1564578955139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$Plotly_Trees.coverage" NAME="Plotly_Trees Coverage Results" MODIFIED="1554898167324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Process_XML_Files" />
     <SUITE FILE_PATH="coverage/PythonScripts$Maxi_Analysis_RepMovie.coverage" NAME="Maxi_Analysis_RepMovie Coverage Results" MODIFIED="1560256105626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Design_Custom_Sine_Wave_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1570631597419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions.coverage" NAME="GenTree_Functions Coverage Results" MODIFIED="1558887244811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
     <SUITE FILE_PATH="coverage/PythonScripts$Manually.coverage" NAME="Manually Coverage Results" MODIFIED="1568646937442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Circadian_Rhythms" />
     <SUITE FILE_PATH="coverage/PythonScripts$Corr_Coeff_BarPlot.coverage" NAME="Corr_Coeff_BarPlot Coverage Results" MODIFIED="1565011824081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
@@ -123,13 +123,14 @@
     <SUITE FILE_PATH="coverage/PythonScripts$Maxi_Analysis_WildType.coverage" NAME="Maxi_Analysis_WildType Coverage Results" MODIFIED="1559576307776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/PythonScripts$Parent_vs_Child_CCT.coverage" NAME="Parent_vs_Child_CCT Coverage Results" MODIFIED="1559738829728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/PythonScripts$SuperOutliers_Plot_LinTrees.coverage" NAME="SuperOutliers_Plot_LinTrees Coverage Results" MODIFIED="1559746343886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
-    <SUITE FILE_PATH="coverage/PythonScripts$Design_Custom_Sine_Wave_3genFam_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1570204359057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Design_Custom_Sine_Wave_3genFam_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1570213881912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
     <SUITE FILE_PATH="coverage/PythonScripts$Help_2.coverage" NAME="Help_2 Coverage Results" MODIFIED="1554294009953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonScripts$Tracker_Tree_Reconstruction.coverage" NAME="Tracker_Tree_Reconstruction Coverage Results" MODIFIED="1565626457050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/PythonScripts$Corr_Coeff_Try.coverage" NAME="Corr_Coeff_Try Coverage Results" MODIFIED="1564488598668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Correlation_Coefficient" />
     <SUITE FILE_PATH="coverage/PythonScripts$JobScripts_ProcessMovies_Call.coverage" NAME="JobScripts_ProcessMovies_Call Coverage Results" MODIFIED="1556809020484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
     <SUITE FILE_PATH="coverage/PythonScripts$GenTree_Functions_Call.coverage" NAME="GenTree_Functions_Call Coverage Results" MODIFIED="1557005923040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lineage_Trees" />
     <SUITE FILE_PATH="coverage/PythonScripts$Gen2_Sine_Wave.coverage" NAME="Gen2_Sine_Wave Coverage Results" MODIFIED="1565621743771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignment" />
+    <SUITE FILE_PATH="coverage/PythonScripts$Estimate_CCT_3rd_Generation.coverage" NAME="Estimate_CCT_3rd_Generation Coverage Results" MODIFIED="1570632366000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave" />
     <SUITE FILE_PATH="coverage/PythonScripts$From_Scratch.coverage" NAME="From_Scratch Coverage Results" MODIFIED="1568652977957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Circadian_Rhythms" />
     <SUITE FILE_PATH="coverage/PythonScripts$Optimiser_Fitting_Single_Family_Plotter_Super_Wave.coverage" NAME="Optimiser_Fitting_Single_Family_Plotter_Super_Wave Coverage Results" MODIFIED="1568817705607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments" />
     <SUITE FILE_PATH="coverage/PythonScripts$How_Many_Frames.coverage" NAME="How_Many_Frames Coverage Results" MODIFIED="1559119619466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
@@ -218,25 +219,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="3" />
-          <entry key="py" value="599" />
+          <entry key="py" value="604" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="3" />
-          <entry key="Python" value="599" />
+          <entry key="Python" value="604" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="972" />
-          <entry key="py" value="230685" />
+          <entry key="py" value="235991" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="972" />
-          <entry key="Python" value="230683" />
+          <entry key="Python" value="235989" />
           <entry key="SQL" value="2" />
         </counts>
       </usages-collector>
@@ -247,8 +248,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/help.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            <state relative-caret-position="648">
+              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -256,8 +260,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="211">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#211#229#0" expanded="true" />
               </folding>
@@ -277,11 +281,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="243">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2856">
+              <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#135#153#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -289,8 +326,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="72" column="57" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="57" />
+            <state relative-caret-position="-167">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#211#229#0" expanded="true" />
               </folding>
@@ -310,7 +347,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>64:</find>
       <find>7264</find>
       <find>7264:</find>
       <find>9702</find>
@@ -340,6 +376,7 @@
       <find>739</find>
       <find>Best X-shift: 0</find>
       <find>14.3</find>
+      <find>all</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -349,10 +386,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Chris_Tracking/Chris_Tracking_Jobs.py" />
-        <option value="$PROJECT_DIR$/Tracking_TroubleShooting/Reconstruct_Trees_Quickly.py" />
-        <option value="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" />
-        <option value="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignment/Sine_Wave_Only.py" />
         <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" />
         <option value="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" />
@@ -389,17 +422,21 @@
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Reverse_Engineer_Synthetic_Dataset.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Top_Solution_Call.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Top_Solution_Function.py" />
-        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" />
-        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/help.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_2genFam_Function.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_2genFam_Call.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_3genFam_Function.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_3genFam_Call.py" />
-        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py" />
-        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Reverse_Engineer_Synthetic_Dataset.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Data_File_Generator.py" />
         <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimator.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call_19.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call_11.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/help.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py" />
+        <option value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py" />
       </list>
     </option>
   </component>
@@ -409,7 +446,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -496,12 +533,23 @@
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Sine_Wave_Alignments" type="462c0819:PsiDirectoryNode" />
+              <item name="CCT_Estimate_From_Sine_Wave" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
               <item name="Tracking_TroubleShooting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
               <item name="Whole_Movie_Check_Plots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Whole_Movie_Check_Plots_Revised" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -543,8 +591,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Reverse_Engineer_Synthetic_Dataset_Grid_Search">
-    <configuration name="Design_Custom_Sine_Wave_2genFam_Function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Estimate_CCT_3rd_Generation">
+    <configuration name="Data_Shape_Summary" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -557,7 +605,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_2genFam_Function.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -588,6 +636,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Design_Custom_Sine_Wave_Call_11" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call_11.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Estimate_CCT_3rd_Generation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Optimiser_Fitting_Single_Family_2" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -602,50 +694,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Circadian_Rhythms/Optimiser_Fitting_Single_Family_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Reverse_Engineer_Synthetic_Dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Reverse_Engineer_Synthetic_Dataset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Reverse_Engineer_Synthetic_Dataset_Grid_Search" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -678,19 +726,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Optimiser_Fitting_Single_Family_2" />
-      <item itemvalue="Python.help" />
-      <item itemvalue="Python.Design_Custom_Sine_Wave_2genFam_Function" />
+      <item itemvalue="Python.Design_Custom_Sine_Wave_Call_11" />
       <item itemvalue="Python.Design_Custom_Sine_Wave_Call" />
-      <item itemvalue="Python.Reverse_Engineer_Synthetic_Dataset" />
-      <item itemvalue="Python.Reverse_Engineer_Synthetic_Dataset_Grid_Search" />
+      <item itemvalue="Python.Data_Shape_Summary" />
+      <item itemvalue="Python.Estimate_CCT_3rd_Generation" />
+      <item itemvalue="Python.help" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Reverse_Engineer_Synthetic_Dataset_Grid_Search" />
-        <item itemvalue="Python.Reverse_Engineer_Synthetic_Dataset" />
+        <item itemvalue="Python.Estimate_CCT_3rd_Generation" />
         <item itemvalue="Python.Design_Custom_Sine_Wave_Call" />
         <item itemvalue="Python.help" />
-        <item itemvalue="Python.Design_Custom_Sine_Wave_2genFam_Function" />
+        <item itemvalue="Python.Design_Custom_Sine_Wave_Call_11" />
+        <item itemvalue="Python.Data_Shape_Summary" />
       </list>
     </recent_temporary>
   </component>
@@ -717,10 +765,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34582132" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27881846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -739,7 +786,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.52521616" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.52521616" />
       <window_info anchor="right" id="R Graphics" order="4" weight="0.3299712" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -752,30 +799,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1704">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1392">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/help.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -924,16 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -971,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_2genFam_Call.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1002,13 +1008,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py">
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Data_File_Generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#211#229#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="337">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
@@ -1022,27 +1025,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Data_File_Generator.py">
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="243">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py">
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="72" column="57" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="57" />
+        <state relative-caret-position="2856">
+          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call_11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#211#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py">
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call_19.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-346">
+          <caret line="6" lean-forward="true" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#211#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#211#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#135#153#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
