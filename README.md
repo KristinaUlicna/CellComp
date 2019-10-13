@@ -1,13 +1,13 @@
 # *CellComp* 🧫: Giving Single Cells a Story… 📜
 
-Welcome to my GitHub *CellComp* repository, where you’ll find various Python packages 🐍related to my PhD project 📚at the interface of cancer cell biology, machine learning and software development. **In my research, I focus on the identification of stem-like cells 🧫within non-/cancer cell populations.** With the aid of wide-field & fluorescence microscopy 🔬, deep learning-mediated image segmentation 🖼️& automated cell tracking 👣, I am identifying proliferation & differentiation characteristics 📈which could serve as good predictors of the *stemness* of the cell 🧬. For a more-detailed description of my PhD research, my previous research experience and my training courses, please click on my [LinkedIn profile](https://www.linkedin.com/in/kristinaulicna/). 
+Welcome to my GitHub *CellComp* repository, where you’ll find various Python packages 🐍 related to my PhD project 📚 at the interface of cancer cell biology, machine learning and software development. **In my research, I focus on the identification of stem-like cells 🧫 within non-/cancer cell populations.** With the aid of wide-field & fluorescence microscopy 🔬, deep learning-mediated image segmentation 🖼️ & automated cell tracking 👣, I am identifying proliferation & differentiation characteristics 📈 which could serve as good predictors of the *stemness* of the cell 🧬. For a more-detailed description of my PhD research, my previous research experience and my training courses, please click on my [LinkedIn profile](https://www.linkedin.com/in/kristinaulicna/). 
 
 
 ## PhD Project 👩‍🔬: Heterogeneity within Non-/Cancer Cell Populations 
 
 In this section, you will find my code divided into these sections: 
 
-- _(collaborative)_ **Sequitr_Tracker:** my contribution towards a collaborative development of our fully automated movie analysis pipeline for computational processing of the fluorescence movies !!!our 👩‍💻fully automated time-lapse movie analysis pipeline !!!
+- _(collaborative)_ **Sequitr_Tracker:** my contribution towards a collaborative development of our fully automated movie analysis pipeline for computational processing of the fluorescence movies !!!our 👩‍💻 fully automated time-lapse movie analysis pipeline !!!
 - _(independent)_ **Stem_Analysis:** development of pipeline to evaluate the behaviour of cells (division or programmed cell death) captured per single imaging period
 - _(independent)_  **Stem_Analysis:** building of automated tools to extract information (such as cell cycle time, local cell density, intrinsic oscillations, etc.) to identify stem-like cells in cell populations
 
