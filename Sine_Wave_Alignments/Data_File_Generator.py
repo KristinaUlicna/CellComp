@@ -1,17 +1,18 @@
+# TODO: Create a function to generate file with:
+# a) 3-generational families
+# b) 2-generational families (parent in gen-1 or in gen-2)
+# c) 2-generational families (parent in gen-1 only)
+
 from Cell_Cycle_Duration.Find_Family_Class import FindFamily
 from itertools import chain
 
 
-def CreateGenerationalFile(merged_file, how_many_gen):
-    """ Writes a new file with independent families and their generational relationships.
+def CreateGenerationalFile(merged_file, how_many_gen, child_gen_only="all"):
+    """
 
-    Options:
-        a) 3-generational families
-        b) 2-generational families (parent in gen-1 or in gen-2)
-        c) 2-generational families (parent in gen-1 only)
-
-    :param how_many_gen:    How many generations you are interested in analysing (options = 2 or 3)
-    :return:                None.
+    :param gen:
+    :param parent_gen:      default = "all" - optionally say "gen_X_only" where X is an integer!
+    :return:
     """
 
     # Define which file you want to create:
@@ -26,7 +27,7 @@ def CreateGenerationalFile(merged_file, how_many_gen):
 
     # Write the file & initiate with headers:
     directory = "/".join(merged_file.split("/")[:-1])
-    result_file = directory + "/generation_{}_families.txt".format(how_many_gen)
+    result_file = directory + "/TRY_generation_{}_families_{}.txt".format(how_many_gen, child_gen_only)
     result_file = open(result_file, "w")
 
     header_string = ""
@@ -47,14 +48,22 @@ def CreateGenerationalFile(merged_file, how_many_gen):
         if line[0] != "Cell_ID-posX-date":
             string = ""
             info = []
-            call = FindFamily(cell_ID=line[0], filtered_file=merged_file)
-            if int(line[5]) == how_many_gen:
-                cellID_info = call.FindItself()
-                parent_info = call.FindParent()
-                info = list(chain.from_iterable([parent_info, cellID_info]))
+            # 3-generational family:
             if how_many_gen == 3:
-                grand_info = call.FindGrandparent()
-                info = grand_info + info
+                if int(line[5]) == 3:
+                    call = FindFamily(cell_ID=line[0], filtered_file=merged_file)
+                    cellID_info = call.FindItself()
+                    parent_info = call.FindParent()
+                    grand_info = call.FindGrandparent()
+                    info = list(chain.from_iterable([grand_info, parent_info, cellID_info]))
+            # 2-generational family:
+            if how_many_gen == 2:
+                if child_gen_only != "all":
+                    if int(line[5]) == int(child_gen_only.split("gen_")[1].split("_only")[0]) + 1:
+                        call = FindFamily(cell_ID=line[0], filtered_file=merged_file)
+                        cellID_info = call.FindItself()
+                        parent_info = call.FindParent()
+                        info = list(chain.from_iterable([parent_info, cellID_info]))
 
             # Write the line which fulfills the requirements into the file:
             if len(info) != 0:
@@ -68,5 +77,7 @@ def CreateGenerationalFile(merged_file, how_many_gen):
 
 # Call the function:
 merged_file = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/cellIDdetails_merged.txt"
-CreateGenerationalFile(merged_file=merged_file, how_many_gen=3)
-CreateGenerationalFile(merged_file=merged_file, how_many_gen=2)
+CreateGenerationalFile(merged_file=merged_file, how_many_gen=3, child_gen_only="all")
+CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="all")
+CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="gen_1_only")
+

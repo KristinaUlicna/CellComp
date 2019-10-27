@@ -102,10 +102,7 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v, 
             x_best = np.array([phase_family, phase_family + family[0], phase_family + family[0] + family[1]])
         y_best = np.array(family)
         if show is True:
-            if how_many_gen == 3:
-                plt.scatter(x=x_best, y=y_best)
-            if how_many_gen == 2:
-                plt.scatter(x=x_best, y=y_best, s=1)
+            plt.scatter(x=x_best, y=y_best)
 
         # Append the lowest MSE for this model:
         mse_best_list.append(mse_family)

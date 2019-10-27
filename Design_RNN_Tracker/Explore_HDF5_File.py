@@ -3,7 +3,7 @@
 import h5py
 import matplotlib.pyplot as plt
 
-filename = '/Users/kristinaulicna/Documents/Rotation_2/Tracker_Evaluation/segmented.hdf5'
+filename = '/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/HDF/segmented.hdf5'
 f = h5py.File(filename, 'r')
 
 print ("Hdf5 file keys:\t\t{}".format(list(f.keys())))       # to list the individual keys
@@ -32,6 +32,6 @@ plt.title("Cell count according to 'segmented.hdf5'")
 plt.xlabel("Frame #")
 plt.ylabel("Event count")
 plt.grid(which='major')
-plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Tracker_Evaluation/Cell_Count.jpeg", bbox_inches="tight")
+#plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Tracker_Evaluation/Cell_Count.jpeg", bbox_inches="tight")
 plt.show()
 plt.close()

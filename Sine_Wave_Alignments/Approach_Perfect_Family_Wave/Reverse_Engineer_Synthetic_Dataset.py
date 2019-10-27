@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 def sine_function(x, amp, per, shift_h, shift_v):
     return amp * np.sin(2*np.pi/per * x + shift_h) + shift_v
 
-amp, per, shift_h, shift_v = 4.6, 11.7, 0, 17.7
+amp, per, shift_h, shift_v = 2.63, 24.0, 0, 17.18
 
-repeats = int(72 / per)
+repeats = 4
 x_sine = np.linspace(0, repeats * 24 + 1, 100)
 y_sine = sine_function(x_sine, amp, per, shift_h, shift_v)
 
@@ -52,12 +52,12 @@ plt.axhline(y=shift_v, color="grey", linestyle="dashed", zorder=0)
 plt.axvline(x=24.0, color="gold", linestyle="dashed", zorder=0)
 plt.axvline(x=48.0, color="gold", linestyle="dashed", zorder=0)
 plt.axvline(x=72.0, color="gold", linestyle="dashed", zorder=0)
-plt.xticks(np.arange(0, repeats * per + 1, 6))
+plt.xticks(np.arange(0, repeats * 24 + 1, 4))
 plt.xlabel("Oscillation Period [hours]")
 plt.ylabel("Cell Cycle Duration [hours]")
 plt.title("Ideal Sine Wave")
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=1)
-plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Ideal_Wave_3_gen_round_1.png", bbox_inches="tight")
+plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Sine_Wave/Summary_All_Cells/Ideal_Wave.png", bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -68,10 +68,10 @@ for x, y in zip(x_data_0, y_data_0):
 
 plt.xlabel("Oscillation Period [hours]")
 plt.ylabel("Cell Cycle Duration [hours]")
-plt.xlim(-2, 42)
 plt.title("Relationships between generations in an ideal family\n"
           "Equation: {} * np.sin (2 * np.pi / {} * x + {}) + {}"
           .format(amp, per, shift_h, shift_v))
-plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Ideal_Wave_Relationships_3_gen_round_1.png", bbox_inches="tight")
+plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Sine_Wave/Summary_All_Cells/Ideal_Wave_Relationships.png",
+            bbox_inches="tight")
 plt.show()
 plt.close()

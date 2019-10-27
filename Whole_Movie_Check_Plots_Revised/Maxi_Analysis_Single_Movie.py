@@ -10,9 +10,9 @@ from Whole_Movie_Check_Plots_Revised.D_Plotter_Branched_Lineage_Trees import Plo
 
 
 # Which movies to analyse? Create a list [one-item list if single movie]:
-for i in range(15, 25):
-    xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracks_try_{}/tracks_type2.xml".format(i)
-    raw_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/analysis_try_{}/channel_RFP/cellIDdetails_raw.txt".format(i)
+for i in [51]:
+    xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/tracks/tracks_type1.xml".format(i)
+    raw_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/analysis/channel_GFP/cellIDdetails_raw.txt".format(i)
 
     call_A = GetCellDetails(xml_file=xml_file).IterateTrees()
     call_B = FilterRawTxtFile(raw_file=raw_file)

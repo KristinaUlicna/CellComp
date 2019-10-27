@@ -128,7 +128,7 @@ class ProcessMovies():
         self.job_file.close()
 
 
-    def Tracking(self, to_track_GFP=False, to_track_RFP=False, try_number=""):
+    def Tracking(self, to_track_GFP=False, to_track_RFP=False, config_number=""):
         """ Tracking of the GFP & RFP movies against the brightfield.
 
         Args (Boolean; 'True' if channel is to be tracked, 'False' if omitted, i.e for pure populations):
@@ -142,17 +142,17 @@ class ProcessMovies():
         """
 
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
-        if os.path.isdir('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF' \
-                                 .format(self.user, self.exp_type, self.data_date, self.pos)) is False \
-            or os.path.exists('/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF/segmented.hdf5' \
-                                 .format(self.user, self.exp_type, self.data_date, self.pos)) is False :
-            raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied", \
-                            "Run the 'SegClass' function first")
+        hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF'.format(self.user, self.exp_type, self.data_date, self.pos)
+        if config_number != "":
+            hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/HDF'\
+                        .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
+        if os.path.isdir(hdf_dir) is False or os.path.exists(hdf_dir + '/segmented.hdf5') is False:
+            raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied in the specified directory!")
 
         # Create a .job file:
         job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
-        if try_number != "":
-            job_name += "_Try_{}".format(try_number)
+        if config_number != "":
+            job_name += "_Config_{}_again".format(config_number)
         #self.job_file = open('/Volumes/lowegrp/Data/{}/{}/'.format(self.user, self.exp_type) + job_name + '.job', 'w')
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
@@ -173,21 +173,19 @@ class ProcessMovies():
                 frame_volume = 1105
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
-                .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
+                .format(self.user, self.exp_type, self.data_date, self.pos)
+        if config_number != "":
+            path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/' \
+                .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
 
         string = '[job]\ncomplete = False\nid = Kristina_Configs_Tweaking\n'
-        string += 'user = ' + str(self.user) + '\npriority = 99\n'
+        string += 'user = ' + str(self.user) + '\npriority = 1\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\n'
-        # With config:
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
-            + str(frame_volume) + ')), "config": {"RFP": "MDCK_config_Kristina_Try_' + str(try_number) + '.json"}}'
+           + str(frame_volume) + ')), "config": {"GFP": "MDCK_config_Kristina_Try_' + \
+                  str(config_number) + '.json", "RFP": "MDCK_config_Kristina_Try_' + str(config_number) + '.json"}}'
 
-        #string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
-        #          + str(frame_volume) + ')), "config": {"GFP": "MDCK_config_Kristina_Try_1.json",  ' \
-        #                                '"RFP": "MDCK_config_Kristina_Try_1.json"}}'
-
-        print (string)
-
+        #print (string)
         self.job_file.write(string)
         self.job_file.close()

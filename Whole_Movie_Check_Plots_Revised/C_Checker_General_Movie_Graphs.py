@@ -46,7 +46,8 @@ class AnalyseAllCellIDs(object):
         directory = txt_file.split("/")[:-1]
         user, exp_type, data_date, pos = directory[-6], directory[-5], directory[-4], directory[-3]
         self.channel = directory[-2].split("channel_")[-1]
-        self.frames = FindMovieLength(exp_type=exp_type, data_date=data_date, pos=pos)
+        #self.frames = FindMovieLength(exp_type=exp_type, data_date=data_date, pos=pos)
+        self.frames = 1105
         self.directory = '/'.join(directory) + "/"
 
         if "raw" in txt_file:
@@ -73,7 +74,7 @@ class AnalyseAllCellIDs(object):
 
         for line in open(self.raw_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             cell_ID_label_list.append([int(line[0]), int(line[0])])
             cell_ID_frame_list.append([int(line[1]), int(line[2])])  # includes the last frame
@@ -107,7 +108,7 @@ class AnalyseAllCellIDs(object):
 
         for line in open(self.raw_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             fr_st, fr_en = int(line[1]), int(line[2])
 
@@ -136,7 +137,7 @@ class AnalyseAllCellIDs(object):
         # For comparison, process the 'cellIDdetails_filtered.txt' (should give the same curve except for the )
         for line in open(self.filtered_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             fr_st, fr_en = int(line[1]), int(line[2])
             for index in range(fr_st, fr_en + 1):
@@ -168,7 +169,7 @@ class AnalyseAllCellIDs(object):
         y_axis_raw = []
         for line in open(self.raw_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             x_axis_raw.append(int(line[1]) * 4)
             y_axis_raw.append(int(line[3]))
@@ -177,7 +178,7 @@ class AnalyseAllCellIDs(object):
         y_axis_fil = []
         for line in open(self.filtered_file, 'r'):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             x_axis_fil.append(int(line[1]) * 4)
             y_axis_fil.append(int(line[3]))
@@ -209,7 +210,7 @@ class AnalyseAllCellIDs(object):
         cct_hrs = []
         for line in open(self.filtered_file, "r"):
             line = line.rstrip().split("\t")
-            if line[0] == 'Cell_ID' or len(line) < 8:
+            if line[0] == 'Cell_ID' or len(line) < 8 or line[0] == '':
                 continue
             cct_hrs.append(float(line[4]))
 
@@ -289,7 +290,7 @@ class AnalyseAllCellIDs(object):
 
         for line in open(self.raw_file, "r"):
             line = line.rstrip().split("\t")
-            if line[0] == "Cell_ID" or len(line) < 8:
+            if line[0] == "Cell_ID" or len(line) < 8 or line[0] == '':
                 continue
             # Aim for Root & Leaf cells only:
             if line[6] == "True" and line[7] == "True":

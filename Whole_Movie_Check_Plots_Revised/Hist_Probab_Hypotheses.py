@@ -5,13 +5,13 @@ def PlotProbabHist(data_file):
     category = []
     probability = []
     for line in open(data_file, 'r'):
-        line = line.rstrip().split(" \t ")
+        line = line.rstrip().split("\t")
         cell_ID.append(int(line[0]) + 1)        # labels from 0, so add +1 to get real cell_ID
         category.append(line[1])
         probability.append(10 ** (float(line[2])))     # get the exponential to get the probability (ranging from 0 to 1)
 
     print (cell_ID[0], cell_ID[-1])
-    print (list(set(category)))                 # there is not a single case of apoptosis!
+    print (list(set(category)))
     print (min(probability), max(probability))
 
 
@@ -43,5 +43,7 @@ def PlotProbabHist(data_file):
         plt.show()
 
 
-PlotProbabHist("/Users/kristinaulicna/Documents/Rotation_2/optimized_type1_ver4.txt")
-PlotProbabHist("/Users/kristinaulicna/Documents/Rotation_2/hypotheses_type1_ver4.txt")
+PlotProbabHist("/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/"
+               "tracker_performance_evaluation/tracks_try_50/tracks/hypotheses_type2.txt")
+PlotProbabHist("/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/"
+               "tracker_performance_evaluation/tracks_try_50/tracks/optimized_type2.txt")
