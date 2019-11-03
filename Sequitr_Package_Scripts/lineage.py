@@ -25,7 +25,7 @@ FATE_APOPTOSIS = 5
 import sys
 sys.path.append("../")
 
-from Sequitr_Lineage_Trees import tracker
+from Sequitr_Package_Scripts import tracker
 
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects

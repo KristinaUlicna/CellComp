@@ -5,7 +5,7 @@
 import sys
 sys.path.append("../")
 import matplotlib.pyplot as plt
-from Sequitr_Lineage_Trees.lineage import LineageTreeNode, LineageTree, LineageTreePlotter
+from Sequitr_Package_Scripts.lineage import LineageTreeNode, LineageTree, LineageTreePlotter
 
 t = LineageTree.from_xml("/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracks/tracks_type2.xml")
 trees = t.create()

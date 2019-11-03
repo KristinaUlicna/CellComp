@@ -2,18 +2,14 @@
 #                                                 #
 # ----- LineageTree : CellID Info Extractor ----- #
 #                                                 #
-# ----- Creator :           Kristina ULICNA ----- #
+# ----- Creator :       Kristina ULICNA     ----- #
 #                                                 #
-# ----- Last Updated :        20th Sep 2019 ----- #
+# ----- Last Updated :  13th May 2019       ----- #
 #                                                 #
 # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
 # Import all the necessary libraries:
-
-import sys
-sys.path.append("../")
-
 from Sequitr_Package_Scripts.lineage import *
 import os
 import time
@@ -39,29 +35,23 @@ class GetCellDetails(object):
     """
 
     def __init__(self, xml_file):
-
         """ Create both paths: channel_GFP (for tracks_type1.xml) & channel_RFP (for tracks_type2.xml)
             irrespectively of which type of xml_file you are using for cell_ID info extraction. """
 
-        # Create analysis directory for both channels:
-        self.xml_file = xml_file
-
-        directory = xml_file.split("/")[:-1]            # directory into ../user/exp_type/data_date/posX/tracks/
-        tracks_name = directory.pop(-1)                 # tracks_name (e.g tracks_try_1)
-        tracks_name = tracks_name.split("tracks")[-1]   # isolate the '_try_1' suffix
-        user, exp_type, data_date, pos = directory[-4], directory[-3], directory[-2], directory[-1]
-        directory = '/'.join(directory)
-        for channel in ["GFP", "RFP"]:
-            analysis_directory = directory + "/analysis{}/channel_{}/".format(tracks_name, channel)
-            if not os.path.exists(analysis_directory):
-                os.makedirs(analysis_directory)
-
-        #TODO: Check if movies with RFP channel only (Scribble) will output tracks_type2.xml file! If not, change below:
+        # Create 'analysis' folder directory for the channel you are processing:
+        directory = '/'.join(xml_file.split("/")[:-2])      # directory into ../user/exp_type/data_date/posX/
 
         if "tracks_type1" in xml_file:
-            self.txt_file = directory + "/analysis{}/channel_GFP/cellIDdetails_raw.txt".format(tracks_name)
+            directory = directory + "/analysis/channel_GFP/"
         if "tracks_type2" in xml_file:
-            self.txt_file = directory + "/analysis{}/channel_RFP/cellIDdetails_raw.txt".format(tracks_name)
+            directory = directory + "/analysis/channel_RFP/"
+
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        txt_file = directory + "cellIDdetails_raw.txt"
+
+        self.xml_file = xml_file
+        self.txt_file = txt_file
 
 
     def IterateTrees(self):
@@ -73,6 +63,16 @@ class GetCellDetails(object):
         t = LineageTree.from_xml(self.xml_file)
         trees = t.create()
 
+        # Loop through the trees:
+        details_list = []
+        for node_order, tree in enumerate(trees):
+            tree_details_list = Traverse_Trees(tree=tree)
+            print (details_list)
+
+            details_list.append(tree_details_list)
+        print (details_list)
+
+        """
         # Initialise the file & write the header:
         file = open(self.txt_file, 'w')
 
@@ -83,15 +83,18 @@ class GetCellDetails(object):
         header_string += "\n"
         file.write(header_string)
 
-        # Loop through the trees:
-        for node_order, tree in enumerate(trees):
-            Traverse_Trees(tree=tree, txt_file=self.txt_file)
+        # Write the details stored as strings into the file:
+        for cell_ID in details_list:
+            file.write(cell_ID)
 
         # When looping is finished, close the still opened file:
         file.close()
+        """
 
 
-def Traverse_Trees(tree, txt_file):        # define the recursive function
+def Traverse_Trees(tree):        # define the recursive function
+
+    tree_details_list = []
 
     # Initialise the variables:
     cell_ID = tree.ID
@@ -102,20 +105,18 @@ def Traverse_Trees(tree, txt_file):        # define the recursive function
     gen = int(tree.depth)
     is_root = True if tree.depth == 0 else False
     is_leaf = tree.leaf
-    if frm_st > frm_en:
-        raise Exception("Warning, frameAppears ({}) > frameDisappears ({}) ! Tracking error!".format(frm_st, frm_en))
-    details = [str(item) for item in [cell_ID, frm_st, frm_en, cct_m, cct_h, gen, is_root, is_leaf]]
 
-    # Write the details into a 'cellIDdetails_raw.txt' file:
-    file = open(txt_file, 'a')
-    detail_string = ''
-    for item in details:
-        detail_string += item + "\t"
-    detail_string = detail_string[:-1]
-    detail_string += "\n"
-    file.write(detail_string)
+    details = [cell_ID, frm_st, frm_en, cct_m, cct_h, gen, is_root, is_leaf]
+
+    if not tree_details_list:
+        tree_details_list = details
+    else:
+        tree_details_list.append(details)
 
     # Check if the current node your just processed branches further:
+
     if tree.leaf is False:
-        Traverse_Trees(tree.children[0], txt_file)
-        Traverse_Trees(tree.children[1], txt_file)
+        Traverse_Trees(tree.children[0])
+        Traverse_Trees(tree.children[1])
+
+    return tree_details_list

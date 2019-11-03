@@ -2,7 +2,7 @@
 
 import sys
 sys.path.append("../")
-from Sequitr_Lineage_Trees.lineage import LineageTreeNode, LineageTree, LineageTreePlotter
+from Sequitr_Package_Scripts.lineage import LineageTreeNode, LineageTree, LineageTreePlotter
 
 
 # TODO: Don't throw away - has 'isApoptotic' function in it!

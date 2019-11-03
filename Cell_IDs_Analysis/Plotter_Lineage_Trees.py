@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append("../")
 
-from Sequitr_Lineage_Trees.lineage import LineageTree, LineageTreePlotter
+from Sequitr_Package_Scripts.lineage import LineageTree, LineageTreePlotter
 
 
 def PlotLineageTree(root_ID, xml_file, show=False):

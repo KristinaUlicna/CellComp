@@ -14,7 +14,7 @@
 import sys
 sys.path.append("../")
 
-from Sequitr_Lineage_Trees.lineage import *
+from Sequitr_Package_Scripts.lineage import *
 import os
 import time
 start_time = time.process_time()
@@ -53,8 +53,6 @@ class GetCellDetails(object):
             analysis_directory = directory + "/analysis/channel_{}/".format(channel)
             if not os.path.exists(analysis_directory):
                 os.makedirs(analysis_directory)
-
-        #TODO: Check if movies with RFP channel only (Scribble) will output tracks_type2.xml file! If not, change below:
 
         if "tracks_type1" in xml_file:
             self.txt_file = directory + "/analysis/channel_GFP/cellIDdetails_raw.txt"
