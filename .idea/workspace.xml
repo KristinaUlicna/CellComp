@@ -2,23 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonScripts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonScripts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Napari_Software/Napari_Getting_Started.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/btypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/btypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/lineage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/lineage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sequitr_Lineage_Trees/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequitr_Package_Scripts/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/A_Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/A_Extractor_CellIDdetails_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/D_Plotter_Branched_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/D_Plotter_Branched_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/.idea/Lineage_Tree_Generator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/LineageTreeCreatorPlotter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Jupyter_Notebooks/LineageTreeCreatorPlotter.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alans_Notebooks/TrackingObjectsIn3D.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Jupyter_Notebooks/TrackingObjectsIn3D.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/ANOVA_Generations_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/ANOVA_Generations_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Cell_Cycle_Length_Sandler_Regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Cumul_Hist_All_Movies_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Cumul_Hist_All_Movies_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Cumul_Hist_All_Movies_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Cumul_Hist_All_Movies_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Find_Family_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Find_Family_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Ideal_Cell_Growth_per_Movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Ideal_Cell_Growth_per_Movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Joint_Probab_Hist2D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Joint_Probab_Hist2D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Joint_Probab_Hist2D_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Joint_Probab_Hist2D_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Max_Generation_Cell_Counts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Max_Generation_Cell_Counts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Merge_Filtered_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Merge_Filtered_Data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Outliers_Skewed_Left_LinTreePlots.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Outliers_Skewed_Left_LinTreePlots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Parent_vs_Child_CCT_All_CellIDs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Generational_Heritability/Parent_vs_Child_CCT_All_CellIDs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Parent_vs_Child_CCT_Outliers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Generational_Heritability/Parent_vs_Child_CCT_Outliers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Plot_CC_Duration_Hist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Plot_CC_Duration_Hist_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Plot_CC_Duration_Hist_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/RelativeCCT_vs_AbsoluteTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/RelativeCCT_vs_AbsoluteTime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/Shortlist_Outliers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Shortlist_Outliers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/SuperOutliers_Plot_LinTrees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/SuperOutliers_Plot_LinTrees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Cycle_Duration/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_BugFix_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Extractor_CellIDdetails_BugFix_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_BugFix_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Extractor_CellIDdetails_BugFix_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Extractor_CellIDdetails_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Extractor_CellIDdetails_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_withTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Extractor_CellIDdetails_withTable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/GenTree_Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/GenTree_Plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/GenTree_Plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/Plotter_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Plotter_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_IDs_Analysis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Append_CellIDdetails_File_byDensity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Append_CellIDdetails_File_byDensity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/CellID_1151_Smoothing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/CellID_1151_Smoothing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Correl_Density_CCT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Correl_Density_CCT_BarPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Correl_Density_CCT_BarPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Finding_Density_Values.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Finding_Density_Values.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Gen3_LeafCells.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Gen3_LeafCells.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Merge_Density_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Merge_Density_Data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Plot_Density_Single_Cells.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Plot_Density_Single_Cells.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Plot_Scatter_DoublingTime_Density.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Plot_Scatter_DoublingTime_Density.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Plot_Scatter_DoublingTime_Density_EachMovie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Plot_Scatter_DoublingTime_Density_EachMovie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Read_Cell_Density_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Read_Cell_Density_Files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Read_Density_Dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Read_Density_Dictionary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Smoothed_R2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Smoothed_R2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Smoothing_Spline_Percentage_CCT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Smoothing_Spline_Percentage_CCT_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/Smoothing_Spline_Percentage_CCT_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Smoothing_Spline_Percentage_CCT_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cell_Local_Density/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Density_Impacts/Check_100_Percent_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chris_Tracking/Chris_Tracking_Jobs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chris_Tracking/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/CellIDs_4682_4683.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Generational_Heritability/CellIDs_4682_4683.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Relationship_CCT_Correl_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Generational_Heritability/Relationship_CCT_Correl_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/Relationship_CCT_Correl_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Generational_Heritability/Relationship_CCT_Correl_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correlation_Coefficient/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design_RNN_Tracker/Explore_HDF5_File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old/Explore_HDF5_File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design_RNN_Tracker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Alan_Template_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Alan_Template_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScript_Creator/JobScriptCreator_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScript_Creator/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density/Understanding_Voronoi_Tesselation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation/Understanding_Voronoi_Tesselation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool/Manual_Tree_Plotter_Tool_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_Tracking_Tool/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Napari_Software/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/Calculate_Migration_Distance_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Migration_Analysis/Calculate_Migration_Distance_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/Calculate_Migration_Distance_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Migration_Analysis/Calculate_Migration_Distance_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/Check_Migration_Outliers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Migration_Analysis/Check_Migration_Outliers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/Plot_Hist_Migrated_Distance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/Unzip_Zip_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions/Unzip_Zip_Files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Tracker_Config_Writer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migration_Distance_Analysis/help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Napari/Getting_Started.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Napari/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Napari/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oscillations_Analysis/Average_StFrame_Gen0.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Average_StFrame_Gen0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oscillations_Analysis/Average_StFrame_Gen0_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Average_StFrame_Gen0_Analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oscillations_Analysis/Hist2D_DoublingTimeVsFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration/Hist2D_DoublingTimeVsFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oscillations_Analysis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/CellParentPairs_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/CellParentPairs_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/Parsing_XML_Tutorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Parsing_XML_Tutorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/Traverse_JSON_format.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing_XML_Files/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/btypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/btypes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/lineage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/lineage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/neighbours.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/neighbours.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sequitr_Package_Scripts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Adjust_Custom_Sine_Waves.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Adjust_Custom_Sine_Waves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Design_Custom_Sine_Wave_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Design_Custom_Sine_Wave_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Design_Custom_Sine_Wave_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Fitting_Arbitrary_Sine_Wave_Minimizing_Loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Fitting_Arbitrary_Sine_Wave_Minimizing_Loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Reverse_Engineer_Synthetic_Dataset_Grid_Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Optimiser_Fitting_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Optimiser_Fitting_Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Optimiser_Fitting_Plotter_Single_Family.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Optimiser_Fitting_Plotter_Single_Family.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Optimiser_Fitting_Plotter_Super_Wave.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Optimiser_Fitting_Plotter_Super_Wave.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Optimiser_Fitting_Super_Sine_Wave_to_All_Points.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Optimiser_Fitting_Super_Sine_Wave_to_All_Points.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/Reverse_Engineer_Synthetic_Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Reverse_Engineer_Synthetic_Dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Perfect_Family_Wave/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Slope_Fitting_Wave/Cosine_Slope_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Slope_Fitting_Wave/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Basics_CalculatingPhaseShift.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Basics_CalculatingPhaseShift.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Basics_Understanding_SinParameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Basics_Understanding_SinParameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Data_File_Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Data_File_Generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/Data_Shape_Summary.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Data_Shape_Summary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sine_Wave_Alignments/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Grid_Search_Combo_Count.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Calculate_Migration_Distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Cell_Migration_Analysis/Calculate_Migration_Distance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Check_Terminate_Fate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Check_Terminate_Fate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Copy_HDF_toTracksDirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Copy_HDF_toTracksDirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Create_Config_Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Create_Config_Models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Read_Tracks_JSON_File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Read_Tracks_JSON_File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Visualise_CellID_Trajectory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Visualise_CellID_Trajectory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Write_Config_JSONs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Tracker_Config_Writer/Write_Config_JSONs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/Write_Config_String.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Tracker_Config_Writer/Write_Config_String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Config_Writer/help_again.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Read_JSON_Tracks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Frame_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Artifacts_Frame_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking_TroubleShooting/Artifacts_Location_Info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Artifacts_Location_Info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking_TroubleShooting/Reconstruct_Trees_Quickly.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Reconstruct_Trees_Quickly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking_TroubleShooting/Tracker_Tree_Reconstruction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Tracker_Tree_Reconstruction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking_TroubleShooting/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Get_Paths_forMatLab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Hist_Probab_Hypotheses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis_RepMovie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Maxi_Analysis_Single_Movie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Movie_Frame_Length.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Movie_Frame_Length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Movie_Statistics_Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Movie_Statistics_Table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Process_Raw_TxtFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Process_Raw_TxtFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Server_Movies_Paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Server_Movies_Paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_CellID_Relabelling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Tracking_CellID_Relabelling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Tracking_Plots_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Tracking_Plots_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/Trimming_Limit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Trimming_Limit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/A_Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/A_Extractor_CellIDdetails_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/B_Processor_TxtFile_RawToFiltered.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/B_Processor_TxtFile_RawToFiltered.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/C_Checker_General_Movie_Graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/C_Checker_General_Movie_Graphs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/D_Plotter_Branched_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/D_Plotter_Branched_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Get_Paths_forMatLab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Hist_Probab_Hypotheses.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting/Hist_Probab_Hypotheses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Maxi_Analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Maxi_Analysis_RepMovie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Maxi_Analysis_Single_Movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Maxi_Analysis_Single_Movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Movie_Frame_Length.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Movie_Statistics_Table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Process_Raw_TxtFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Server_Movies_Paths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Tracking_CellID_Relabelling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Tracking_Plots_Class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Trimming_Limit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/__init__.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +358,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cell_IDs_Analysis" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Design_RNN_Tracker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -219,19 +370,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Sequitr_Lineage_Trees" />
-      <recent name="$PROJECT_DIR$/Chris_Tracking" />
-      <recent name="$PROJECT_DIR$/Manual_Tracking_Tool" />
-      <recent name="$PROJECT_DIR$/Oscillations_Analysis" />
-      <recent name="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Design_RNN_Tracker" />
+      <recent name="$PROJECT_DIR$/Sequitr_Package_Scripts" />
       <recent name="$PROJECT_DIR$/Cell_IDs_Analysis" />
       <recent name="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
       <recent name="$PROJECT_DIR$/Sine_Wave_Alignments" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Circadian_Rhythms" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments" />
+      <recent name="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,8 +397,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.help">
-    <configuration name="Estimate_CCT_3rd_Generation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Manual_Tree_Plotted_in_3D">
+    <configuration name="Fake_Linked_Divisions_Identifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -255,12 +406,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tracking_TroubleShooting" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sine_Wave_Alignments/CCT_Estimate_From_Sine_Wave/Estimate_CCT_3rd_Generation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tracking_TroubleShooting/Fake_Linked_Divisions_Identifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -269,7 +420,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Extractor_CellIDdetails_BugFix_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Getting_Started" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -277,12 +428,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cell_IDs_Analysis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Napari" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cell_IDs_Analysis/Extractor_CellIDdetails_BugFix_Call.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Napari/Getting_Started.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,7 +442,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Neighbours" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="JobScriptCreator_Alan_Template_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,12 +450,56 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JobScript_Creator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sequitr_Lineage_Trees/neighbours.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JobScript_Creator/JobScript_Creator_Call.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Manual_Tree_Plotted_in_3D" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool/Manual_Tree_Plotted_in_3D.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Maxi_Analysis_Single_Movie" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Maxi_Analysis_Single_Movie.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -335,65 +530,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Understanding_Voronoi_Tesselation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Local_Cell_Density" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Local_Cell_Density/Understanding_Voronoi_Tesselation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="help" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sequitr_Local_Cell_Density/help.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.Optimiser_Fitting_Single_Family_2" />
-      <item itemvalue="Python.Estimate_CCT_3rd_Generation" />
-      <item itemvalue="Python.Extractor_CellIDdetails_BugFix_Call" />
-      <item itemvalue="Python.Understanding_Voronoi_Tesselation" />
-      <item itemvalue="Python.Neighbours" />
-      <item itemvalue="Python.help" />
+      <item itemvalue="Python.JobScriptCreator_Alan_Template_Call" />
+      <item itemvalue="Python.Maxi_Analysis_Single_Movie" />
+      <item itemvalue="Python.Fake_Linked_Divisions_Identifier" />
+      <item itemvalue="Python.Getting_Started" />
+      <item itemvalue="Python.Manual_Tree_Plotted_in_3D" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.help" />
-        <item itemvalue="Python.Neighbours" />
-        <item itemvalue="Python.Understanding_Voronoi_Tesselation" />
-        <item itemvalue="Python.Extractor_CellIDdetails_BugFix_Call" />
-        <item itemvalue="Python.Estimate_CCT_3rd_Generation" />
+        <item itemvalue="Python.Manual_Tree_Plotted_in_3D" />
+        <item itemvalue="Python.Getting_Started" />
+        <item itemvalue="Python.Fake_Linked_Divisions_Identifier" />
+        <item itemvalue="Python.Maxi_Analysis_Single_Movie" />
+        <item itemvalue="Python.JobScriptCreator_Alan_Template_Call" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +558,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553615181250</updated>
-      <workItem from="1572360877444" duration="11508000" />
+      <workItem from="1572360877444" duration="62837000" />
+      <workItem from="1573839095932" duration="8304000" />
+      <workItem from="1574098573413" duration="3924000" />
     </task>
     <servers />
   </component>
@@ -428,16 +581,40 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CellComp$Neighbours.coverage" NAME="Neighbours Coverage Results" MODIFIED="1572797559425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Results_MSE_Fixed_Parameter.coverage" NAME="Results_MSE_Fixed_Parameter Coverage Results" MODIFIED="1572967345360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
     <SUITE FILE_PATH="coverage/CellComp$Extractor_CellIDdetails_BugFix_Call.coverage" NAME="Extractor_CellIDdetails_BugFix_Call Coverage Results" MODIFIED="1572371474381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
+    <SUITE FILE_PATH="coverage/CellComp$Plot_CC_Duration_Hist.coverage" NAME="Plot_CC_Duration_Hist Coverage Results" MODIFIED="1573149926401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/CellComp$Maxi_Analysis_Single_Movie.coverage" NAME="Maxi_Analysis_Single_Movie Coverage Results" MODIFIED="1574082567305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised" />
+    <SUITE FILE_PATH="coverage/CellComp$Manual_Tree_Plotted_in_3D.coverage" NAME="Manual_Tree_Plotted_in_3D Coverage Results" MODIFIED="1574102621850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool" />
+    <SUITE FILE_PATH="coverage/CellComp$Neighbours.coverage" NAME="Neighbours Coverage Results" MODIFIED="1572797559425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Comparing_Densities_Matlab.coverage" NAME="Comparing_Densities_Matlab Coverage Results" MODIFIED="1573658440675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_Functions.coverage" NAME="Explore_HDF5_File_Functions Coverage Results" MODIFIED="1573583990405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_CropSection.coverage" NAME="Explore_HDF5_File_CropSection Coverage Results" MODIFIED="1573659459074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Parent_vs_Child_CCT_Outliers.coverage" NAME="Parent_vs_Child_CCT_Outliers Coverage Results" MODIFIED="1573150724695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/CellComp$Plot_CC_Duration_Hist_Call.coverage" NAME="Plot_CC_Duration_Hist_Call Coverage Results" MODIFIED="1573149278956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/CellComp$Design_Custom_Sine_Wave_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1572967040302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+    <SUITE FILE_PATH="coverage/CellComp$Fake_Linked_Divisions_Identifier.coverage" NAME="Fake_Linked_Divisions_Identifier Coverage Results" MODIFIED="1574091253957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
     <SUITE FILE_PATH="coverage/CellComp$Understanding_Voronoi_Tesselation.coverage" NAME="Understanding_Voronoi_Tesselation Coverage Results" MODIFIED="1572634087955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Comparing_Densities_Python.coverage" NAME="Comparing_Densities_Python Coverage Results" MODIFIED="1573501967766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$help_maths.coverage" NAME="help_maths Coverage Results" MODIFIED="1573656318286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Silvia_s_Movies_New_HDF_Format.coverage" NAME="Silvia's_Movies_New_HDF_Format Coverage Results" MODIFIED="1573739136076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SegClass_HDF_Output" />
+    <SUITE FILE_PATH="coverage/CellComp$Parent_vs_Child_CCT_All_CellIDs.coverage" NAME="Parent_vs_Child_CCT_All_CellIDs Coverage Results" MODIFIED="1573151145712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/CellComp$Getting_Started.coverage" NAME="Getting_Started Coverage Results" MODIFIED="1574093092437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Napari" />
+    <SUITE FILE_PATH="coverage/CellComp$Threshold_For_Neighbourhood.coverage" NAME="Threshold_For_Neighbourhood Coverage Results" MODIFIED="1573561844820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File.coverage" NAME="Explore_HDF5_File Coverage Results" MODIFIED="1573580461398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Help.coverage" NAME="Help Coverage Results" MODIFIED="1573489435650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/CellComp$help.coverage" NAME="help Coverage Results" MODIFIED="1572800372616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$Read_Cell_Density_Files.coverage" NAME="Read_Cell_Density_Files Coverage Results" MODIFIED="1573495430565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$JobScriptCreator_Alan_Template_Call.coverage" NAME="JobScriptCreator_Alan_Template_Call Coverage Results" MODIFIED="1574081730415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
+    <SUITE FILE_PATH="coverage/CellComp$neighbours.coverage" NAME="neighbours Coverage Results" MODIFIED="1573571264942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Package_Scripts" />
   </component>
 </project>
