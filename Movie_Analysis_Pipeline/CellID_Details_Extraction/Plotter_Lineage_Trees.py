@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append("../")
 
-from Tracker_Development.Sequitr_Package_Scripts import LineageTree, LineageTreePlotter
+from Tracker_Development.Sequitr_Package_Scripts.lineage import LineageTree, LineageTreePlotter
 
 
 def PlotLineageTree(root_ID, xml_file, show=False):
@@ -31,12 +31,12 @@ def PlotLineageTree(root_ID, xml_file, show=False):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    plt.savefig(directory + "LinTree_Root_{}.png".format(root_ID), bbox_inches="tight")
+    #plt.savefig(directory + "LinTree_Root_{}.png".format(root_ID), bbox_inches="tight")
     if show is True:
         plt.show()
+        print ("Done!")
     plt.close()
 
 
-xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracks/tracks_type2.xml"
-for root in range(0, 100):
-    PlotLineageTree(root_ID=root, xml_file=xml_file)
+xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_31/pos6/tracks/tracks_type1.xml"
+PlotLineageTree(root_ID=127, xml_file=xml_file, show=True)

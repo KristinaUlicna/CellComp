@@ -16,9 +16,7 @@ import statistics as stats
 import numpy as np
 import math
 import os
-import sys
-sys.path.append("../")
-from Whole_Movie_Check_Plots.Movie_Frame_Length import FindMovieLength
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLength
 
 
 class AnalyseAllCellIDs(object):

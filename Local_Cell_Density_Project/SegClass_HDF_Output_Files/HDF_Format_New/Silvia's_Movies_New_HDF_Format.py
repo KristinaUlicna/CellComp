@@ -9,14 +9,16 @@
 import h5py
 import matplotlib.pyplot as plt
 
-filename = '/Volumes/lowegrp/Data/Kristina/Cells_FUCCI_Silvia/P00003_mCherry_HDF/segmented.hdf5'
+#filename = '/Volumes/lowegrp/Data/Kristina/Cells_FUCCI_Silvia/P00003_mCherry_HDF/segmented.hdf5'
+filename = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/" \
+            "tracker_performance_evaluation/tracks_try_55/HDF/segmented.hdf5"
 f = h5py.File(filename, 'r')
 
 print ("Hdf5 file keys:\t\t{}".format(list(f.keys())))       # to list the individual keys
 print ("Hdf5 file values:\t{}".format(list(f.values())))     # summary, e.g number of members (here, 1105)...
-print ("List of members:\t{}".format(list(f['objects'])))     # list of how the 1105 members are called
+print ("List of members:\t{}".format(list(f['objects'])))    # list of how the 1105 members are called
 
-# Access data in ['frames_0']
+# Access data in ['obj_type_X'] (1 = GFP, 2 = RFP)
 print ("Keys per frame:\t{}".format(list(f["objects"]["obj_type_1"].keys())))
 print ("Values per frame:\t{}".format(list(f["objects"]["obj_type_1"].values())))
 
@@ -24,5 +26,11 @@ print ("Values per frame:\t{}".format(list(f["objects"]["obj_type_1"].values()))
 print ("'Coords' per frame:\t{}".format(f["objects"]["obj_type_1"]["coords"]))                  # len = 216 (both GFP & RFP)
 print ("'Coords' per frame:\t{}".format(list(f["objects"]["obj_type_1"]["coords"][0:10])))      # [t (frame), x, y, z, type (1=GFP, 2=RFP)]
 
+print ("'Labels' per frame:\t{}".format(f["objects"]["obj_type_1"]["labels"]))
+print ("'Labels' per frame:\t{}".format(list(f["objects"]["obj_type_1"]["labels"][0:10])))
+
 print ("'Map' per frame:\t{}".format(f["objects"]["obj_type_1"]["map"]))
 print ("'Map' per frame:\t{}".format(list(f["objects"]["obj_type_1"]["map"][0:10])))
+
+movie_length = len(list(f["objects"]["obj_type_1"]["map"]))
+print (movie_length)

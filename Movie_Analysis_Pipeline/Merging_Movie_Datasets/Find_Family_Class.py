@@ -196,3 +196,6 @@ print ("Grandpa:\t{}".format(grandparent_list))
 print ("Cousins:\t{}".format(cousin_list))
 
 """
+
+call = FindFamily(cell_ID=7997, filtered_file="/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/17_07_31/pos5/analysis/cellIDdetails_filtered.txt")
+print (call.FindRoot())

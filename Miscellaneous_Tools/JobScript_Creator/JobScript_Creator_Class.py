@@ -13,13 +13,12 @@
 
 import os
 import datetime
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLength
 
 # You need to be connected to the server!
 # Server directory absolute path: "/Volumes/lowegrp/JobServer/jobs/"
 print ("Does server path exist? {}".format(os.path.exists("/Volumes/lowegrp/JobServer/jobs/")))
 
-# TODO: Change Segmentation job description
-# TODO: Check if the job already exists - if so, create new with '_again.job'
 
 """
         Text of the Alan's template TRACKING job text file: ()
@@ -88,7 +87,7 @@ class ProcessMovies():
         self.jobs_dir = '/mnt/lowe-sn00/lowegrp/JobServer/jobs/'
 
 
-    def SegClass(self, BF=False, GFP=False, RFP=False):
+    def SegClass(self, BF=False, GFP=False, RFP=False, ResNet=False):
         """ Segmentation & Classification of the BF, GFP & RFP movies.
 
         Args (Boolean; 'False' if only the 'noise' movie is provided):
@@ -97,7 +96,11 @@ class ProcessMovies():
             I'm only mapping pure populations, so 'RFP=False' or 'RFP_posX_noise.tif' set as default.
 
         Return (overall output):
-            An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied. """
+            An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied.
+
+        TODO:
+            SERVER_segment_classify_and_track - ask Alan for JobScript specification & create class function.
+        """
 
         # Create a .job file:
         job_name = 'JOB_SegClass_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
@@ -112,6 +115,11 @@ class ProcessMovies():
             else:
                 channels[order] = 'GAUSSIAN_NOISE'
 
+        # Define which UNet to use; classic or residual:
+        network = 'U'
+        if ResNet is True:
+            network = 'Res' + network
+
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
             .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
 
@@ -120,7 +128,8 @@ class ProcessMovies():
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\ntimeout = 3600\n'
         string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "' + channels[0] + '", ' \
-                    '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600)}\n'
+                    '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600), "model": "' \
+                    + str(network) + 'Net2D_competition", "unet_type": "' + str(network) + 'Net2D"}\n'
 
         #print (string)
         self.job_file.write(string)
@@ -166,7 +175,9 @@ class ProcessMovies():
             if item is False:
                 del channels[order]
 
-        frame_volume = None
+        frame_volume = FindMovieLength(exp_type=self.exp_type, data_date=self.data_date, pos="pos" + str(self.pos))
+        frame_volume += 1
+        """
         #if self.exp_type == "MDCK_WT_Pure":
         #    frame_volume = 1200
         if self.exp_type == "MDCK_90WT_10Sc_NoComp":
@@ -174,20 +185,23 @@ class ProcessMovies():
                 frame_volume = 1447
             if self.data_date == "17_07_24":
                 frame_volume = 1105
+        """
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
                 .format(self.user, self.exp_type, self.data_date, self.pos)
+        config = '"MDCK_config_wildtype.json"'
+
         if config_number != "":
             path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/' \
                 .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
+            config = "'MDCK_config_Kristina_Try_{}.json'".format(config_number)
 
-        string = '[job]\ncomplete = False\nid = Kristina_Configs_Tweaking\n'
+        string = '[job]\ncomplete = False\nid = Kristina_Re_Tracking\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\ntimeout = ' + str(timeout_seconds) + '\n'
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
-                    + str(frame_volume) + ')), "config": {"GFP": "MDCK_config_Kristina_Try_' + \
-                    str(config_number) + '.json", "RFP": "MDCK_config_Kristina_Try_' + str(config_number) + '.json"}}'
+                    + str(frame_volume) + ')), "config": {"GFP": ' + str(config) + ', "RFP": ' + str(config) + '}}'
 
         #print (string)
         self.job_file.write(string)

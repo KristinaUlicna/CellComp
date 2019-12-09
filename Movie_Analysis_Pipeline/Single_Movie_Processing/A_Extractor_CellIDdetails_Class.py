@@ -11,11 +11,9 @@
 
 # Import all the necessary libraries:
 
-import sys
-sys.path.append("../")
-
 import os
 import time
+from Tracker_Development.Sequitr_Package_Scripts.lineage import LineageTree
 start_time = time.process_time()
 
 

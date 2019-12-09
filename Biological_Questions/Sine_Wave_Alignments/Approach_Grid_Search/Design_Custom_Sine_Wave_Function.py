@@ -7,7 +7,15 @@ import matplotlib.pyplot as plt
 
 
 def PrepareFamilyList(file, how_many_gen):
-    """ Prepare list which the following function will read to optimize the parameters."""
+    """ Prepare list which the following function will read to optimize the parameters.
+
+    Args:
+        :arg file:
+        :arg how_many_gen
+
+    Return:
+        :param family_list:     (list of floats) CCT of gen#1, CCT of gen#2, CCT of gen#3 cell in the family
+    """
 
     family_list = []
     for line in open(file, "r"):
@@ -30,7 +38,7 @@ def sine_function(x, amp, per, shift_h, shift_v):
 
 # Define the GRID SEARCH function:
 def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
-                         show=False, write=False, print_phase_mse=False):
+                         show=False, print_phase_mse=False, return_phases=False):
 
     """ "Grid Search" Approach:
             Create sine waves with unknown amp, per, shift_h and shift_v in combinatorial manner
@@ -43,7 +51,6 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
     :param shift_h:             (float) ->
     :param shift_v:             (float) ->
     :param show:                (bool)  ->
-    :param write:               (bool)  ->
     :param print_phase_mse:     (bool)  ->
 
     :return:                    best_model_mse (float) -> the best possible phasing of families
@@ -51,8 +58,9 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
     """
 
     # Specify how many generations do your families have:
-    if int(how_many_gen) != 3 and int(how_many_gen) != 2:
-        raise Exception("Warning, number of generations to consider is not specified: how_many_gen must be 2 or 3!")
+    # TODO: Loop through the generational variants of x_axis values in a more elegant way!
+    if int(how_many_gen) > 3:
+        raise Exception("Number of generations to consider is not specified: how_many_gen must be 1 or 2 or 3!")
 
     # Prepare the sine wave specified by the function parameters:
     repeats = int(72.0 / per)
@@ -62,10 +70,11 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
     x_sine = np.linspace(0, repeats * per + 1, int(repeats * per * 5))
     y_sine = sine_function(x=x_sine, amp=amp, per=per, shift_h=shift_h, shift_v=shift_v)
     if show is True:
-        plt.plot(x_sine, y_sine, color="dodgerblue")
+        plt.plot(x_sine, y_sine, color="dodgerblue", zorder=0, label="Sine Wave")
 
     # Create the return variable - list of all best MSE that could be fitted for each family which will be summed:
     mse_best_list = []
+    phase_best_list = []
 
     for family in family_list:
         mse_list = []
@@ -76,10 +85,13 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
         for phase in np.linspace(0, per, int(per*10) + 1):
 
             # Create x & y axes:
-            x_data = np.array([phase, phase + family[0]])
+            x_data = np.array([phase])
+            if how_many_gen == 2:
+                x_data = np.array([phase, phase + family[0]])
             if how_many_gen == 3:
                 x_data = np.array([phase, phase + family[0], phase + family[0] + family[1]])
-            y_data_true = np.array(family)
+
+            y_data_true = np.array(family[0:len(x_data)])
             y_data_sine = sine_function(x=x_data, amp=amp, per=per, shift_h=shift_h, shift_v=shift_v)
 
             # Calculate mean squared error:
@@ -100,15 +112,18 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
             print ("Lowest MSE reached: {} for Phase: {}".format(mse_family, phase_family))
 
         # Plot the best result for the family:
-        x_best = np.array([phase_family, phase_family + family[0]])
+        x_best = np.array([phase_family])
+        if how_many_gen == 2:
+            x_best = np.array([phase_family, phase_family + family[0]])
         if how_many_gen == 3:
             x_best = np.array([phase_family, phase_family + family[0], phase_family + family[0] + family[1]])
-        y_best = np.array(family)
+        y_best = np.array(family[0:len(x_best)])
         if show is True:
-            plt.scatter(x=x_best, y=y_best)
+            plt.scatter(x=x_best, y=y_best, s=5, zorder=1)
 
         # Append the lowest MSE for this model:
         mse_best_list.append(mse_family)
+        phase_best_list.append(phase_family)
 
     sum = float(np.sum(mse_best_list))
     best_model_mse = round(sum, 2)
@@ -118,12 +133,18 @@ def DesignCustomSineWave(family_list, how_many_gen, amp, per, shift_h, shift_v,
         plt.xticks(np.arange(0, repeats * per + 1, 6))
         plt.xlabel("Oscillation Period / Time [hours]")
         plt.ylabel("Cell Cycle Duration [hours]")
-        plt.title("Sine Wave Parameters: y(x) = {} * sin(2*pi/{}*x + {}) + {}\nSum of Lowest MSE per each family = {}"
-                    .format(amp, per, shift_h, shift_v, best_model_mse))
+        plt.title("Sine Wave Parameters: y(x) = {} * sin(2*pi/{}*x + {}) + {}\n"
+                  "Sum of Lowest MSE per each family = {}"
+                  .format(amp, per, shift_h, shift_v, best_model_mse))
         plt.grid(axis="both")
-        plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Top_Solution_Sine_Wave_{}_gen_families.png"
-                    .format(how_many_gen), bbox_inches="tight")
+        plt.legend(loc="best")
+        #plt.savefig("/Users/kristinaulicna/Documents/Rotation_2/Top_Solution_Sine_Wave_{}_gen_families.png"
+        #            .format(how_many_gen), bbox_inches="tight")
         plt.show()
         plt.close()
 
-    return best_model_mse
+    # For the estimator graphs, this is important to know how to phase the families:
+    if return_phases is True:
+        return best_model_mse, phase_best_list
+    else:
+        return best_model_mse

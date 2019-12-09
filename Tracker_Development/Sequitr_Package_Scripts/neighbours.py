@@ -308,6 +308,7 @@ def calculate_neighborhood(winner_fn=None, loser_fn=None, d_thresh=100.0):
 
 
 # Call the function 'calculate_neighborhood':
-wnr = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/tracks/tracks_type1.xml"
-lsr = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/tracks/tracks_type2.xml"
+directory = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/tracks/"
+wnr = directory + "tracks_type1.xml"
+lsr = directory + "tracks_type2.xml"
 calculate_neighborhood(winner_fn=wnr, loser_fn=lsr, d_thresh=100.0)

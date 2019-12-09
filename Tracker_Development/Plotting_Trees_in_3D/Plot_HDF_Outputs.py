@@ -12,30 +12,17 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 for frame in range(0, 1105):
+    if frame % 10 == 0:
+        print ("Processing frame #{}".format(frame))
     x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordinatesPerFrame(hdf5_file=file, frame=frame)
-    ax.scatter(x_gfp, y_gfp, frame)
-    ax.scatter()
+    ax.scatter(x_gfp, y_gfp, frame, s=1, color="forestgreen", label="GFP")
+    ax.scatter(x_rfp, y_rfp, frame, s=1, color="magenta", label="RFP")
+    break
 
-
-def randrange(n, vmin, vmax):
-    '''
-    Helper function to make an array of random numbers having shape (n, )
-    with each number distributed Uniform(vmin, vmax).
-    '''
-    return (vmax - vmin)*np.random.rand(n) + vmin
-
-
-n = 100
-
-# For each set of style and range settings, plot n random points in the box
-# defined by x in [23, 32], y in [0, 100], z in [zlow, zhigh].
-for c, m, zlow, zhigh in [('r', 'o', -50, -25), ('b', '^', -30, -5)]:
-    xs = randrange(n, 23, 32)
-    ys = randrange(n, 0, 100)
-    zs = randrange(n, zlow, zhigh)
-
-ax.set_xlabel('X Label')
-ax.set_ylabel('Y Label')
-ax.set_zlabel('Z Label')
+ax.set_xlabel('X coordinate [pixels]')
+ax.set_ylabel('Y coordinate [pixels]')
+ax.set_zlabel('Time [frames]')
 
 plt.show()
+
+

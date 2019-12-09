@@ -24,12 +24,12 @@ def CreateGenerationalFile(merged_file, how_many_gen, child_gen_only="all"):
         header_2 = ["Cell_ID", "CCT", "Gener", "Cell_ID", "CCT", "Gener"]
     else:
         raise Exception("Warning, define the number of generations to search for")
-
+    """
     # Write the file & initiate with headers:
     directory = "/".join(merged_file.split("/")[:-1])
     result_file = directory + "/TRY_generation_{}_families_{}.txt".format(how_many_gen, child_gen_only)
     result_file = open(result_file, "w")
-
+    
     header_string = ""
     for item in header_1:
         header_string += str(item) + "\t"
@@ -41,7 +41,7 @@ def CreateGenerationalFile(merged_file, how_many_gen, child_gen_only="all"):
         header_string += str(item) + "\t"
     header_string = header_string[:-1] + "\n"
     result_file.write(header_string)
-
+    """
     # Search the file:
     for line in open(merged_file, "r"):
         line = line.rstrip().split("\t")
@@ -51,11 +51,13 @@ def CreateGenerationalFile(merged_file, how_many_gen, child_gen_only="all"):
             # 3-generational family:
             if how_many_gen == 3:
                 if int(line[5]) == 3:
+                    print (line[0])
                     call = FindFamily(cell_ID=line[0], filtered_file=merged_file)
                     cellID_info = call.FindItself()
                     parent_info = call.FindParent()
                     grand_info = call.FindGrandparent()
                     info = list(chain.from_iterable([grand_info, parent_info, cellID_info]))
+            """
             # 2-generational family:
             if how_many_gen == 2:
                 if child_gen_only != "all":
@@ -71,13 +73,13 @@ def CreateGenerationalFile(merged_file, how_many_gen, child_gen_only="all"):
                     string += str(item) + "\t"
                 string = string[:-1] + "\n"
                 result_file.write(string)
-
-    result_file.close()
+            """
+    #result_file.close()
 
 
 # Call the function:
 merged_file = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/cellIDdetails_merged.txt"
 CreateGenerationalFile(merged_file=merged_file, how_many_gen=3, child_gen_only="all")
-CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="all")
-CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="gen_1_only")
+#CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="all")
+#CreateGenerationalFile(merged_file=merged_file, how_many_gen=2, child_gen_only="gen_1_only")
 

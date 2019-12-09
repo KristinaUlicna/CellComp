@@ -16,17 +16,41 @@ def GetXandYcoordinatesPerFrame(hdf5_file, frame=0):
     f = h5py.File(hdf5_file, 'r')
     x_gfp, y_gfp, x_rfp, y_rfp = [], [], [], []
 
-    for object in list(f["frames"]["frame_{}".format(frame)]["coords"]):
-        if int(object[4]) == 1:
-            x_gfp.append(object[1])
-            y_gfp.append(object[2])
-        elif int(object[4]) == 2:
-            x_rfp.append(object[1])
-            y_rfp.append(object[2])
+    for cell in list(f["frames"]["frame_{}".format(frame)]["coords"]):
+        if int(cell[4]) == 1:
+            x_gfp.append(cell[1])
+            y_gfp.append(cell[2])
+        elif int(cell[4]) == 2:
+            x_rfp.append(cell[1])
+            y_rfp.append(cell[2])
         else:
             raise TypeError("Cell type is unknown; not GFP = 1, not RFP = 2.")
 
     return x_gfp, y_gfp, x_rfp, y_rfp
+
+
+def GetXandYcoordinatesPerMovie(hdf5_file):
+    """ Iterates through the whole hdf5_file and returns
+        4 nested lists of the length of the movie
+        with all x & y GFP and RFP cells coordinates.
+
+    :param hdf5_file:
+    :return:
+    """
+
+    f = h5py.File(hdf5_file, 'r')
+    x_gfp_list, y_gfp_list, x_rfp_list, y_rfp_list = [], [], [], []
+
+    for i in range(1, len(list(f['frames']))):
+        if i % 100 == 0:
+            print ("Processing frame #{}...".format(i))
+        x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordinatesPerFrame(hdf5_file=hdf5_file, frame=i-1)
+        x_gfp_list.append(x_gfp)
+        y_gfp_list.append(y_gfp)
+        x_rfp_list.append(x_rfp)
+        y_rfp_list.append(y_rfp)
+
+    return x_gfp_list, y_gfp_list, x_rfp_list, y_rfp_list
 
 
 def ConvertXandYcoordinates(x_gfp, y_gfp, x_rfp, y_rfp, print_lists=False):
@@ -100,6 +124,8 @@ def DrawVoronoiTesselation(hdf5_file, frame=0):
 
 
 # Call the function to test:
+"""
 filename = '/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5'
 PlotXandYcoordinatesPerFrame(hdf5_file=filename, frame=0)
 DrawVoronoiTesselation(hdf5_file=filename, frame=0)
+"""

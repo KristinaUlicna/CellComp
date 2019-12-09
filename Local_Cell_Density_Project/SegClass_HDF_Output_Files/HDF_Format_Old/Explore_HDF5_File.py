@@ -8,7 +8,7 @@ f = h5py.File(filename, 'r')
 
 print ("Hdf5 file keys:\t\t{}".format(list(f.keys())))       # to list the individual keys
 print ("Hdf5 file values:\t{}".format(list(f.values())))     # summary, e.g number of members (here, 1105)...
-print ("List of members:\t{}".format(list(f['frames'])))     # list of how the 1105 members are called
+print ("List of members:\t{}".format(len(list(f['frames']))))     # list of how the 1105 members are called
 
 # Access data in ['frames_0']
 print ("Keys per frame:\t{}".format(list(f["frames"]["frame_0"].keys())))

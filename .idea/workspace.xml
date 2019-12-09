@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ed53ef8-152c-474a-80ac-052b163dab6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Family_Fits/Reverse_Engineer_Synthetic_Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Reverse_Engineer_Synthetic_Dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Adjust_Custom_Sine_Waves.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Design_Custom_Sine_Wave_Call.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Design_Custom_Sine_Wave_Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Design_Custom_Sine_Wave_Function_Deprecated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Fitting_Arbitrary_Sine_Wave_Minimizing_Loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Grid_Search_Combo_Count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search/Results_MSE_Fixed_Parameter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Data_File_Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend/Data_File_Generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density_Project/Calculations_and_Definitions/Unit_Test_Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/Unit_Test_Density/Unit_Test_Help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density_Project/Confluency_Mask_Network/VisualiseUNetTrainingData.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/Confluency_Mask_Network/VisualiseUNetTrainingData.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New/Silvia's_Movies_New_HDF_Format.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New/Silvia's_Movies_New_HDF_Format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old/Explore_HDF5_File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old/Explore_HDF5_File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old/Explore_HDF5_File_Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old/Explore_HDF5_File_Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions/Unzip_Zip_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions/Unzip_Zip_Files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miscellaneous_Tools/JobScript_Creator/JobScript_Creator_Call.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/JobScript_Creator/JobScript_Creator_Call.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miscellaneous_Tools/JobScript_Creator/JobScript_Creator_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous_Tools/JobScript_Creator/JobScript_Creator_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Plotter_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction/Plotter_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Find_Family_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets/Find_Family_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/A_Extractor_CellIDdetails_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/A_Extractor_CellIDdetails_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/C_Checker_General_Movie_Graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/C_Checker_General_Movie_Graphs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/D_Plotter_Branched_Lineage_Trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/D_Plotter_Branched_Lineage_Trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Maxi_Analysis_Single_Movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Maxi_Analysis_Single_Movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Server_Movies_Paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Server_Movies_Paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Development/Plotting_Trees_in_3D/Plot_HDF_Outputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Plotting_Trees_in_3D/Plot_HDF_Outputs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/neighbours.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts/neighbours.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +217,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -203,19 +229,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Design_RNN_Tracker" />
-      <recent name="$PROJECT_DIR$/Sequitr_Package_Scripts" />
-      <recent name="$PROJECT_DIR$/Cell_IDs_Analysis" />
-      <recent name="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
-      <recent name="$PROJECT_DIR$/Sine_Wave_Alignments" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend" />
+      <recent name="$PROJECT_DIR$/Local_Cell_Density_Project/Unit_Test_Density" />
       <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Circadian_Time_Estimator" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Visualising_MSE_Results" />
       <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments" />
-      <recent name="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting" />
-      <recent name="$PROJECT_DIR$/Biological_Questions/Cell_Cycle_Duration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
+      <recent name="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+      <recent name="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Visualising_MSE_Results" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,8 +256,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Manual_Tree_Plotted_in_3D">
-    <configuration name="Fake_Linked_Divisions_Identifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Evolution_Anaphase_Class">
+    <configuration name="Delete_Directory_with_Contents" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,12 +265,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tracking_TroubleShooting" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tracking_TroubleShooting/Fake_Linked_Divisions_Identifier.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions/Delete_Folders_and_Files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,7 +279,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Getting_Started" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Evolution_Anaphase_Class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -261,12 +287,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Napari" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Napari/Getting_Started.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation/Evolution_Anaphase_Class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -275,7 +301,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="JobScriptCreator_Alan_Template_Call" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="HDF5_Data_Functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonScripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,56 +309,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JobScript_Creator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JobScript_Creator/JobScript_Creator_Call.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Manual_Tree_Plotted_in_3D" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool/Manual_Tree_Plotted_in_3D.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Maxi_Analysis_Single_Movie" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonScripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised/Maxi_Analysis_Single_Movie.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New/HDF5_Data_Functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -363,21 +345,87 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Server_Movies_Paths" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Server_Movies_Paths.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Triangle_Edges_Evolution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing/Server_Movies_Paths.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit_Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonScripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Local_Cell_Density_Project/Unit_Test_Density" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Local_Cell_Density_Project/Unit_Test_Density/Unit_Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Optimiser_Fitting_Single_Family_2" />
-      <item itemvalue="Python.JobScriptCreator_Alan_Template_Call" />
-      <item itemvalue="Python.Maxi_Analysis_Single_Movie" />
-      <item itemvalue="Python.Fake_Linked_Divisions_Identifier" />
-      <item itemvalue="Python.Getting_Started" />
-      <item itemvalue="Python.Manual_Tree_Plotted_in_3D" />
+      <item itemvalue="Python.Unit_Test" />
+      <item itemvalue="Python.Delete_Directory_with_Contents" />
+      <item itemvalue="Python.Server_Movies_Paths" />
+      <item itemvalue="Python.HDF5_Data_Functions" />
+      <item itemvalue="Python.Evolution_Anaphase_Class" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Manual_Tree_Plotted_in_3D" />
-        <item itemvalue="Python.Getting_Started" />
-        <item itemvalue="Python.Fake_Linked_Divisions_Identifier" />
-        <item itemvalue="Python.Maxi_Analysis_Single_Movie" />
-        <item itemvalue="Python.JobScriptCreator_Alan_Template_Call" />
+        <item itemvalue="Python.Evolution_Anaphase_Class" />
+        <item itemvalue="Python.HDF5_Data_Functions" />
+        <item itemvalue="Python.Server_Movies_Paths" />
+        <item itemvalue="Python.Delete_Directory_with_Contents" />
+        <item itemvalue="Python.Unit_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -393,18 +441,10 @@
       <updated>1553615181250</updated>
       <workItem from="1572360877444" duration="62837000" />
       <workItem from="1573839095932" duration="8304000" />
-      <workItem from="1574098573413" duration="4526000" />
+      <workItem from="1574098573413" duration="29187000" />
+      <workItem from="1574343525352" duration="139081000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -423,31 +463,59 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CellComp$Results_MSE_Fixed_Parameter.coverage" NAME="Results_MSE_Fixed_Parameter Coverage Results" MODIFIED="1572967345360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+    <SUITE FILE_PATH="coverage/CellComp$Delete_Directory_with_Contents.coverage" NAME="Delete_Directory_with_Contents Coverage Results" MODIFIED="1575907959790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions" />
     <SUITE FILE_PATH="coverage/CellComp$Extractor_CellIDdetails_BugFix_Call.coverage" NAME="Extractor_CellIDdetails_BugFix_Call Coverage Results" MODIFIED="1572371474381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_IDs_Analysis" />
+    <SUITE FILE_PATH="coverage/CellComp$Unit_Test.coverage" NAME="Unit_Test Coverage Results" MODIFIED="1575904196582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Unit_Test_Density" />
     <SUITE FILE_PATH="coverage/CellComp$Plot_CC_Duration_Hist.coverage" NAME="Plot_CC_Duration_Hist Coverage Results" MODIFIED="1573149926401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
-    <SUITE FILE_PATH="coverage/CellComp$Maxi_Analysis_Single_Movie.coverage" NAME="Maxi_Analysis_Single_Movie Coverage Results" MODIFIED="1574082567305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots_Revised" />
-    <SUITE FILE_PATH="coverage/CellComp$Manual_Tree_Plotted_in_3D.coverage" NAME="Manual_Tree_Plotted_in_3D Coverage Results" MODIFIED="1574102621850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool" />
+    <SUITE FILE_PATH="coverage/CellComp$Plotting_MSE_Plotly.coverage" NAME="Plotting_MSE_Plotly Coverage Results" MODIFIED="1574864942750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
     <SUITE FILE_PATH="coverage/CellComp$Neighbours.coverage" NAME="Neighbours Coverage Results" MODIFIED="1572797559425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
     <SUITE FILE_PATH="coverage/CellComp$Comparing_Densities_Matlab.coverage" NAME="Comparing_Densities_Matlab Coverage Results" MODIFIED="1573658440675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
-    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_Functions.coverage" NAME="Explore_HDF5_File_Functions Coverage Results" MODIFIED="1573583990405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
-    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_CropSection.coverage" NAME="Explore_HDF5_File_CropSection Coverage Results" MODIFIED="1573659459074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Split_MSE_File.coverage" NAME="Split_MSE_File Coverage Results" MODIFIED="1574951569723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+    <SUITE FILE_PATH="coverage/CellComp$Design_Custom_Sine_Wave_Call_Less.coverage" NAME="Design_Custom_Sine_Wave_Call_Less Coverage Results" MODIFIED="1574954931327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+    <SUITE FILE_PATH="coverage/CellComp$Temporary_Results.coverage" NAME="Temporary_Results Coverage Results" MODIFIED="1575652846130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
+    <SUITE FILE_PATH="coverage/CellComp$Server_Movies_Paths.coverage" NAME="Server_Movies_Paths Coverage Results" MODIFIED="1575912600134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing" />
     <SUITE FILE_PATH="coverage/CellComp$Parent_vs_Child_CCT_Outliers.coverage" NAME="Parent_vs_Child_CCT_Outliers Coverage Results" MODIFIED="1573150724695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
     <SUITE FILE_PATH="coverage/CellComp$Plot_CC_Duration_Hist_Call.coverage" NAME="Plot_CC_Duration_Hist_Call Coverage Results" MODIFIED="1573149278956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
-    <SUITE FILE_PATH="coverage/CellComp$Design_Custom_Sine_Wave_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1572967040302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
     <SUITE FILE_PATH="coverage/CellComp$Fake_Linked_Divisions_Identifier.coverage" NAME="Fake_Linked_Divisions_Identifier Coverage Results" MODIFIED="1574091253957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracking_TroubleShooting" />
+    <SUITE FILE_PATH="coverage/CellComp$Design_Custom_Sine_Wave_Call.coverage" NAME="Design_Custom_Sine_Wave_Call Coverage Results" MODIFIED="1574951088154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+    <SUITE FILE_PATH="coverage/CellComp$Help_3D.coverage" NAME="Help_3D Coverage Results" MODIFIED="1574967370926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Visualising_MSE_Results" />
+    <SUITE FILE_PATH="coverage/CellComp$Cells_Long_Division_Time.coverage" NAME="Cells_Long_Division_Time Coverage Results" MODIFIED="1575651075808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracker_Development/Tracker_Troubleshooting" />
     <SUITE FILE_PATH="coverage/CellComp$Understanding_Voronoi_Tesselation.coverage" NAME="Understanding_Voronoi_Tesselation Coverage Results" MODIFIED="1572634087955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
     <SUITE FILE_PATH="coverage/CellComp$Comparing_Densities_Python.coverage" NAME="Comparing_Densities_Python Coverage Results" MODIFIED="1573501967766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
     <SUITE FILE_PATH="coverage/CellComp$help_maths.coverage" NAME="help_maths Coverage Results" MODIFIED="1573656318286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
-    <SUITE FILE_PATH="coverage/CellComp$Silvia_s_Movies_New_HDF_Format.coverage" NAME="Silvia's_Movies_New_HDF_Format Coverage Results" MODIFIED="1573739136076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SegClass_HDF_Output" />
+    <SUITE FILE_PATH="coverage/CellComp$Silvia_s_Movies_New_HDF_Format.coverage" NAME="Silvia's_Movies_New_HDF_Format Coverage Results" MODIFIED="1575298858809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New" />
+    <SUITE FILE_PATH="coverage/CellComp$Understanding_Delaunay_Triangulation.coverage" NAME="Understanding_Delaunay_Triangulation Coverage Results" MODIFIED="1575828146551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
     <SUITE FILE_PATH="coverage/CellComp$Parent_vs_Child_CCT_All_CellIDs.coverage" NAME="Parent_vs_Child_CCT_All_CellIDs Coverage Results" MODIFIED="1573151145712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Cycle_Duration" />
+    <SUITE FILE_PATH="coverage/CellComp$Plotter_Lineage_Trees.coverage" NAME="Plotter_Lineage_Trees Coverage Results" MODIFIED="1575376463809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Movie_Analysis_Pipeline/CellID_Details_Extraction" />
     <SUITE FILE_PATH="coverage/CellComp$Getting_Started.coverage" NAME="Getting_Started Coverage Results" MODIFIED="1574093092437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Napari" />
+    <SUITE FILE_PATH="coverage/CellComp$Evolution_Distance_Cell_Nuclei_Anaphase.coverage" NAME="Evolution_Distance_Cell_Nuclei_Anaphase Coverage Results" MODIFIED="1575649573175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
     <SUITE FILE_PATH="coverage/CellComp$Threshold_For_Neighbourhood.coverage" NAME="Threshold_For_Neighbourhood Coverage Results" MODIFIED="1573561844820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density" />
-    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File.coverage" NAME="Explore_HDF5_File Coverage Results" MODIFIED="1573580461398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File.coverage" NAME="Explore_HDF5_File Coverage Results" MODIFIED="1574244900026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old" />
+    <SUITE FILE_PATH="coverage/CellComp$Plotting_MSE_Period_AllinOne.coverage" NAME="Plotting_MSE_Period_AllinOne Coverage Results" MODIFIED="1575026507624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Visualising_MSE_Results" />
+    <SUITE FILE_PATH="coverage/CellComp$Data_File_Generator.coverage" NAME="Data_File_Generator Coverage Results" MODIFIED="1575370516646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Basics_to_Comprehend" />
     <SUITE FILE_PATH="coverage/CellComp$Help.coverage" NAME="Help Coverage Results" MODIFIED="1573489435650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Whole_Movie_Check_Plots" />
     <SUITE FILE_PATH="coverage/CellComp$help.coverage" NAME="help Coverage Results" MODIFIED="1572800372616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Local_Cell_Density" />
     <SUITE FILE_PATH="coverage/CellComp$Read_Cell_Density_Files.coverage" NAME="Read_Cell_Density_Files Coverage Results" MODIFIED="1573495430565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cell_Local_Density" />
+    <SUITE FILE_PATH="coverage/CellComp$JobScript_Creator_Call.coverage" NAME="JobScript_Creator_Call Coverage Results" MODIFIED="1575891161611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/JobScript_Creator" />
     <SUITE FILE_PATH="coverage/CellComp$JobScriptCreator_Alan_Template_Call.coverage" NAME="JobScriptCreator_Alan_Template_Call Coverage Results" MODIFIED="1574081730415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JobScript_Creator" />
-    <SUITE FILE_PATH="coverage/CellComp$neighbours.coverage" NAME="neighbours Coverage Results" MODIFIED="1573571264942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sequitr_Package_Scripts" />
+    <SUITE FILE_PATH="coverage/CellComp$neighbours.coverage" NAME="neighbours Coverage Results" MODIFIED="1575901855084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracker_Development/Sequitr_Package_Scripts" />
+    <SUITE FILE_PATH="coverage/CellComp$Results_MSE_Fixed_Parameter.coverage" NAME="Results_MSE_Fixed_Parameter Coverage Results" MODIFIED="1572967345360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sine_Wave_Alignments/Approach_Custom_Sine_Wave" />
+    <SUITE FILE_PATH="coverage/CellComp$Unzip_Zip_Files.coverage" NAME="Unzip_Zip_Files Coverage Results" MODIFIED="1575636150461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/Handy_Functions" />
+    <SUITE FILE_PATH="coverage/CellComp$Maxi_Analysis_Single_Movie.coverage" NAME="Maxi_Analysis_Single_Movie Coverage Results" MODIFIED="1575470404643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Movie_Analysis_Pipeline/Single_Movie_Processing" />
+    <SUITE FILE_PATH="coverage/CellComp$Manual_Tree_Plotted_in_3D.coverage" NAME="Manual_Tree_Plotted_in_3D Coverage Results" MODIFIED="1574102621850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Miscellaneous_Tools/Manual_Tracking_Tool" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_Functions.coverage" NAME="Explore_HDF5_File_Functions Coverage Results" MODIFIED="1573583990405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_CropSection.coverage" NAME="Explore_HDF5_File_CropSection Coverage Results" MODIFIED="1573659459074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Design_RNN_Tracker" />
+    <SUITE FILE_PATH="coverage/CellComp$Help_DF.coverage" NAME="Help_DF Coverage Results" MODIFIED="1574948487174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+    <SUITE FILE_PATH="coverage/CellComp$Explore_HDF5_File_Call.coverage" NAME="Explore_HDF5_File_Call Coverage Results" MODIFIED="1574337007042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_Old" />
+    <SUITE FILE_PATH="coverage/CellComp$Plot_HDF_Outputs.coverage" NAME="Plot_HDF_Outputs_Plotly Coverage Results" MODIFIED="1574170216355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracker_Development/Plotting_Trees_in_3D" />
+    <SUITE FILE_PATH="coverage/CellComp$HDF5_Data_Functions.coverage" NAME="HDF5_Data_Functions Coverage Results" MODIFIED="1575916226198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/SegClass_HDF_Output_Files/HDF_Format_New" />
+    <SUITE FILE_PATH="coverage/CellComp$Plotting_MSE_Period_DFs_CSV.coverage" NAME="Plotting_MSE_Period_DFs_CSV Coverage Results" MODIFIED="1574965045367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Visualising_MSE_Results" />
+    <SUITE FILE_PATH="coverage/CellComp$Reading_MSE_File.coverage" NAME="Reading_MSE_File Coverage Results" MODIFIED="1574855677227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
+    <SUITE FILE_PATH="coverage/CellComp$Evolution_Anaphase_Class.coverage" NAME="Evolution_Anaphase_Class Coverage Results" MODIFIED="1575919315362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
+    <SUITE FILE_PATH="coverage/CellComp$Plot_3D_SegClass_and_Tracking_Outputs.coverage" NAME="Plot_3D_SegClass_and_Tracking_Outputs Coverage Results" MODIFIED="1575302383419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tracker_Development/Plotting_Trees_in_3D" />
+    <SUITE FILE_PATH="coverage/CellComp$Triangle_Edges_Evolution.coverage" NAME="Triangle_Edges_Evolution Coverage Results" MODIFIED="1575457373241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Local_Cell_Density_Project/Triangulation_and_Tesselation" />
+    <SUITE FILE_PATH="coverage/CellComp$Find_Family_Class.coverage" NAME="Find_Family_Class Coverage Results" MODIFIED="1575377638667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Movie_Analysis_Pipeline/Merging_Movie_Datasets" />
+    <SUITE FILE_PATH="coverage/CellComp$Circadian_Time_Estimator.coverage" NAME="Circadian_Time_Estimator Coverage Results" MODIFIED="1575053590828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Circadian_Time_Estimator" />
+    <SUITE FILE_PATH="coverage/CellComp$Fitting_Arbitrary_Sine_Wave_Minimizing_Loss.coverage" NAME="Fitting_Arbitrary_Sine_Wave_Minimizing_Loss Coverage Results" MODIFIED="1574972158661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Biological_Questions/Sine_Wave_Alignments/Approach_Grid_Search" />
   </component>
 </project>
