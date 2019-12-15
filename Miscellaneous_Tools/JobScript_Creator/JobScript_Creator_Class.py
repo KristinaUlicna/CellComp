@@ -102,8 +102,14 @@ class ProcessMovies():
             SERVER_segment_classify_and_track - ask Alan for JobScript specification & create class function.
         """
 
+        # Define which UNet to use; classic or residual:
+        network = 'U'
+        if ResNet is True:
+            network = 'Res' + network
+
         # Create a .job file:
-        job_name = 'JOB_SegClass_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
+        job_name = 'JOB_SegClass_{}_{}_{}_pos{}_{}net' \
+                        .format(self.today_date, self.user, self.data_date, self.pos, network)
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
@@ -114,11 +120,6 @@ class ProcessMovies():
                 channels[order] += '_pos' + str(self.pos) + '.tif'
             else:
                 channels[order] = 'GAUSSIAN_NOISE'
-
-        # Define which UNet to use; classic or residual:
-        network = 'U'
-        if ResNet is True:
-            network = 'Res' + network
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
             .format(str(self.user), str(self.exp_type), str(self.data_date), str(self.pos))
@@ -177,6 +178,7 @@ class ProcessMovies():
 
         frame_volume = FindMovieLength(exp_type=self.exp_type, data_date=self.data_date, pos="pos" + str(self.pos))
         frame_volume += 1
+
         """
         #if self.exp_type == "MDCK_WT_Pure":
         #    frame_volume = 1200

@@ -290,7 +290,7 @@ def calculate_neighborhood(winner_fn=None, loser_fn=None, d_thresh=100.0):
             # update the original Track object to contain the new info
             c.ref.neighborhood.append(neighborhood)
 
-        break
+        #break
 
     winner_tracks = [t for t in frame_map.tracks if t.cell_type is "winner"]
     loser_tracks = [t for t in frame_map.tracks if t.cell_type is "loser"]

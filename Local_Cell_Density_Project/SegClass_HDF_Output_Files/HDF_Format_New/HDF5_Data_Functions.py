@@ -7,6 +7,7 @@
 #           'labels' = [_, _, _, _, _, _] -> probability of an object is in inter-, prometa-, meta-, anaphase or apoptosis
 #           'map' = [0, X] for frame #0 -> cumulative cell count (or rather 'segmented object count') per each frame.
 #                   last number of previous frame is starting number of following frame, [0, 95], [95, 193], [193, 286],...
+#                   To get cell count per frame, subtract value[1] from value [0] from the specified frame.
 
 
 import h5py
@@ -28,23 +29,41 @@ def GetCellCountPerFrame(hdf5_file, frame=0):
 
     return cell_count
 
-    """
-    movie_length = list(f["objects"]["obj_type_1"]["map"])
-    print(movie_length)
-    movie_length = 
-    print(movie_length)
-    movie_length = movie_length[1] - movie_length[0]
-    print(movie_length)
 
-    movie_length = list(f["objects"]["obj_type_2"]["map"])
-    print(movie_length)
-    movie_length = list(f["objects"]["obj_type_2"]["map"])[frame]
-    print(movie_length)
-    movie_length = movie_length[1] - movie_length[0]
-    print(movie_length)
-    """
 
 def GetXandYcoordsPerFrame(hdf5_file, frame=0):
+    """ Iterates through the whole hdf5_file and returns
+        4 nested lists of the length of 1 (single frame)
+        with all 'x' & 'y' GFP and RFP cells coordinates.
+
+    :param hdf5_file:
+    :param frame:
+    :return:
+    """
+
+    x_coords, y_coords = [[] for _ in range(2)], [[] for _ in range(2)],
+
+    f = h5py.File(hdf5_file, 'r')
+    objects = list(f["objects"])
+    print (objects)
+
+    for channel in objects:
+        index = list(f["objects"][channel]["map"])[frame]
+        selection = list(f["objects"][channel]["coords"])[index[0]:index[1]]
+        for centroid in selection:
+            x_coords[int(channel.split("obj_type_")[-1])-1].append(centroid[0])
+            y_coords[int(channel.split("obj_type_")[-1])-1].append(centroid[1])
+
+    x_gfp_coords = x_coords[0]
+    y_gfp_coords = y_coords[0]
+    x_rfp_coords = x_coords[1]
+    y_rfp_coords = y_coords[1]
+
+    return x_gfp_coords, y_gfp_coords, x_rfp_coords, y_rfp_coords
+
+
+
+def GetXandYcoordsPerFrameSLOW(hdf5_file, frame=0):
     """ Iterates through the whole hdf5_file and returns
         4 nested lists of the length of 1 (single frame)
         with all 'x' & 'y' GFP and RFP cells coordinates.
@@ -125,13 +144,20 @@ def CreateDataFramePerMovie(hdf5_file):
     #print (df)
 
 
+
+f1 = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/17_07_31/pos0/HDF/segmented.hdf5"
+f2 = "/Volumes/lowegrp/Data/Kristina/MDCK_Sc_Tet-_Pure/17_01_19/pos6/HDF/segmented.hdf5"
+f3 = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5"
+
+
 """
-filename = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/17_07_31/pos0/HDF/segmented.hdf5"
-#filename = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/" \
-#            "tracker_performance_evaluation/tracks_try_55/HDF/segmented.hdf5"
-frame = 1150
-i = GetCellCountPerFrame(hdf5_file=filename, frame=frame)
-print (i)
-j, k, l, m = GetXandYcoordsPerFrame(hdf5_file=filename, frame=frame)
-print (len(j+l))
+frame = 500
+
+for filename in [f3]:
+    #i = GetCellCountPerFrame(hdf5_file=filename, frame=frame)
+    i, j, k, l = GetXandYcoordsPerFrame(hdf5_file=filename, frame=frame)
+    m, n, o, p = GetXandYcoordsPerFrameSLOW(hdf5_file=filename, frame=frame)
+
+    print (len(i+k))
+    print (len(m+o))
 """

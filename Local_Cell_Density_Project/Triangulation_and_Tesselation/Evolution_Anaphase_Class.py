@@ -39,8 +39,11 @@ class AnaphaseNucleiDistance(object):
         """ """
 
         print (self.directory)
+        file_list = os.listdir(self.directory)
 
-        for file in os.listdir(self.directory):
+        for number, file in enumerate(sorted(file_list)):
+            print ("Processing file #{} out of {} files...".format(number + 1, len(file_list)))
+
             with open(self.directory + file) as json_file:
                 data = json.load(json_file)
 
@@ -71,17 +74,18 @@ class AnaphaseNucleiDistance(object):
                             for j in range(2):
                                 dis_pc = DistanceBetweenTwoPoints(x1=x_p, y1=y_p, x2=x_c[j][i], y2=y_c[j][i])
                                 self.parent_child[i].append(dis_pc)
-                            dis_ss = DistanceBetweenTwoPoints(x1=x_c[0][i], y1=y_p[0][i], x2=x_c[1][i], y2=y_c[1][i])
+                            dis_ss = DistanceBetweenTwoPoints(x1=x_c[0][i], y1=y_c[0][i], x2=x_c[1][i], y2=y_c[1][i])
                             self.sibling_sibling[i].append(dis_ss)
                         self.cell_count.append(cell_count)
 
         return self.cell_count, self.parent_child, self.sibling_sibling
 
 
-
-txt_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/analysis/channel_GFP/cellIDdetails_raw.txt"
-call = AnaphaseNucleiDistance(txt_file=txt_file)
-cell_count, parent_child, sibling_sibling = call.CalculateAnaphaseDistancePerMovie()
-print ("Cell Count = {}".format(cell_count))
-print ("Parent_Child = {}".format(parent_child))
-print ("Sibling_Sibling = {}".format(sibling_sibling))
+for channel in ["GFP", "RFP"]:
+    txt_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/" \
+               "analysis/channel_{}/cellIDdetails_raw.txt".format(channel)
+    call = AnaphaseNucleiDistance(txt_file=txt_file)
+    cell_count, parent_child, sibling_sibling = call.CalculateAnaphaseDistancePerMovie()
+    print ("Cell Count = {}".format(cell_count))
+    print ("Parent_Child = {}".format(parent_child))
+    print ("Sibling_Sibling = {}".format(sibling_sibling))

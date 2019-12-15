@@ -4,13 +4,14 @@
 import numpy as np
 import scipy.spatial as sp
 import matplotlib.pyplot as plt
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetXandYcoordsPerFrame
+from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetXandYcoordsPerFrameSLOW
 from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore_HDF5_File_Functions import GetXandYcoordinatesPerFrame
 
 # Initiate coordinates of all cells per frame:
 hdf5_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5"
-#x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordsPerFrame(hdf5_file=hdf5_file, frame=552)
-x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordsPerFrame(hdf5_file=hdf5_file, frame=551)
+print ("Processing the hdf5 file: {}".format(hdf5_file))
+x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordsPerFrameSLOW(hdf5_file=hdf5_file, frame=1103)
+print ("Done with the hdf5 file: {}".format(hdf5_file))
 
 
 print (x_gfp)
@@ -21,6 +22,11 @@ print (y_rfp)
 x_coords = x_gfp + x_rfp
 y_coords = y_gfp + y_rfp
 cells = []
+
+for x, y in zip(x_coords, y_coords):
+    if x > 597.0 and x < 598.0 and y > 730.0 and y < 732.0:
+        print ("HERE", x, y)
+
 
 if len(x_coords) == len(y_coords):
     for x, y in zip(x_coords, y_coords):
@@ -81,4 +87,5 @@ print (cells)
 print (areas)
 
 for cell, area in zip(cells, areas):
+    #if cell[0] > 597.0 and cell[0] < 598.0 and cell[1] > 730.0 and cell[1] < 732.0:
     print (cell, area)
