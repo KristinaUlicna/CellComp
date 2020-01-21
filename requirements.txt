@@ -1,7 +1,6 @@
 numpy
 scipy
 h5py
-pandas
 matplotlib.pyplot
 plotly
 time

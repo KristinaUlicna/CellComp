@@ -138,6 +138,8 @@ class ProcessMovies():
 
         return string
 
+        # TODO: When segmenting Guilia's movies from posX_aligned folders, just say '' as image_dict inputs.
+
 
     def Tracking(self, to_track_GFP=False, to_track_RFP=False, timeout_seconds=7200, config_number=""):
         """ Tracking of the GFP & RFP movies against the brightfield.
@@ -157,8 +159,11 @@ class ProcessMovies():
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
         hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF'.format(self.user, self.exp_type, self.data_date, self.pos)
         if config_number != "":
-            hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/HDF'\
-                        .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
+            #hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/HDF'\
+            #            .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
+            hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF' \
+                .format(self.user, self.exp_type, self.data_date, self.pos)
+
         if os.path.isdir(hdf_dir) is False or os.path.exists(hdf_dir + '/segmented.hdf5') is False:
             raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied in the specified directory!")
 

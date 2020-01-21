@@ -11,8 +11,11 @@ from Movie_Analysis_Pipeline.Single_Movie_Processing.D_Plotter_Branched_Lineage_
 
 # Which movies to analyse? Create a list [one-item list if single movie]:
 for i in [56]:
-    xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/tracks/tracks_type2.xml".format(i)
-    raw_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/analysis/channel_RFP/cellIDdetails_raw.txt".format(i)
+    #xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/tracks/tracks_type2.xml".format(i)
+    #raw_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracker_performance_evaluation/tracks_try_{}/analysis/channel_RFP/cellIDdetails_raw.txt".format(i)
+
+    xml_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/tracks/tracks_type2.xml".format(i)
+    raw_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos13/analysis/channel_RFP/cellIDdetails_raw.txt".format(i)
 
     call_A = GetCellDetails(xml_file=xml_file).IterateTrees()
     call_B = FilterRawTxtFile(raw_file=raw_file)

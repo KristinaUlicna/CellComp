@@ -10,7 +10,7 @@ from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore
 # Initiate coordinates of all cells per frame:
 hdf5_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5"
 print ("Processing the hdf5 file: {}".format(hdf5_file))
-x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordsPerFrameSLOW(hdf5_file=hdf5_file, frame=1103)
+x_gfp, y_gfp, x_rfp, y_rfp = GetXandYcoordsPerFrameSLOW(hdf5_file=hdf5_file, frame=775)
 print ("Done with the hdf5 file: {}".format(hdf5_file))
 
 
@@ -42,6 +42,7 @@ print (areas)
 
 # Now calculate their densities - unit test:
 points = np.array(cells)
+print (points)
 tri = sp.Delaunay(points)
 fig = sp.delaunay_plot_2d(tri=tri)
 plt.title("Unit Test - Local Density Analysis\n'MDCK_90WT_10Sc_NoComp', '17_07_24', 'pos0', slice #552")
