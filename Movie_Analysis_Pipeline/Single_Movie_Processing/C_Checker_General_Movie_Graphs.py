@@ -16,7 +16,7 @@ import statistics as stats
 import numpy as np
 import math
 import os
-from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLength
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLengthFromHDF
 
 
 class AnalyseAllCellIDs(object):
@@ -44,8 +44,8 @@ class AnalyseAllCellIDs(object):
         directory = txt_file.split("/")[:-1]
         user, exp_type, data_date, pos = directory[-6], directory[-5], directory[-4], directory[-3]
         self.channel = directory[-2].split("channel_")[-1]
-        #self.frames = FindMovieLength(exp_type=exp_type, data_date=data_date, pos=pos)
-        self.frames = 1105
+        self.frames = FindMovieLengthFromHDF(exp_type=exp_type, data_date=data_date, pos=pos)
+        #self.frames = 1105
         self.directory = '/'.join(directory) + "/"
 
         if "raw" in txt_file:

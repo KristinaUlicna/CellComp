@@ -13,7 +13,7 @@
 
 import os
 import datetime
-from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLength
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLengthFromHDF
 
 # You need to be connected to the server!
 # Server directory absolute path: "/Volumes/lowegrp/JobServer/jobs/"
@@ -87,7 +87,7 @@ class ProcessMovies():
         self.jobs_dir = '/mnt/lowe-sn00/lowegrp/JobServer/jobs/'
 
 
-    def SegClass(self, BF=False, GFP=False, RFP=False, ResNet=False):
+    def SegClass_Old(self, BF=False, GFP=False, RFP=False, ResNet=False):
         """ Segmentation & Classification of the BF, GFP & RFP movies.
 
         Args (Boolean; 'False' if only the 'noise' movie is provided):
@@ -141,6 +141,47 @@ class ProcessMovies():
         # TODO: When segmenting Guilia's movies from posX_aligned folders, just say '' as image_dict inputs.
 
 
+    def SegClass_New(self):
+        """ Segmentation & Classification of the BF, GFP & RFP movies.
+
+        Args (Boolean; 'False' if only the 'noise' movie is provided):
+            Uses 3 .tif files (brightfield, GFP, RFP, which should be stored in the posX folder.
+            Supply the noise movies as Channel_posX_noise.tif (e.g. RFP_pos6_noise.tif).
+            I'm only mapping pure populations, so 'RFP=False' or 'RFP_posX_noise.tif' set as default.
+
+        Return (overall output):
+            An HDF file ('segmented.hdf5') saved in the folder from which movies were supplied.
+
+        """
+
+        # Define which UNet to use; classic or residual:
+        network = 'U'
+
+        # Create a .job file:
+        job_name = 'JOB_SegClass_{}_{}_{}_pos{}_{}net' \
+                        .format(self.today_date, self.user, self.data_date, self.pos, network)
+        self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
+
+        # Define what goes into the file:
+        'GAUSSIAN_NOISE'
+
+        path = '/mnt/lowe-sn00/Data/{}/{}/Pos{}/Pos{}_aligned/' \
+            .format(str(self.user), str(self.data_date), str(self.pos), str(self.pos))
+
+        string = '[job]\ncomplete = False\nid = Kristina_Segment_and_Classif\n'
+        string += 'user = ' + str(self.user) + '\npriority = 99\n'
+        string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
+        string += 'func = SERVER_segment_and_classify\ndevice = GPU\ntimeout = 3600\n'
+        string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "", "gfp": "", "rfp": ""}, ' \
+                  '"shape": (1200, 1600), "model": "UNet2D_competition", "unet_type": "UNet2D"}\n'
+
+        print (string)
+        self.job_file.write(string)
+        self.job_file.close()
+
+        return string
+
+
     def Tracking(self, to_track_GFP=False, to_track_RFP=False, timeout_seconds=7200, config_number=""):
         """ Tracking of the GFP & RFP movies against the brightfield.
 
@@ -181,18 +222,10 @@ class ProcessMovies():
             if item is False:
                 del channels[order]
 
-        frame_volume = FindMovieLength(exp_type=self.exp_type, data_date=self.data_date, pos="pos" + str(self.pos))
-        frame_volume += 1
+        # Find out how long a movie is by reading the HDF file:
 
-        """
-        #if self.exp_type == "MDCK_WT_Pure":
-        #    frame_volume = 1200
-        if self.exp_type == "MDCK_90WT_10Sc_NoComp":
-            if self.data_date == "17_03_27":
-                frame_volume = 1447
-            if self.data_date == "17_07_24":
-                frame_volume = 1105
-        """
+        frame_volume = FindMovieLengthFromHDF(pos=self.pos, data_date=self.data_date,
+                                              exp_type=self.exp_type, user=self.user)
 
         path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
                 .format(self.user, self.exp_type, self.data_date, self.pos)
@@ -203,12 +236,12 @@ class ProcessMovies():
                 .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
             config = "'MDCK_config_Kristina_Try_{}.json'".format(config_number)
 
-        string = '[job]\ncomplete = False\nid = Kristina_Re_Tracking\n'
+        string = '[job]\ncomplete = False\nid = Kristina_Tracking\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\ntimeout = ' + str(timeout_seconds) + '\n'
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
-                    + str(frame_volume) + ')), "config": {"GFP": ' + str(config) + ', "RFP": ' + str(config) + '}}'
+                    + str(frame_volume + 2) + ')), "config": {"GFP": ' + str(config) + '}}'
 
         #print (string)
         self.job_file.write(string)

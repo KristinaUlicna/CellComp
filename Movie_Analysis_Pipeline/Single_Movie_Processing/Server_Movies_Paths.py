@@ -107,3 +107,22 @@ class GetMovieFilesPaths(object):
 
         return txt_file_list
 
+
+
+def Get_MDCK_Movies_Paths():
+    """
+
+    :return:
+    """
+
+    positions_list = []
+    directory = "/Volumes/lowegrp/Data/Kristina/Cells_MDCK/"
+    for folder in sorted(os.listdir(directory)):
+        if folder.startswith("AB") or folder.startswith("GV"):
+            folder = directory + folder
+            for pos in sorted(os.listdir(folder)):
+                if pos.startswith("pos"):
+                    position = folder + "/" + pos + "/"
+                    positions_list.append(position)
+    return positions_list
+

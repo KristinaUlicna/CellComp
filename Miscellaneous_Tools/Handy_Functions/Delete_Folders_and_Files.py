@@ -2,6 +2,7 @@
 
 import os
 import shutil
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import Get_MDCK_Movies_Paths
 
 def DeleteFolderWithContents(directory):
     shutil.rmtree(path=directory, ignore_errors=True)
@@ -13,5 +14,3 @@ def DeleteFile(file):
     print("File {} has been removed.".format(file))
 
 
-directory = "/Volumes/lowegrp/Data/Kristina/Training_Data/"
-DeleteFolderWithContents(directory=directory)

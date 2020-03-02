@@ -1,12 +1,12 @@
-#!/bin/sh
-'''exec' "/Users/kristinaulicna/Documents/Rotation_2/Cell Competition/PythonScripts/venv/bin/python" "$0" "$@"
-' '''
-# -*- coding: utf-8 -*-
+#!/Users/kristinaulicna/PycharmProjects/CellComp/venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip'
+__requires__ = 'pip==19.0.3'
 import re
 import sys
-
-from pip._internal import main
+from pkg_resources import load_entry_point
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(main())
+    sys.exit(
+        load_entry_point('pip==19.0.3', 'console_scripts', 'pip')()
+    )

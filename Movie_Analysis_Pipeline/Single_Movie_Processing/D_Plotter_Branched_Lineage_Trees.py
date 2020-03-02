@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append("../")
 
-from Tracker_Development.Sequitr_Package_Scripts.lineage import LineageTree, LineageTreePlotter
+from Tracker_Development.Sequitr_Package_Scripts.lineage_temp_use_for_HDF import LineageTree, LineageTreePlotter
 
 
 def PlotLineageTree(xml_file, show=False):
@@ -34,7 +34,7 @@ def PlotLineageTree(xml_file, show=False):
     counter_total = 0
     counter_plotted = 0
 
-    for tree in trees:
+    for tree in trees[:1]:
         counter_total += 1
         if tree.root is True and tree.leaf is False:
             plotter.plot([tree])
@@ -46,3 +46,11 @@ def PlotLineageTree(xml_file, show=False):
             counter_plotted += 1
 
     return counter_total, counter_plotted
+
+
+"""
+# Try to understand what the LineageTreePlotter does:
+xml_file = "/Volumes/lowegrp/Data/Kristina/Cells_MDCK/GV0800/pos0/tracks/tracks_type1.xml"
+trees = LineageTree.from_xml(filename=xml_file).create()
+plotter = LineageTreePlotter().plot(tree=[trees[8]])
+"""

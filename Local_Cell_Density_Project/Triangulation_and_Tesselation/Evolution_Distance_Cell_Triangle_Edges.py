@@ -2,7 +2,6 @@ import numpy as np
 import scipy.spatial as sp
 import matplotlib.pyplot as plt
 from itertools import chain
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore_HDF5_File_Functions import *
 from Movie_Analysis_Pipeline.Single_Movie_Processing.Movie_Frame_Length import FindMovieLength
 from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import GetMovieFilesPaths
 

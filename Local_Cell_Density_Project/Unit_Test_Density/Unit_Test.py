@@ -4,8 +4,7 @@
 import numpy as np
 import scipy.spatial as sp
 import matplotlib.pyplot as plt
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetXandYcoordsPerFrameSLOW
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore_HDF5_File_Functions import GetXandYcoordinatesPerFrame
+from SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetXandYcoordsPerFrameSLOW
 
 # Initiate coordinates of all cells per frame:
 hdf5_file = "/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5"

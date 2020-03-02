@@ -1,12 +1,7 @@
 # TODO: Plot the output of segmentation (HDF data) and tracking (XML data) on top of each other with overlapping colors:
 
-import numpy as np
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
 from scipy.io import loadmat
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions \
-    import GetXandYcoordsPerMovie
 
 # Example plotly scatter plot:
 """

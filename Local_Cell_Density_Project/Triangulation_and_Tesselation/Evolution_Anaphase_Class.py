@@ -4,7 +4,7 @@ import os
 import json
 import numpy as np
 from Miscellaneous_Tools.Handy_Functions.Unzip_Zip_Files import UnzipTrackJSONfile
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetCellCountPerFrame
+from SegClass_HDF_Output_Files.HDF_Format_New.HDF5_Data_Functions import GetCellCountPerFrame
 
 
 def DistanceBetweenTwoPoints(x1, y1, x2, y2):

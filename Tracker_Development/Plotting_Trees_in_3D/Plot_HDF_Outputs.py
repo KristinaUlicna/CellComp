@@ -1,9 +1,7 @@
 #TODO: Plot the scatter plot of all cells in 3D
 
-import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore_HDF5_File_Functions import GetXandYcoordinatesPerFrame
+from SegClass_HDF_Output_Files.HDF_Format_Old import GetXandYcoordinatesPerFrame
 
 
 file = '/Volumes/lowegrp/Data/Kristina/MDCK_90WT_10Sc_NoComp/17_07_24/pos0/HDF/segmented.hdf5'

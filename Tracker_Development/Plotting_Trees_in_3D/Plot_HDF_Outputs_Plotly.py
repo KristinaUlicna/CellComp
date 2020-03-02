@@ -1,6 +1,5 @@
-import pandas as pd
 import plotly.express as px
-from Local_Cell_Density_Project.SegClass_HDF_Output_Files.HDF_Format_Old.Explore_HDF5_File_Functions import GetXandYcoordinatesPerFrame
+from SegClass_HDF_Output_Files.HDF_Format_Old import GetXandYcoordinatesPerFrame
 
 #TODO: Plot the scatter plot of all cells in 3D in Plotly
 
