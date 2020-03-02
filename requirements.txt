@@ -1,6 +1,5 @@
 numpy
 scipy
 h5py
-matplotlib.pyplot
+matplotlib
 plotly
-time

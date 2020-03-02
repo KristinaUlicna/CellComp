@@ -25,7 +25,7 @@ colors = ["dodgerblue", "orange", "forestgreen", "firebrick", "purple"]
 for enum, gen in enumerate(cct[1:6]):
     a, b, c =plt.hist(x=gen, bins=40, range=(5.0, 45.0), color=colors[enum], alpha=0.5, label="Gen #{}".format(enum+1))
     plt.axvline(x=np.mean(gen), ls='dashed', color=colors[enum])
-    print (a, b, list(c))
+    print (a, b)
 
 
 plt.legend(loc="best")
@@ -54,4 +54,3 @@ print (cell[0])
 print (cct[0])
 print (parent[0])
 print (root[0])
-
