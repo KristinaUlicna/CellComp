@@ -47,17 +47,31 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
 
         self.position = hdf5_file.split("/pos")[1].split("/")[0]
         self.data_date = hdf5_file.split("/pos{}".format(self.position))[0][-6:]
+        self.exp_type = "MDCK_WT_Pure"
+
+        if "AB0327" in hdf5_file:
+            if "pos0" or "pos2" or "pos4" or "pos6" or "pos8" or "pos10" in hdf5_file:
+                self.exp_type = "MDCK_90WT_10Sc_NoComp"
+
+        if "AB0724" in hdf5_file:
+            if "pos0" or "pos2" or "pos4" or "pos9" or "pos11" or "pos13" in hdf5_file:
+                self.exp_type = "MDCK_90WT_10Sc_NoComp"
 
         # Initialise the movie if processing fluo_intensity:
         if self.data_date.startswith("AB"):
-            raw_movie = "/Volumes/lowegrp/Data/Kristina/MDCK_WT_Pure/17_{}_{}/pos{}/GFP_pos{}.tif" \
-                .format(self.data_date[2:4], self.data_date[4:6], self.position, self.position)
+            raw_movie = "/Volumes/lowegrp/Data/Kristina/{}/17_{}_{}/pos{}/GFP_pos{}.tif" \
+                .format(self.exp_type, self.data_date[2:4], self.data_date[4:6], self.position, self.position)
             self.raw_movie = io.imread(raw_movie)
 
         # Vectors to return:
         self.density = [0 for _ in range(GFP_length)]
         self.nucleus = [0 for _ in range(GFP_length)]
         self.fsignal = [0 for _ in range(GFP_length)]
+
+        #print (len(self.density))
+        #print (len(self.nucleus))
+        #print (len(self.fsignal))
+
 
 
     def Extract_Cell_Coords(self, frame):
@@ -134,10 +148,9 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
             for index in vertex_index:
                 densities[index] += density
 
-        # 5.) Write these definitive cell densities into the big density array:
-        self.density[cell_map[0][0]:cell_map[0][1]] = np.array(densities, dtype=np.float64)
-
-        # 6.) Return an intermediate so you can check if correctly calculated:
+        # Return an intermediate so you can check if correctly calculated:
+        breaking_point = cell_map[0][1] - cell_map[0][0]
+        self.density[cell_map[0][0]:cell_map[0][1]] = np.array(densities[:breaking_point], dtype=np.float32)
         return densities
 
 
@@ -185,8 +198,8 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
             nuclei_size.append(nucleus_size)
 
         # Append these sizes into the final array:
-        self.nucleus[cell_map[0][0]:cell_map[0][1]] = np.array(nuclei_size, dtype=np.float64)
-
+        breaking_point = cell_map[0][1] - cell_map[0][0]
+        self.nucleus[cell_map[0][0]:cell_map[0][1]] = np.array(nuclei_size[:breaking_point], dtype=np.float32)
         return nuclei_size, object_labels, found_objects
 
 
@@ -213,33 +226,31 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
         if self.data_date.startswith("AB"):
             raw_image = self.raw_movie[frame]
 
-        elif self.data_date.startswith("GV"):
-            raw_image = "/Volumes/lowegrp/Data/Giulia/{}/pos{}/Pos{}_aligned/img_channel001_position{}_time00000{}_z000.tif" \
-                         .format(self.data_date, self.position, self.position, self.position.zfill(3), str(frame).zfill(4))
-
-        elif self.data_date.startswith("KU"):
-            raw_image = "/Volumes/lowegrp/Data/Kristina/Cells_HeLa/{}/Pos{}/img_channel001_position{}_time00000{}_z000.tif" \
-                         .format(self.data_date, self.position, self.position.zfill(3), str(frame).zfill(4))
         else:
-            raise Exception("Directory data_date starts with either 'AB' nor 'GV' nor 'KU'!")
+            if self.data_date.startswith("GV"):
+                raw_image = "/Volumes/lowegrp/Data/Giulia/{}/pos{}/Pos{}_aligned/img_channel001_position{}_time00000{}_z000.tif" \
+                             .format(self.data_date, self.position, self.position, self.position.zfill(3), str(frame).zfill(4))
+                if not os.path.isfile(raw_image):
+                    return np.array(fluo_signal_intensity_sum, dtype=np.float64)
 
+            if self.data_date.startswith("KU"):
+                raw_image = "/Volumes/lowegrp/Data/Kristina/Cells_HeLa/{}/Pos{}/img_channel001_position{}_time00000{}_z000.tif" \
+                             .format(self.data_date, self.position, self.position.zfill(3), str(frame).zfill(4))
+                if not os.path.isfile(raw_image):
+                    return np.array(fluo_signal_intensity_sum, dtype=np.float64)
 
-        # Check if the frame exist & resize appropriately:
-        if not os.path.isfile(raw_image):
-            return np.array(fluo_signal_intensity_sum, dtype=np.float64)
+            # Process the full-sized image (1739 x 1379 pixels):
+            image = Image.open(raw_image).convert('L')        # converts the image to 8-bit grayscale
+            img_w, img_h = image.size                         # stores image dimensions:
+            new_w, new_h = 1600, 1200
 
-        # Process the full-sized image (1739 x 1379 pixels):
-        image = Image.open(raw_image).convert('L')        # converts the image to 8-bit grayscale
-        img_w, img_h = image.size                         # stores image dimensions:
-        new_w, new_h = 1600, 1200
-
-        # Define center & crop image accordingly... TODO: Python & FiJi have different offsets!
-        if img_w != new_w or img_h != new_h:
-            left = (img_w - 1 - new_w) / 2
-            top = (img_h - 1 - new_h) / 2
-            right = (img_w - 1 + new_w) / 2
-            bottom = (img_h - 1 + new_h) / 2
-            raw_image = np.array(image.crop((left, top, right, bottom)))  # convert 'PIL.Image.Image' to 'numpy.ndarray'
+            # Define center & crop image accordingly... TODO: Python & FiJi have different offsets!
+            if img_w != new_w or img_h != new_h:
+                left = (img_w - 1 - new_w) / 2
+                top = (img_h - 1 - new_h) / 2
+                right = (img_w - 1 + new_w) / 2
+                bottom = (img_h - 1 + new_h) / 2
+                raw_image = np.array(image.crop((left, top, right, bottom)))  # convert 'PIL.Image.Image' to 'numpy.ndarray'
 
         # Superimpose the segmented masks with unique labels to the raw fluorescence readout images:
         if len(cell_coords) != len(nuclei_size):
@@ -261,8 +272,11 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
                         if label_pixel == pixel_label:
                             fluo_signal_intensity_sum[enum] += raw_pixel
 
-        self.fsignal[cell_map[0][0]:cell_map[0][1]] = np.array(fluo_signal_intensity_sum, dtype=np.float64)
-        return np.array(fluo_signal_intensity_sum, dtype=np.float64)
+        # Append to the final array:
+        breaking_point = cell_map[0][1] - cell_map[0][0]
+        fluo_signal_intensity_sum = np.array(fluo_signal_intensity_sum[:breaking_point], dtype=np.float32)
+        self.fsignal[cell_map[0][0]:cell_map[0][1]] = fluo_signal_intensity_sum
+        return fluo_signal_intensity_sum
 
 
     # ---------------------------------------------------------------------------------------------------
@@ -286,14 +300,16 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
         if self.hdf5_file_to_read.__bool__():
             self.hdf5_file_to_read.close()
 
+        #print (len(self.density))
+        #print (len(self.nucleus))
+        #print (len(self.fsignal))
+
         return self.density, self.nucleus, self.fsignal
 
 
     def Append_To_HDF(self, local_density=False, nucleus_size=False, fluo_signal=False):
 
-        density, nucleus, fsignal = self.Process_Whole_Movie(local_density=local_density,
-                                                             nucleus_size=nucleus_size,
-                                                             fluo_signal=fluo_signal)
+        self.Process_Whole_Movie(local_density=local_density, nucleus_size=nucleus_size, fluo_signal=fluo_signal)
 
         with h5py.File(self.hdf5_file, 'a') as f:
 
@@ -301,19 +317,19 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
                 if "local_density" in list(f["objects"]["obj_type_1"]):
                     del f["objects"]["obj_type_1"]["local_density"]
                 grp_d = f["objects"]["obj_type_1"]
-                grp_d.create_dataset(name="local_density", data=density)
+                grp_d.create_dataset(name="local_density", data=self.density)
 
             if nucleus_size is True:
                 if "nucleus_size" in list(f["objects"]["obj_type_1"]):
                     del f["objects"]["obj_type_1"]["nucleus_size"]
                 grp_n = f["objects"]["obj_type_1"]
-                grp_n.create_dataset(name="nucleus_size", data=nucleus)
+                grp_n.create_dataset(name="nucleus_size", data=self.nucleus)
 
             if fluo_signal is True:
                 if "fluo_signal_sum" in list(f["objects"]["obj_type_1"]):
                     del f["objects"]["obj_type_1"]["fluo_signal_sum"]
                 grp_f = f["objects"]["obj_type_1"]
-                grp_f.create_dataset(name="fluo_signal_sum", data=fsignal)
+                grp_f.create_dataset(name="fluo_signal_sum", data=self.fsignal)
 
 
     def __exit__(self):
@@ -326,8 +342,17 @@ class Local_Density_Nucleus_Size_Fluo_Signal(object):
 movies = Get_MDCK_Movies_Paths()
 
 for movie in movies:
-    if "GV" in movie:
-        hdf5_file = movie + "HDF/segmented.hdf5"
-        print ("Calculating for {}".format(hdf5_file))
-        Local_Density_Nucleus_Size_Fluo_Signal(hdf5_file=hdf5_file).Append_To_HDF(nucleus_size=True, fluo_signal=True)
-
+    if "AB0327" in movie:
+        if "pos2" in movie or "pos4" in movie or "pos6" in movie or "pos8" in movie or "pos10" in movie:
+            hdf5_file = movie + "HDF/segmented.hdf5"
+            print ("Calculating for {}".format(hdf5_file))
+            Local_Density_Nucleus_Size_Fluo_Signal(hdf5_file=hdf5_file).Append_To_HDF(local_density=True,
+                                                                                      nucleus_size=True,
+                                                                                      fluo_signal=True)
+    if "AB0724" in movie:
+        if "pos0" in movie or "pos2" in movie or "pos4" in movie or "pos9" in movie or "pos11" in movie or "pos13" in movie:
+            hdf5_file = movie + "HDF/segmented.hdf5"
+            print("Calculating for {}".format(hdf5_file))
+            Local_Density_Nucleus_Size_Fluo_Signal(hdf5_file=hdf5_file).Append_To_HDF(local_density=True,
+                                                                                      nucleus_size=True,
+                                                                                      fluo_signal=True)

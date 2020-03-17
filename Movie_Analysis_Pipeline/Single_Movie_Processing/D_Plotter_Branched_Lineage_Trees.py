@@ -34,7 +34,8 @@ def PlotLineageTree(xml_file, show=False):
     counter_total = 0
     counter_plotted = 0
 
-    for tree in trees[:1]:
+    #for tree in trees[:1]:
+    for tree in trees:
         counter_total += 1
         if tree.root is True and tree.leaf is False:
             plotter.plot([tree])

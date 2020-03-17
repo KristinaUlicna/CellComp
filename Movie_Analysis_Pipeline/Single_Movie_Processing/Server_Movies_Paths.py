@@ -126,3 +126,20 @@ def Get_MDCK_Movies_Paths():
                     positions_list.append(position)
     return positions_list
 
+
+def Get_HeLa_Movies_Paths():
+    """
+
+    :return:
+    """
+
+    positions_list = []
+    directory = "/Volumes/lowegrp/Data/Kristina/Cells_HeLa/"
+    for folder in sorted(os.listdir(directory)):
+        if folder.startswith("KU"):
+            folder = directory + folder
+            for pos in sorted(os.listdir(folder)):
+                if pos.startswith("Pos"):
+                    position = folder + "/" + pos + "/"
+                    positions_list.append(position)
+    return positions_list

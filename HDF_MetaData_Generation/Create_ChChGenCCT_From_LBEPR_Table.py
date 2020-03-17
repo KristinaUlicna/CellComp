@@ -1,9 +1,11 @@
 import os
+import sys
 import json
 import h5py
 import numpy as np
 
 from tqdm import tqdm
+sys.path.append("../")
 from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import Get_MDCK_Movies_Paths
 
 
@@ -154,7 +156,7 @@ class Process_LBEPR_Table(object):
 movies = Get_MDCK_Movies_Paths()
 
 for movie in movies:
-    if "GV" in movie:
+    if "AB" in movie:
         hdf5_file = movie + "HDF/segmented.hdf5"
         print("Calculating for {}".format(hdf5_file))
         Process_LBEPR_Table(hdf5_file=hdf5_file).Append_To_HDF()

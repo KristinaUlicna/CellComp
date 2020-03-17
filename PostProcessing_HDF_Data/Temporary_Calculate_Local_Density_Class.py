@@ -17,6 +17,7 @@ import h5py
 import numpy as np
 import scipy.spatial as sp
 import matplotlib.pyplot as plt
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import Get_MDCK_Movies_Paths
 
 
 class Local_Density(object):
@@ -26,11 +27,15 @@ class Local_Density(object):
         :param hdf5_file (str): absolute directory to file: /segmented.hdf5
         """
 
+        self.hdf5_file = hdf5_file
         self.file = h5py.File(hdf5_file, 'r')
         self.movie_length = len(self.file["objects"]["obj_type_1"]["map"])
+        print (self.movie_length)
+        self.channels = len(list(self.file.values())[0])
 
         self.density_GFP = [0 for _ in range(len(self.file["objects"]["obj_type_1"]["coords"]))]
-        self.density_RFP = [0 for _ in range(len(self.file["objects"]["obj_type_2"]["coords"]))]
+        if self.channels > 1:
+            self.density_RFP = [0 for _ in range(len(self.file["objects"]["obj_type_2"]["coords"]))]
 
 
     def Extract_Cell_Coords(self, frame):
@@ -43,11 +48,11 @@ class Local_Density(object):
 
         cell_coords = []
         cell_map = []
-        for item in [1, 2]:
-            map = self.file["objects"]["obj_type_{}".format(item)]["map"][frame]
+        for channel in range(1, self.channels + 1):
+            map = self.file["objects"]["obj_type_{}".format(channel)]["map"][frame]
             cell_map.append(map)
             for cell in range(map[0], map[1]):
-                cell_data = self.file["objects"]["obj_type_{}".format(item)]["coords"][cell]
+                cell_data = self.file["objects"]["obj_type_{}".format(channel)]["coords"][cell]
                 cell_coords.append([cell_data[1], cell_data[2]])
         return np.array(cell_coords), np.array(cell_map)
 
@@ -64,7 +69,9 @@ class Local_Density(object):
 
 
     def Calculate_Triangle_Density(self, a, b, c):
-        """ a = [x_coord, y_coord]
+        """ Input: coordinates of the triangle vertex.
+
+            a = [x_coord, y_coord]
             b = [x_coord, y_coord]
             c = [x_coord, y_coord]
         """
@@ -84,7 +91,7 @@ class Local_Density(object):
 
         for frame in range(0, self.movie_length):
 
-            if frame % 10 == 0:
+            if frame % 100 == 0:
                 print ("Calculating for frame #{}".format(frame))
 
             # 1.) Extract the coordinates of all GFP & RFP cells at specified frame:
@@ -106,11 +113,47 @@ class Local_Density(object):
             breaking_point = cell_map[0][1] - cell_map[0][0]
 
             # Write these definitive cell densities into the big density array:
-            self.density_GFP[cell_map[0][0]:cell_map[0][1]] = densities[:breaking_point]
-            self.density_RFP[cell_map[1][0]:cell_map[1][1]] = densities[breaking_point:]
+            if self.channels == 1:
+                self.density_GFP[cell_map[0][0]:cell_map[0][1]] = densities[:breaking_point]
+            else:
+                self.density_GFP[cell_map[0][0]:cell_map[0][1]] = densities[:breaking_point]
+                self.density_RFP[cell_map[1][0]:cell_map[1][1]] = densities[breaking_point:]
 
-        return self.density_GFP, self.density_RFP
+
+        if self.channels == 1:
+            return np.array(self.density_GFP, dtype=np.float32)
+        else:
+            return np.array(self.density_GFP, dtype=np.float32), np.array(self.density_RFP, dtype=np.float32)
+
+
+    def Append_to_HDF(self):
+        """ """
+
+        self.Calculate_for_Movie()
+        if self.file.__bool__:
+            self.file.close()
+
+        with h5py.File(self.hdf5_file, 'a') as f:
+            for channel in range(1, self.channels + 1):
+                if "density" in list(f["objects"]["obj_type_{}".format(channel)]):
+                    del f["objects"]["obj_type_{}".format(channel)]["density"]
+
+                grp = f["objects"]["obj_type_{}".format(channel)]
+
+                if channel == 1:
+                    grp.create_dataset(name="density", data=self.density_GFP)
+                elif channel == 2:
+                    grp.create_dataset(name="density", data=self.density_RFP)
+                else:
+                    raise ValueError("Warning, specify the channel (1 = 'GFP', 2 = 'RFP')")
 
 
 
 
+# Call the class:
+movies = Get_MDCK_Movies_Paths()
+
+for enum, movie in enumerate(movies):
+    print ("Movie {} out of {} -> {}".format(enum, len(movies), movie))
+    hdf5_file = movie + "HDF/segmented.hdf5"
+    Local_Density(hdf5_file=hdf5_file).Append_to_HDF()

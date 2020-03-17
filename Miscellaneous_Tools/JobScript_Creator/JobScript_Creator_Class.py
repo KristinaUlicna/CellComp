@@ -108,8 +108,8 @@ class ProcessMovies():
             network = 'Res' + network
 
         # Create a .job file:
-        job_name = 'JOB_SegClass_{}_{}_{}_pos{}_{}net' \
-                        .format(self.today_date, self.user, self.data_date, self.pos, network)
+        job_name = 'JOB_SegClass_{}_{}_{}_pos{}_fixed' \
+                        .format(self.today_date, self.user, self.data_date, self.pos)
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
@@ -132,7 +132,7 @@ class ProcessMovies():
                     '"gfp": "' + channels[1] + '", "rfp": "' + channels[2] + '"}, "shape": (1200, 1600), "model": "' \
                     + str(network) + 'Net2D_competition", "unet_type": "' + str(network) + 'Net2D"}\n'
 
-        #print (string)
+        print (string)
         self.job_file.write(string)
         self.job_file.close()
 
@@ -158,21 +158,21 @@ class ProcessMovies():
         network = 'U'
 
         # Create a .job file:
-        job_name = 'JOB_SegClass_{}_{}_{}_pos{}_{}net' \
-                        .format(self.today_date, self.user, self.data_date, self.pos, network)
+        job_name = 'JOB_SegClass_{}_{}_{}_pos{}' \
+                        .format(self.today_date, self.user, self.data_date, self.pos)
         self.job_file = open('/Volumes/lowegrp/JobServer/jobs/' + job_name + '.job', 'w')
 
         # Define what goes into the file:
         'GAUSSIAN_NOISE'
 
-        path = '/mnt/lowe-sn00/Data/{}/{}/Pos{}/Pos{}_aligned/' \
+        path = '/mnt/lowe-sn00/Data/{}/Cells_HeLa/{}/Pos{}/Pos{}_aligned/' \
             .format(str(self.user), str(self.data_date), str(self.pos), str(self.pos))
 
         string = '[job]\ncomplete = False\nid = Kristina_Segment_and_Classif\n'
         string += 'user = ' + str(self.user) + '\npriority = 99\n'
         string += 'time = ' + str(self.current_time) + '\nmodule = jobs\n'
         string += 'func = SERVER_segment_and_classify\ndevice = GPU\ntimeout = 3600\n'
-        string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "", "gfp": "", "rfp": ""}, ' \
+        string += 'params = {"path": "' + str(path) + '", "image_dict": {"brightfield": "", "gfp": "", "rfp": "GAUSSIAN_NOISE"}, ' \
                   '"shape": (1200, 1600), "model": "UNet2D_competition", "unet_type": "UNet2D"}\n'
 
         print (string)
@@ -198,15 +198,16 @@ class ProcessMovies():
         """
 
         # Did the SegClass job ran as expected? Check for HDF folder and/or 'segmented.hdf5' file:
-        hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF'.format(self.user, self.exp_type, self.data_date, self.pos)
+        hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/Pos{}/' \
+                    .format(self.user, self.exp_type, self.data_date, self.pos)
         if config_number != "":
             #hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/tracker_performance_evaluation/tracks_try_{}/HDF'\
             #            .format(self.user, self.exp_type, self.data_date, self.pos, config_number)
             hdf_dir = '/Volumes/lowegrp/Data/{}/{}/{}/pos{}/HDF' \
                 .format(self.user, self.exp_type, self.data_date, self.pos)
 
-        if os.path.isdir(hdf_dir) is False or os.path.exists(hdf_dir + '/segmented.hdf5') is False:
-            raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied in the specified directory!")
+        #if os.path.isdir(hdf_dir) is False or os.path.exists(hdf_dir + '/segmented.hdf5') is False:
+        #    raise Exception("Warning: No 'HDF' folder or 'segmented.hdf5' file supplied in the specified directory!")
 
         # Create a .job file:
         job_name = 'JOB_Tracking_{}_{}_{}_pos{}'.format(self.today_date, self.user, self.data_date, self.pos)
@@ -224,10 +225,15 @@ class ProcessMovies():
 
         # Find out how long a movie is by reading the HDF file:
 
-        frame_volume = FindMovieLengthFromHDF(pos=self.pos, data_date=self.data_date,
-                                              exp_type=self.exp_type, user=self.user)
+        #frame_volume = FindMovieLengthFromHDF(pos=self.pos, data_date=self.data_date,
+        #                                      exp_type=self.exp_type, user=self.user)
+        #frame_volume = 1200 - 2
+        if self.data_date == "17_03_27":
+            frame_volume = 1447
+        if self.data_date == "17_07_24":
+            frame_volume = 1105
 
-        path = '/mnt/lowe-sn00/Data/{}/{}/{}/pos{}/' \
+        path = '/mnt/lowe-sn00/Data/{}/{}/{}/Pos{}' \
                 .format(self.user, self.exp_type, self.data_date, self.pos)
         config = '"MDCK_config_wildtype.json"'
 
@@ -241,9 +247,9 @@ class ProcessMovies():
         string += 'time = ' + str(self.current_time) + '\nlib_path = /home/alan/code/BayesianTracker/\n'
         string += 'module = bworker\nfunc = SERVER_track\ndevice = CPU\ntimeout = ' + str(timeout_seconds) + '\n'
         string += 'params = {"path": "' + str(path) + '", "volume":((0,1200),(0,1600),(-100000.0, 100000.0),(0,' \
-                    + str(frame_volume + 2) + ')), "config": {"GFP": ' + str(config) + '}}'
+                    + str(frame_volume + 2) + ')), "config": {"GFP": ' + str(config) + ', "RFP": ' + str(config) + '}}'
 
-        #print (string)
+        print (string)
         self.job_file.write(string)
         self.job_file.close()
 

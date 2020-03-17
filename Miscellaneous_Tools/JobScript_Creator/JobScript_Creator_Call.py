@@ -11,19 +11,19 @@
 
 # Call the class 'ProcessMovies' & its 'SegClass' & 'Tracking' functions:
 from Miscellaneous_Tools.JobScript_Creator.JobScript_Creator_Class import ProcessMovies
-from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import Get_MDCK_Movies_Paths
+from Movie_Analysis_Pipeline.Single_Movie_Processing.Server_Movies_Paths import Get_HeLa_Movies_Paths
 
 # Track all of your MDCK movies:
-"""
-movies = Get_MDCK_Movies_Paths()
 
-for movie in movies:
-    data_date, pos_number = movie.split("/")[-3], movie.split("/")[-2].split("pos")[-1]
-    print (data_date, pos_number)
-    call_template = ProcessMovies(pos=pos_number, data_date=data_date, exp_type="Cells_MDCK", user="Kristina")
-    call_template.Tracking(to_track_GFP=True, to_track_RFP=False, timeout_seconds=3600)
-"""
+#movies = Get_HeLa_Movies_Paths()
 
-call_template = ProcessMovies(pos=0, data_date="extra", exp_type="Cells_MDCK", user="Kristina")
-#call_template.SegClass_Old(BF=True, GFP=False, RFP=True)
-call_template.Tracking(to_track_GFP=False, to_track_RFP=True, timeout_seconds=3600)
+for pos in [0, 2, 4, 6, 8, 10]:
+    call_template = ProcessMovies(pos=pos, data_date="17_03_27", exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+    #call_template.SegClass_Old(BF=True, GFP=True, RFP=True)
+    call_template.Tracking(to_track_GFP=True, to_track_RFP=True)
+
+for pos in [0, 2, 4, 9, 11, 13]:
+    call_template = ProcessMovies(pos=pos, data_date="17_07_24", exp_type="MDCK_90WT_10Sc_NoComp", user="Kristina")
+    #call_template.SegClass_Old(BF=True, GFP=True, RFP=True)
+    call_template.Tracking(to_track_GFP=True, to_track_RFP=True)
+
